@@ -11,6 +11,8 @@
 		F4766FD42716A1FB00E3AD87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD32716A1FB00E3AD87 /* ContentView.swift */; };
 		F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD52716A1FE00E3AD87 /* Assets.xcassets */; };
 		F4766FD92716A1FE00E3AD87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */; };
+		F4B5001F2717DC99007F9DE0 /* brandy_dummy_data.json in Resources */ = {isa = PBXBuildFile; fileRef = F4B5001E2717DC99007F9DE0 /* brandy_dummy_data.json */; };
+		F4B50021271815D4007F9DE0 /* LoadJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B50020271815D4007F9DE0 /* LoadJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		F4766FD32716A1FB00E3AD87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F4766FD52716A1FE00E3AD87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F4B5001C2717DC80007F9DE0 /* ZotMeal-2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ZotMeal-2-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F4B5001E2717DC99007F9DE0 /* brandy_dummy_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brandy_dummy_data.json; sourceTree = "<group>"; };
+		F4B50020271815D4007F9DE0 /* LoadJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +58,9 @@
 			children = (
 				F4766FD12716A1FB00E3AD87 /* ZotMeal_2App.swift */,
 				F4766FD32716A1FB00E3AD87 /* ContentView.swift */,
+				F4B5001D2717DC8C007F9DE0 /* JSON */,
 				F4766FD52716A1FE00E3AD87 /* Assets.xcassets */,
+				F4B5001C2717DC80007F9DE0 /* ZotMeal-2-Info.plist */,
 				F4766FD72716A1FE00E3AD87 /* Preview Content */,
 			);
 			path = "ZotMeal 2";
@@ -65,6 +72,15 @@
 				F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F4B5001D2717DC8C007F9DE0 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F4B5001E2717DC99007F9DE0 /* brandy_dummy_data.json */,
+				F4B50020271815D4007F9DE0 /* LoadJSON.swift */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +143,7 @@
 			files = (
 				F4766FD92716A1FE00E3AD87 /* Preview Assets.xcassets in Resources */,
 				F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */,
+				F4B5001F2717DC99007F9DE0 /* brandy_dummy_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4766FD42716A1FB00E3AD87 /* ContentView.swift in Sources */,
+				F4B50021271815D4007F9DE0 /* LoadJSON.swift in Sources */,
 				F4766FD22716A1FB00E3AD87 /* ZotMeal_2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +290,7 @@
 				DEVELOPMENT_TEAM = WMFKF24VVS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ZotMeal-2-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +321,7 @@
 				DEVELOPMENT_TEAM = WMFKF24VVS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ZotMeal-2-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
