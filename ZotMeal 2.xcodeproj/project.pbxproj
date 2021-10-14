@@ -77,8 +77,8 @@
 		F4B5001D2717DC8C007F9DE0 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				F4B5001E2717DC99007F9DE0 /* brandy_dummy_data.json */,
 				F4B50020271815D4007F9DE0 /* LoadJSON.swift */,
+				F4B5001E2717DC99007F9DE0 /* brandy_dummy_data.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";

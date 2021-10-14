@@ -21,7 +21,7 @@ class LoadJSON {
             
         } catch {
             print("Error when parsing local JSON: \(error)")
-          
+            
         }
         
         return nil
