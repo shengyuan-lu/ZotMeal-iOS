@@ -1,6 +1,7 @@
 {
     "refreshTime": 1634102374,
-    "brandywine": [
+    "restaurant": "Brandywine",
+    "all": [
         {
             "station": "Ember/Grill",
             "menu": [

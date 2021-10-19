@@ -9,13 +9,14 @@ import Foundation
 
 class LoadJSON {
     
-    static func loadLocalJSON(forName name:String) -> Data? {
+    func loadLocalJSON(forName name:String) -> Data? {
         
         do {
             
             if let filePath = Bundle.main.path(forResource: name, ofType: "json") {
                 let fileURL = URL(fileURLWithPath: filePath)
                 let data = try Data(contentsOf: fileURL)
+                print("Load local JSON name:\(name) succeessfully")
                 return data
             }
             

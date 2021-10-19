@@ -7,20 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F4766FD22716A1FB00E3AD87 /* ZotMeal_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD12716A1FB00E3AD87 /* ZotMeal_2App.swift */; };
+		F4766FD22716A1FB00E3AD87 /* ZotMeal_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */; };
 		F4766FD42716A1FB00E3AD87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD32716A1FB00E3AD87 /* ContentView.swift */; };
 		F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD52716A1FE00E3AD87 /* Assets.xcassets */; };
 		F4766FD92716A1FE00E3AD87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */; };
+		F4B4E0C2271F462D0057833D /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B4E0C1271F462D0057833D /* Food.swift */; };
+		F4B4E0C4271F475D0057833D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B4E0C3271F475D0057833D /* Category.swift */; };
+		F4B4E0C6271F49140057833D /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B4E0C5271F49140057833D /* Station.swift */; };
+		F4B4E0C8271F4A5D0057833D /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B4E0C7271F4A5D0057833D /* Restaurant.swift */; };
 		F4B5001F2717DC99007F9DE0 /* brandy_dummy_data.json in Resources */ = {isa = PBXBuildFile; fileRef = F4B5001E2717DC99007F9DE0 /* brandy_dummy_data.json */; };
 		F4B50021271815D4007F9DE0 /* LoadJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B50020271815D4007F9DE0 /* LoadJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F4766FCE2716A1FB00E3AD87 /* ZotMeal 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZotMeal 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4766FD12716A1FB00E3AD87 /* ZotMeal_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotMeal_2App.swift; sourceTree = "<group>"; };
+		F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotMeal_App.swift; sourceTree = "<group>"; };
 		F4766FD32716A1FB00E3AD87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F4766FD52716A1FE00E3AD87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F4B4E0C1271F462D0057833D /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		F4B4E0C3271F475D0057833D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		F4B4E0C5271F49140057833D /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		F4B4E0C7271F4A5D0057833D /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		F4B5001C2717DC80007F9DE0 /* ZotMeal-2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ZotMeal-2-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F4B5001E2717DC99007F9DE0 /* brandy_dummy_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brandy_dummy_data.json; sourceTree = "<group>"; };
 		F4B50020271815D4007F9DE0 /* LoadJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJSON.swift; sourceTree = "<group>"; };
@@ -37,6 +45,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4598235271AAF4900BE591E /* JSON Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				F4B50020271815D4007F9DE0 /* LoadJSON.swift */,
+			);
+			path = "JSON Parsing";
+			sourceTree = "<group>";
+		};
+		F4598236271AAF5600BE591E /* Data Structure */ = {
+			isa = PBXGroup;
+			children = (
+				F4B4E0C7271F4A5D0057833D /* Restaurant.swift */,
+				F4B4E0C5271F49140057833D /* Station.swift */,
+				F4B4E0C3271F475D0057833D /* Category.swift */,
+				F4B4E0C1271F462D0057833D /* Food.swift */,
+			);
+			path = "Data Structure";
+			sourceTree = "<group>";
+		};
 		F4766FC52716A1FB00E3AD87 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +83,11 @@
 		F4766FD02716A1FB00E3AD87 /* ZotMeal 2 */ = {
 			isa = PBXGroup;
 			children = (
-				F4766FD12716A1FB00E3AD87 /* ZotMeal_2App.swift */,
+				F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */,
 				F4766FD32716A1FB00E3AD87 /* ContentView.swift */,
-				F4B5001D2717DC8C007F9DE0 /* JSON */,
+				F4598236271AAF5600BE591E /* Data Structure */,
+				F4598235271AAF4900BE591E /* JSON Parsing */,
+				F4B5001D2717DC8C007F9DE0 /* Local JSON */,
 				F4766FD52716A1FE00E3AD87 /* Assets.xcassets */,
 				F4B5001C2717DC80007F9DE0 /* ZotMeal-2-Info.plist */,
 				F4766FD72716A1FE00E3AD87 /* Preview Content */,
@@ -74,13 +103,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		F4B5001D2717DC8C007F9DE0 /* JSON */ = {
+		F4B5001D2717DC8C007F9DE0 /* Local JSON */ = {
 			isa = PBXGroup;
 			children = (
-				F4B50020271815D4007F9DE0 /* LoadJSON.swift */,
 				F4B5001E2717DC99007F9DE0 /* brandy_dummy_data.json */,
 			);
-			path = JSON;
+			path = "Local JSON";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +183,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4766FD42716A1FB00E3AD87 /* ContentView.swift in Sources */,
+				F4B4E0C4271F475D0057833D /* Category.swift in Sources */,
+				F4B4E0C2271F462D0057833D /* Food.swift in Sources */,
+				F4B4E0C8271F4A5D0057833D /* Restaurant.swift in Sources */,
 				F4B50021271815D4007F9DE0 /* LoadJSON.swift in Sources */,
-				F4766FD22716A1FB00E3AD87 /* ZotMeal_2App.swift in Sources */,
+				F4B4E0C6271F49140057833D /* Station.swift in Sources */,
+				F4766FD22716A1FB00E3AD87 /* ZotMeal_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
