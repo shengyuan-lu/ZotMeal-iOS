@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F4766FD22716A1FB00E3AD87 /* ZotMeal_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */; };
-		F4766FD42716A1FB00E3AD87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD32716A1FB00E3AD87 /* ContentView.swift */; };
+		F4766FD42716A1FB00E3AD87 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD32716A1FB00E3AD87 /* MainView.swift */; };
 		F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD52716A1FE00E3AD87 /* Assets.xcassets */; };
 		F4766FD92716A1FE00E3AD87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */; };
 		F4B4E0C2271F462D0057833D /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B4E0C1271F462D0057833D /* Food.swift */; };
@@ -20,9 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F4766FCE2716A1FB00E3AD87 /* ZotMeal 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZotMeal 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4766FCE2716A1FB00E3AD87 /* ZotMeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZotMeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotMeal_App.swift; sourceTree = "<group>"; };
-		F4766FD32716A1FB00E3AD87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F4766FD32716A1FB00E3AD87 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F4766FD52716A1FE00E3AD87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4B4E0C1271F462D0057833D /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
@@ -45,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F41E2AD727281EB2004DF007 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4766FD32716A1FB00E3AD87 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F4598235271AAF4900BE591E /* JSON Parsing */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,7 +75,7 @@
 		F4766FC52716A1FB00E3AD87 = {
 			isa = PBXGroup;
 			children = (
-				F4766FD02716A1FB00E3AD87 /* ZotMeal 2 */,
+				F4766FD02716A1FB00E3AD87 /* ZotMeal */,
 				F4766FCF2716A1FB00E3AD87 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,16 +83,16 @@
 		F4766FCF2716A1FB00E3AD87 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F4766FCE2716A1FB00E3AD87 /* ZotMeal 2.app */,
+				F4766FCE2716A1FB00E3AD87 /* ZotMeal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F4766FD02716A1FB00E3AD87 /* ZotMeal 2 */ = {
+		F4766FD02716A1FB00E3AD87 /* ZotMeal */ = {
 			isa = PBXGroup;
 			children = (
 				F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */,
-				F4766FD32716A1FB00E3AD87 /* ContentView.swift */,
+				F41E2AD727281EB2004DF007 /* View */,
 				F4598236271AAF5600BE591E /* Data Structure */,
 				F4598235271AAF4900BE591E /* JSON Parsing */,
 				F4B5001D2717DC8C007F9DE0 /* Local JSON */,
@@ -92,7 +100,7 @@
 				F4B5001C2717DC80007F9DE0 /* ZotMeal-2-Info.plist */,
 				F4766FD72716A1FE00E3AD87 /* Preview Content */,
 			);
-			path = "ZotMeal 2";
+			path = ZotMeal;
 			sourceTree = "<group>";
 		};
 		F4766FD72716A1FE00E3AD87 /* Preview Content */ = {
@@ -114,9 +122,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F4766FCD2716A1FB00E3AD87 /* ZotMeal 2 */ = {
+		F4766FCD2716A1FB00E3AD87 /* ZotMeal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4766FDC2716A1FE00E3AD87 /* Build configuration list for PBXNativeTarget "ZotMeal 2" */;
+			buildConfigurationList = F4766FDC2716A1FE00E3AD87 /* Build configuration list for PBXNativeTarget "ZotMeal" */;
 			buildPhases = (
 				F4766FCA2716A1FB00E3AD87 /* Sources */,
 				F4766FCB2716A1FB00E3AD87 /* Frameworks */,
@@ -126,9 +134,9 @@
 			);
 			dependencies = (
 			);
-			name = "ZotMeal 2";
+			name = ZotMeal;
 			productName = "ZotMeal 2";
-			productReference = F4766FCE2716A1FB00E3AD87 /* ZotMeal 2.app */;
+			productReference = F4766FCE2716A1FB00E3AD87 /* ZotMeal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,7 +154,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F4766FC92716A1FB00E3AD87 /* Build configuration list for PBXProject "ZotMeal 2" */;
+			buildConfigurationList = F4766FC92716A1FB00E3AD87 /* Build configuration list for PBXProject "ZotMeal" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -159,7 +167,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F4766FCD2716A1FB00E3AD87 /* ZotMeal 2 */,
+				F4766FCD2716A1FB00E3AD87 /* ZotMeal */,
 			);
 		};
 /* End PBXProject section */
@@ -182,7 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4766FD42716A1FB00E3AD87 /* ContentView.swift in Sources */,
+				F4766FD42716A1FB00E3AD87 /* MainView.swift in Sources */,
 				F4B4E0C4271F475D0057833D /* Category.swift in Sources */,
 				F4B4E0C2271F462D0057833D /* Food.swift in Sources */,
 				F4B4E0C8271F4A5D0057833D /* Restaurant.swift in Sources */,
@@ -246,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -301,7 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -318,11 +326,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ZotMeal 2/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ZotMeal/Preview Content\"";
 				DEVELOPMENT_TEAM = WMFKF24VVS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ZotMeal-2-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ZotMeal;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -334,7 +343,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shengyuan-lu.ZotMeal-2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shengyuan-lu.ZotMeal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -349,11 +358,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ZotMeal 2/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ZotMeal/Preview Content\"";
 				DEVELOPMENT_TEAM = WMFKF24VVS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ZotMeal-2-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ZotMeal;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -365,7 +375,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shengyuan-lu.ZotMeal-2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shengyuan-lu.ZotMeal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -376,7 +386,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F4766FC92716A1FB00E3AD87 /* Build configuration list for PBXProject "ZotMeal 2" */ = {
+		F4766FC92716A1FB00E3AD87 /* Build configuration list for PBXProject "ZotMeal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4766FDA2716A1FE00E3AD87 /* Debug */,
@@ -385,7 +395,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4766FDC2716A1FE00E3AD87 /* Build configuration list for PBXNativeTarget "ZotMeal 2" */ = {
+		F4766FDC2716A1FE00E3AD87 /* Build configuration list for PBXNativeTarget "ZotMeal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4766FDD2716A1FE00E3AD87 /* Debug */,

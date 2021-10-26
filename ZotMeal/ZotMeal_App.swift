@@ -11,10 +11,7 @@ import SwiftUI
 struct ZotMeal_App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .onAppear {
-                    let data = LoadJSON().loadLocalJSON(forName: "brandy_dummy_data")
-                }
+            MainView()
         }
     }
 }
