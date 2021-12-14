@@ -16,6 +16,7 @@ struct FoodCell: View {
         HStack {
             Text(food.name)
                 .bold()
+                .fixedSize(horizontal: false, vertical: true)
             Spacer()
             Text(String(food.calories))
         }

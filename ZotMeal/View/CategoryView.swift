@@ -10,7 +10,6 @@ import SwiftUI
 struct CategoryView: View {
     
     @State var category: Category
-    @State var toggleViewAll: Bool = false
     
     let buttonText: String = "View All"
     
@@ -23,29 +22,23 @@ struct CategoryView: View {
             VStack {
                 HStack {
                     Text("Dish")
+                        .font(.footnote)
                     
                     Spacer()
                     
                     Text("Calories")
+                        .font(.footnote)
                 }
                 
                 Divider()
                 
-                ForEach(category.items.prefix(3), id: \.self) { food in
+                ForEach(category.items.prefix(4).sorted(by: {$0.calories > $1.calories}), id: \.self) { food in
                     FoodCell(food: food)
                         .padding(.vertical, 2)
                     Divider()
                 }
                 
                 Spacer()
-                
-                HStack {
-                    Spacer()
-                    GenericButtonView(action: {
-                        toggleViewAll.toggle()
-                    }, buttonText: buttonText)
-                        .padding(.vertical, 10)
-                }
             }
             .padding(.horizontal, 8)
             

@@ -21,6 +21,11 @@ struct StationView: View {
                     .font(.title2)
                 
                 Spacer()
+                
+                GenericButtonView(action: {
+                    
+                }, buttonText: String("View All"), bgColor: Color.yellow, textColor: Color.black)
+                    .padding(.trailing, 8)
             }
             
             ScrollView(.horizontal, showsIndicators: false) {
