@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Category: Codable {
+struct Category: Codable, Hashable {
     let category: String
     let items: [Food]
     
@@ -15,4 +15,22 @@ struct Category: Codable {
         case category
         case items
     }
+    
+    init(category: String, items: [Food]) {
+        self.category = category
+        self.items = items
+    }
 }
+
+func getSampleCategory() -> Category {
+    
+    var foodArray = [Food]()
+    
+    for _ in 0...3 {
+        foodArray.append(getSampleFood())
+    }
+    
+    return Category(category: "Condiments", items: foodArray)
+}
+
+

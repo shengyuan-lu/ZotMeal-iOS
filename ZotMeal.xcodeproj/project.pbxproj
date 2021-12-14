@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F45200A1276674A000E9D5EA /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200A0276674A000E9D5EA /* RestaurantModel.swift */; };
+		F45200A327679CE000E9D5EA /* RestaurantBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200A227679CE000E9D5EA /* RestaurantBannerView.swift */; };
+		F45200A62767A4F900E9D5EA /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200A52767A4F900E9D5EA /* UIScreenExtension.swift */; };
+		F45200A82767AF4100E9D5EA /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200A72767AF4100E9D5EA /* CategoryView.swift */; };
+		F45200AA2767AF4F00E9D5EA /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200A92767AF4F00E9D5EA /* FoodCell.swift */; };
+		F45200AC27682B2900E9D5EA /* CategoryTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AB27682B2900E9D5EA /* CategoryTitleView.swift */; };
+		F45200AE27682C0C00E9D5EA /* GenericButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AD27682C0C00E9D5EA /* GenericButtonView.swift */; };
+		F45200B027683C8E00E9D5EA /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AF27683C8E00E9D5EA /* StationView.swift */; };
 		F4766FD22716A1FB00E3AD87 /* ZotMeal_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */; };
 		F4766FD42716A1FB00E3AD87 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD32716A1FB00E3AD87 /* MainView.swift */; };
 		F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD52716A1FE00E3AD87 /* Assets.xcassets */; };
@@ -20,6 +28,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F45200A0276674A000E9D5EA /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
+		F45200A227679CE000E9D5EA /* RestaurantBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantBannerView.swift; sourceTree = "<group>"; };
+		F45200A52767A4F900E9D5EA /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
+		F45200A72767AF4100E9D5EA /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		F45200A92767AF4F00E9D5EA /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		F45200AB27682B2900E9D5EA /* CategoryTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTitleView.swift; sourceTree = "<group>"; };
+		F45200AD27682C0C00E9D5EA /* GenericButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButtonView.swift; sourceTree = "<group>"; };
+		F45200AF27683C8E00E9D5EA /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
 		F4766FCE2716A1FB00E3AD87 /* ZotMeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZotMeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotMeal_App.swift; sourceTree = "<group>"; };
 		F4766FD32716A1FB00E3AD87 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -49,8 +65,30 @@
 			isa = PBXGroup;
 			children = (
 				F4766FD32716A1FB00E3AD87 /* MainView.swift */,
+				F45200A227679CE000E9D5EA /* RestaurantBannerView.swift */,
+				F45200AF27683C8E00E9D5EA /* StationView.swift */,
+				F45200A72767AF4100E9D5EA /* CategoryView.swift */,
+				F45200AB27682B2900E9D5EA /* CategoryTitleView.swift */,
+				F45200A92767AF4F00E9D5EA /* FoodCell.swift */,
+				F45200AD27682C0C00E9D5EA /* GenericButtonView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F452009F2766747D00E9D5EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F45200A0276674A000E9D5EA /* RestaurantModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F45200A42767A4E300E9D5EA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F45200A52767A4F900E9D5EA /* UIScreenExtension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		F4598235271AAF4900BE591E /* JSON Parsing */ = {
@@ -93,7 +131,9 @@
 			children = (
 				F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */,
 				F41E2AD727281EB2004DF007 /* View */,
+				F452009F2766747D00E9D5EA /* Model */,
 				F4598236271AAF5600BE591E /* Data Structure */,
+				F45200A42767A4E300E9D5EA /* Helper */,
 				F4598235271AAF4900BE591E /* JSON Parsing */,
 				F4B5001D2717DC8C007F9DE0 /* Local JSON */,
 				F4766FD52716A1FE00E3AD87 /* Assets.xcassets */,
@@ -191,12 +231,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4766FD42716A1FB00E3AD87 /* MainView.swift in Sources */,
+				F45200AC27682B2900E9D5EA /* CategoryTitleView.swift in Sources */,
+				F45200AA2767AF4F00E9D5EA /* FoodCell.swift in Sources */,
+				F45200A327679CE000E9D5EA /* RestaurantBannerView.swift in Sources */,
+				F45200B027683C8E00E9D5EA /* StationView.swift in Sources */,
 				F4B4E0C4271F475D0057833D /* Category.swift in Sources */,
+				F45200A1276674A000E9D5EA /* RestaurantModel.swift in Sources */,
+				F45200AE27682C0C00E9D5EA /* GenericButtonView.swift in Sources */,
 				F4B4E0C2271F462D0057833D /* Food.swift in Sources */,
+				F45200A82767AF4100E9D5EA /* CategoryView.swift in Sources */,
 				F4B4E0C8271F4A5D0057833D /* Restaurant.swift in Sources */,
 				F4B50021271815D4007F9DE0 /* LoadJSON.swift in Sources */,
 				F4B4E0C6271F49140057833D /* Station.swift in Sources */,
 				F4766FD22716A1FB00E3AD87 /* ZotMeal_App.swift in Sources */,
+				F45200A62767A4F900E9D5EA /* UIScreenExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

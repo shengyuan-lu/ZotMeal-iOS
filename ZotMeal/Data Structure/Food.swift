@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
-struct Food: Codable {
+struct Food: Codable, Hashable {
     let name: String
     let calories: Int
     let description: String
@@ -27,4 +28,20 @@ struct Food: Codable {
         case isPlantForward
         case isWholeGrains
     }
+    
+    init(name: String, calories: Int, description: String, isVegan: Bool, isVegetarian: Bool, isEatWell: Bool, isPlantForward: Bool, isWholeGrains: Bool) {
+        self.name = name
+        self.calories = calories
+        self.description = description
+        self.isVegan = isVegan
+        self.isVegetarian = isVegetarian
+        self.isEatWell = isEatWell
+        self.isPlantForward = isPlantForward
+        self.isWholeGrains = isWholeGrains
+    }
+    
+}
+
+func getSampleFood() -> Food {
+    return Food(name: "Beijing Duck", calories: 199, description: "Famous dish among tourists", isVegan: false, isVegetarian: false, isEatWell: true, isPlantForward: false, isWholeGrains: false)
 }

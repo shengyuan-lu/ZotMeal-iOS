@@ -1,17 +1,14 @@
-//
-//  ZotMeal_2App.swift
-//  ZotMeal 2
-//
-//  Created by Shengyuan Lu on 10/12/21.
-//
-
 import SwiftUI
 
 @main
 struct ZotMeal_App: App {
+    
+    @StateObject var restaurantModel:RestaurantModel = RestaurantModel()
+    
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(restaurantModel)
         }
     }
 }

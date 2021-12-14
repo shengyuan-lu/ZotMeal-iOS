@@ -28,4 +28,10 @@ class LoadJSON {
         return nil
     }
     
+    /*
+    func loadRemoteJSON(forName name:String) -> Data? {
+        
+    }
+    */
+    
 }
