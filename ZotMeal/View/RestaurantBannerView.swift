@@ -18,24 +18,26 @@ struct RestaurantBannerView: View {
             Image(restaurantModel.restaurant?.restaurantName ?? "")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: UIScreen.screenWidth, height: 120, alignment: .center)
+                .frame(width: UIScreen.screenWidth, height: 180, alignment: .center)
                 .clipped()
             
             VStack {
+                
+                Spacer()
+                
                 HStack {
                     Text(restaurantModel.restaurant?.restaurantName ?? "")
                         .bold()
-                        .font(.title2)
+                        .font(.title)
                         .foregroundColor(.white)
-                        .shadow(color: Color.black, radius: 1, x: 1, y: 1)
-                        .padding(10)
+                        .shadow(color: Color.black, radius: 5, x: 5, y: 5)
+                        .padding(16)
                     
                     Spacer()
                 }
-                Spacer()
             }
         }
-        .frame(width: UIScreen.screenWidth, height: 120, alignment: .center)
+        .frame(width: UIScreen.screenWidth, height: 180, alignment: .center)
     }
 }
 

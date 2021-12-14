@@ -7,21 +7,24 @@ struct MainView: View {
     var body: some View {
         
         NavigationView {
-            
-            VStack {
-                RestaurantBannerView()
-                    .navigationBarTitle("ZotMeal")
-                    .padding(.bottom, 8)
                 
                 ScrollView(.vertical, showsIndicators: true) {
-                    VStack(spacing: 20) {
-                        ForEach(restaurantModel.restaurant!.allMenu, id: \.self) { station in
+                    
+                    VStack {
+                        RestaurantBannerView()
+                            .padding(.bottom, 8)
+                        
+                    VStack(spacing: 24) {
+                        ForEach(restaurantModel.restaurant?.allMenu ?? getEmptyRestaurant().allMenu, id: \.self) { station in
                             StationView(station: station)
                         }
                     }
+                    .padding(.leading, 16)
                 }
-                .padding(.leading, 10)
+
             }
+            .navigationBarTitle("ZotMeal")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

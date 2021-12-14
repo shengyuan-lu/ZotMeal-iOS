@@ -22,11 +22,10 @@ struct StationView: View {
                 
                 Spacer()
             }
-
             
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 10) {
-                    ForEach(station.menu, id: \.self) { menu in
+                HStack(spacing: 16) {
+                    ForEach(station.menu.sorted(by: { $0.items.count > $1.items.count }), id: \.self) { menu in
                         CategoryView(category: menu)
                     }
                 }

@@ -27,5 +27,17 @@ struct Restaurant: Codable {
         self.restaurantName = try container.decode(String.self, forKey: .restaurantName)
         self.allMenu = all
     }
+    
+    init(refreshTime: Date, restaurantName: String, allMenu: [Station]) {
+        self.refreshTime = refreshTime
+        self.restaurantName = restaurantName
+        self.allMenu = allMenu
+    }
+    
+    
 }
 
+func getEmptyRestaurant() -> Restaurant {
+    let emptyMenu = [Station]()
+    return Restaurant(refreshTime: Date(), restaurantName: "", allMenu: emptyMenu)
+}

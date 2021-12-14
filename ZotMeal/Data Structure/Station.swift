@@ -32,3 +32,4 @@ func getSampleStation() -> Station {
     
     return Station(station: "Ember / Grill", menu: categoryArray)
 }
+
