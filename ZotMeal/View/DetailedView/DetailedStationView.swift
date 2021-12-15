@@ -19,7 +19,7 @@ struct DetailedStationView: View {
                 DetailedCategoryView(category: category)
                     .padding(.bottom, 8)
             }
-            .padding(16)
+            .padding([.horizontal, .bottom], 16)
         }
         .navigationTitle(station.station)
     }

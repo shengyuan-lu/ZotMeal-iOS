@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F420176127697FCF0064FF86 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F420176027697FCF0064FF86 /* WebView.swift */; };
+		F4201763276982030064FF86 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4201762276982030064FF86 /* Constants.swift */; };
+		F4201765276985A20064FF86 /* WebSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4201764276985A20064FF86 /* WebSearchView.swift */; };
 		F45200A1276674A000E9D5EA /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200A0276674A000E9D5EA /* RestaurantModel.swift */; };
 		F45200A327679CE000E9D5EA /* RestaurantBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200A227679CE000E9D5EA /* RestaurantBannerView.swift */; };
 		F45200A62767A4F900E9D5EA /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200A52767A4F900E9D5EA /* UIScreenExtension.swift */; };
@@ -34,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F420176027697FCF0064FF86 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		F4201762276982030064FF86 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F4201764276985A20064FF86 /* WebSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchView.swift; sourceTree = "<group>"; };
 		F45200A0276674A000E9D5EA /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		F45200A227679CE000E9D5EA /* RestaurantBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantBannerView.swift; sourceTree = "<group>"; };
 		F45200A52767A4F900E9D5EA /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
@@ -84,8 +90,17 @@
 				F45200A92767AF4F00E9D5EA /* SimpleFoodCell.swift */,
 				F4BEBE3D276969000043C603 /* DetailedView */,
 				F4BEBE3C276967610043C603 /* Buttons */,
+				F4201764276985A20064FF86 /* WebSearchView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F420175F27697FB70064FF86 /* UIViewConversion */ = {
+			isa = PBXGroup;
+			children = (
+				F420176027697FCF0064FF86 /* WebView.swift */,
+			);
+			path = UIViewConversion;
 			sourceTree = "<group>";
 		};
 		F452009F2766747D00E9D5EA /* Model */ = {
@@ -100,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				F45200A52767A4F900E9D5EA /* UIScreenExtension.swift */,
+				F4201762276982030064FF86 /* Constants.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -144,6 +160,7 @@
 			children = (
 				F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */,
 				F41E2AD727281EB2004DF007 /* View */,
+				F420175F27697FB70064FF86 /* UIViewConversion */,
 				F452009F2766747D00E9D5EA /* Model */,
 				F4598236271AAF5600BE591E /* Data Structure */,
 				F45200A42767A4E300E9D5EA /* Helper */,
@@ -270,12 +287,14 @@
 				F45200A327679CE000E9D5EA /* RestaurantBannerView.swift in Sources */,
 				F45200B027683C8E00E9D5EA /* StationView.swift in Sources */,
 				F4ABC336276976B9008A32ED /* DetailedStationView.swift in Sources */,
+				F4201763276982030064FF86 /* Constants.swift in Sources */,
 				F4B4E0C4271F475D0057833D /* Category.swift in Sources */,
 				F45200A1276674A000E9D5EA /* RestaurantModel.swift in Sources */,
 				F4BEBE39276958350043C603 /* GenericButtonWithoutLabel.swift in Sources */,
 				F45200AE27682C0C00E9D5EA /* GenericButtonWithLabelView.swift in Sources */,
 				F4BEBE35276929D90043C603 /* ExpandButtonView.swift in Sources */,
 				F4B4E0C2271F462D0057833D /* Food.swift in Sources */,
+				F4201765276985A20064FF86 /* WebSearchView.swift in Sources */,
 				F45200A82767AF4100E9D5EA /* CategoryView.swift in Sources */,
 				F4B4E0C8271F4A5D0057833D /* Restaurant.swift in Sources */,
 				F4B50021271815D4007F9DE0 /* LoadJSON.swift in Sources */,
@@ -285,6 +304,7 @@
 				F4BEBE3B276967550043C603 /* FoodSpecView.swift in Sources */,
 				F45200A62767A4F900E9D5EA /* UIScreenExtension.swift in Sources */,
 				F4BEBE3727693D850043C603 /* DetailedFoodCell.swift in Sources */,
+				F420176127697FCF0064FF86 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

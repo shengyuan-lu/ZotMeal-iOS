@@ -12,6 +12,8 @@ struct DetailedFoodCell: View {
     @State var food: Food
     @State var isExpanded: Bool = false
     
+    @State private var showingWebSearch = false
+    
     var body: some View {
         
         VStack(spacing: 8) {
@@ -35,8 +37,11 @@ struct DetailedFoodCell: View {
                 }
                 
                 GenericButtonWithoutLabel(action: {
-                    
+                    self.showingWebSearch.toggle()
                 }, systemName: "magnifyingglass.circle.fill", imageColor: Color.blue)
+            }
+            .sheet(isPresented: $showingWebSearch) {
+                WebSearchView(url: getURLfromName(name: food.name))
             }
             
             Divider()
@@ -75,8 +80,35 @@ struct DetailedFoodCell: View {
             }
             
             Divider()
-            
         }
+    }
+    
+    func getURLfromName(name: String) -> URL{
+        let url = Constants.googleSearchURL + processName(name: name)
+        return URL(string: url)!
+    }
+    
+    func processName(name: String) -> String {
+        var str = ""
+        let postStr = removeSpecialCharsFromString(text: name)
+        let strArray = postStr.split(separator: " ")
+        
+        print(strArray)
+        
+        for item in strArray {
+            str.append(contentsOf: item)
+            str.append("+")
+        }
+        
+        let string = str.dropLast()
+        
+        return String(string)
+    }
+    
+
+    func removeSpecialCharsFromString(text: String) -> String {
+        let okayChars = Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890")
+        return text.filter {okayChars.contains($0) }
     }
 }
 

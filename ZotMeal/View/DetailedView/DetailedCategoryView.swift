@@ -20,10 +20,9 @@ struct DetailedCategoryView: View {
                 Divider()
                 
                 DetailedFoodCell(food: food)
-                    .padding(.vertical, 2)
                     .padding(.horizontal, 16)
             }
-            .padding(.vertical, 8)
+            .padding(.bottom, 8)
             
         }
         .overlay(

@@ -44,6 +44,7 @@ struct FoodSpecView: View {
             }
         }
     }
+    
 }
 
 struct FoodSpecView_Previews: PreviewProvider {
