@@ -9,6 +9,6 @@ import Foundation
 
 struct Constants {
     static var googleSearchURL = "https://www.google.com/search?q="
-    // static var brandyURL = ""
+    static var brandyURL = "https://zotmeal-backend.vercel.app/api?location=Brandywine"
     // static var anteateryURL = ""
 }

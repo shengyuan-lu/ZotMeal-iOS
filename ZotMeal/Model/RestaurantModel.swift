@@ -12,10 +12,30 @@ class RestaurantModel: ObservableObject {
     
     @Published var restaurant: Restaurant?
     
+    let isDevModeOn: Bool = true
+    
     init() {
-        let data = LoadJSON().loadLocalJSON(forName: "brandy_dummy_data")
-        loadRestaurant(data: data)
+        reloadData()
     }
+    
+    func reloadData() {
+        
+        var data: Data?
+        
+        if isDevModeOn {
+            
+            data = LoadJSON().loadLocalJSON(forName: "brandy_dummy_data")
+            
+        } else {
+            
+            data = LoadJSON().loadRemoteJSON(forURL: Constants.brandyURL)
+            
+        }
+        
+        loadRestaurant(data: data)
+        
+    }
+    
     
     func loadRestaurant(data: Data?) -> Void {
         let decoder = JSONDecoder()

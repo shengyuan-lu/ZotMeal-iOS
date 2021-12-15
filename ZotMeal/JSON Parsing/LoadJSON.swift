@@ -21,17 +21,25 @@ class LoadJSON {
             }
             
         } catch {
-            print("Error when parsing local JSON: \(error)")
-            
+            print("Error when parsing local JSON: \(error.localizedDescription)")
         }
         
         return nil
     }
     
-    /*
-    func loadRemoteJSON(forName name:String) -> Data? {
-        
-    }
-    */
     
+    func loadRemoteJSON(forURL urlString: String) -> Data? {
+        
+        let url = URL(string: urlString)
+        
+        var d: Data? = nil
+        
+        URLSession.shared.dataTask(with: url!) { data, response, err in
+            
+            d = data
+            
+        }.resume()
+        
+        return d
+    }
 }
