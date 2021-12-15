@@ -22,7 +22,7 @@ struct WebSearchView: View {
                         presentationMode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: "xmark.circle.fill")
-                            .font(.title)
+                            .font(.title2)
                             .foregroundColor(.red)
                     }
                     

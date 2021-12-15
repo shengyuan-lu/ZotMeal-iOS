@@ -64,15 +64,18 @@ struct DetailedFoodCell: View {
                 }
             }
             
-            Divider()
-            
-            HStack {
-                Text("Nutrition Info")
-                    .bold()
+            if hasNutritionInfo() {
                 
-                Spacer()
+                Divider()
                 
-                ExpandButtonView(isExpanded: $isExpanded)
+                HStack {
+                    Text("Nutrition Info")
+                        .bold()
+                    
+                    Spacer()
+                    
+                    ExpandButtonView(isExpanded: $isExpanded)
+                }
             }
             
             if isExpanded {
@@ -83,10 +86,20 @@ struct DetailedFoodCell: View {
         }
     }
     
+    func hasNutritionInfo() -> Bool {
+        if (food.isVegetarian == false && food.isVegan == false && food.isPlantForward == false && food.isEatWell == false && food.isWholeGrains == false) {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    
     func getURLfromName(name: String) -> URL{
         let url = Constants.googleSearchURL + processName(name: name)
         return URL(string: url)!
     }
+    
     
     func processName(name: String) -> String {
         var str = ""

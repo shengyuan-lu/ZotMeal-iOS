@@ -12,6 +12,7 @@ struct Food: Codable, Hashable {
     let name: String
     let calories: Int
     let description: String
+    
     let isVegan: Bool
     let isVegetarian: Bool
     let isEatWell: Bool
