@@ -15,11 +15,15 @@ struct RestaurantBannerView: View {
         
         ZStack {
             
-            Image(restaurantModel.restaurant?.restaurantName ?? "")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: UIScreen.screenWidth, height: 180, alignment: .center)
-                .clipped()
+            ZStack{
+                Image(restaurantModel.restaurant?.restaurantName ?? "")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: UIScreen.screenWidth, height: 180, alignment: .center)
+                    .clipped()
+                
+                LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .center, endPoint: .bottom)
+            }
             
             VStack {
                 
@@ -31,13 +35,31 @@ struct RestaurantBannerView: View {
                         .font(.title)
                         .foregroundColor(.white)
                         .shadow(color: Color.black, radius: 5, x: 5, y: 5)
-                        .padding(16)
+                    
+                    
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("Menu Updated: " + getMenuUpdateTimeInString())
+                        .bold()
+                        .foregroundColor(.white)
+                        .shadow(color: Color.black, radius: 5, x: 5, y: 5)
                     
                     Spacer()
                 }
             }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
         }
         .frame(width: UIScreen.screenWidth, height: 180, alignment: .center)
+    }
+    
+    func getMenuUpdateTimeInString() -> String {
+        let date = restaurantModel.restaurant?.refreshTime ?? Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        return dateFormatter.string(from: date)
     }
 }
 

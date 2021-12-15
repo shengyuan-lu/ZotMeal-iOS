@@ -9,7 +9,7 @@ import Foundation
 
 struct Category: Codable, Hashable {
     let category: String
-    let items: [Food]
+    var items: [Food]
     
     enum CodingKeys: String, CodingKey {
         case category

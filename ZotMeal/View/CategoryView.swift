@@ -10,8 +10,8 @@ import SwiftUI
 struct CategoryView: View {
     
     @State var category: Category
-    
-    let buttonText: String = "View All"
+    @State var showMore: Bool = false
+    @Binding var isExpanded: Bool
     
     var body: some View {
         
@@ -30,15 +30,22 @@ struct CategoryView: View {
                         .font(.footnote)
                 }
                 
-                Divider()
-                
-                ForEach(category.items.prefix(4).sorted(by: {$0.calories > $1.calories}), id: \.self) { food in
-                    FoodCell(food: food)
-                        .padding(.vertical, 2)
+                ForEach(returnItemArray(), id: \.self) { food in
                     Divider()
+                    
+                    SimpleFoodCell(food: food)
+                        .padding(.vertical, 2)
                 }
                 
                 Spacer()
+                
+                if category.items.count > 4 {
+                    
+                    Divider()
+                    
+                    ExpandButtonView(isExpanded: $isExpanded)
+                        .padding(.bottom, 8)
+                }
             }
             .padding(.horizontal, 8)
             
@@ -51,12 +58,18 @@ struct CategoryView: View {
         .frame(width: 220)
     }
     
-    
+    func returnItemArray() -> [Food] {
+        if !isExpanded {
+            return Array(category.items.sorted(by: {$0.calories > $1.calories}).prefix(4))
+        } else {
+            return category.items.sorted(by: {$0.calories > $1.calories})
+        }
+    }
 }
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryView(category: getSampleCategory())
+        CategoryView(category: getSampleCategory(), isExpanded: Binding.constant(true))
             .previewLayout(PreviewLayout.sizeThatFits)
             .previewDisplayName("Default preview")
     }

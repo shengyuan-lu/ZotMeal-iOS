@@ -12,10 +12,11 @@ struct CategoryTitleView: View {
     @State var category: Category
     
     var body: some View {
+        
         HStack {
             Spacer()
             
-            Text(category.category)
+            Text(category.category + " (" + String(category.items.count) + ")")
                 .foregroundColor(Color.white)
                 .bold()
                 .frame(alignment: .center)
@@ -24,6 +25,7 @@ struct CategoryTitleView: View {
             Spacer()
         }
         .background(Color.blue)
+        
     }
 }
 

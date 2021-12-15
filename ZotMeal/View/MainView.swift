@@ -14,12 +14,12 @@ struct MainView: View {
                         RestaurantBannerView()
                             .padding(.bottom, 8)
                         
-                    VStack(spacing: 24) {
+                    VStack(spacing: 12) {
                         ForEach(restaurantModel.restaurant?.allMenu ?? getEmptyRestaurant().allMenu, id: \.self) { station in
                             StationView(station: station)
                         }
                     }
-                    .padding(.leading, 16)
+                    .padding(.leading, 12)
                 }
 
             }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FoodCell: View {
+struct SimpleFoodCell: View {
     
     @State var food: Food
     
@@ -24,9 +24,9 @@ struct FoodCell: View {
     }
 }
 
-struct FoodCell_Previews: PreviewProvider {
+struct SimpleFoodCell_Previews: PreviewProvider {
     static var previews: some View {
-        FoodCell(food: getSampleFood())
+        SimpleFoodCell(food: getSampleFood())
             .previewLayout(PreviewLayout.sizeThatFits)
             .previewDisplayName("Default preview")
     }

@@ -43,5 +43,5 @@ struct Food: Codable, Hashable {
 }
 
 func getSampleFood() -> Food {
-    return Food(name: "Beijing Duck", calories: 199, description: "Famous dish among tourists", isVegan: false, isVegetarian: false, isEatWell: true, isPlantForward: false, isWholeGrains: false)
+    return Food(name: "Beijing Duck", calories: 199, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", isVegan: true, isVegetarian: false, isEatWell: true, isPlantForward: false, isWholeGrains: false)
 }
