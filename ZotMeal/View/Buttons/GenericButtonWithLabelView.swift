@@ -14,6 +14,7 @@ struct GenericButtonWithLabelView: View {
     let systemImageName: String
     let bgColor: Color
     let textColor: Color
+    let edgeInsets: EdgeInsets
     
     var body: some View {
         
@@ -32,7 +33,7 @@ struct GenericButtonWithLabelView: View {
                     
             }
             .foregroundColor(textColor)
-            .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+            .padding(edgeInsets)
             .background(bgColor)
             .cornerRadius(8)
         }
@@ -43,7 +44,7 @@ struct GenericButtonWithLabelView_Previews: PreviewProvider {
     static var previews: some View {
         GenericButtonWithLabelView(action: {
             // DO NOTHING FOR PREVIEW
-        }, buttonText: String("View All"), systemImageName: "", bgColor: Color.blue, textColor: Color.black)
+        }, buttonText: String("View All"), systemImageName: "", bgColor: Color.blue, textColor: Color.black, edgeInsets: EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
             .padding()
             .previewLayout(PreviewLayout.sizeThatFits)
             .previewDisplayName("Default preview")

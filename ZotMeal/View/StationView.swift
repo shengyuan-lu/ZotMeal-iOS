@@ -34,7 +34,7 @@ struct StationView: View {
                 
                 GenericButtonWithLabelView(action: {
                     self.action = 1
-                }, buttonText: buttonText, systemImageName: "", bgColor: Color.yellow, textColor: Color.black)
+                }, buttonText: buttonText, systemImageName: "", bgColor: Color.yellow, textColor: Color.black, edgeInsets: EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                     .padding(.horizontal, 8)
             }
             

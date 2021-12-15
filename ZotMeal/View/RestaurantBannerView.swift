@@ -42,7 +42,6 @@ struct RestaurantBannerView: View {
                 
                 HStack {
                     Text("Menu Updated: " + getMenuUpdateTimeInString())
-                        .bold()
                         .foregroundColor(.white)
                         .shadow(color: Color.black, radius: 5, x: 5, y: 5)
                     

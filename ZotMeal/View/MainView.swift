@@ -30,7 +30,7 @@ struct MainView: View {
             }
             
         } else {
-            Text("Server returns invalid response. Menu can't be loaded.")
+            FailView()
         }
     }
     

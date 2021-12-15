@@ -1,6 +1,6 @@
 //
 //  Restaurant.swift
-//  ZotMeal 2
+//  ZotMeal
 //
 //  Created by Shengyuan Lu on 10/19/21.
 //

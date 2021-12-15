@@ -17,8 +17,11 @@ struct SimpleFoodCell: View {
             Text(food.name)
                 .bold()
                 .fixedSize(horizontal: false, vertical: true)
+            
             Spacer()
+            
             Text(String(food.calories))
+                .padding(.leading, 4)
         }
        
     }
