@@ -53,10 +53,12 @@ struct RestaurantBannerView: View {
             .padding(.vertical, 8)
         }
         .frame(width: UIScreen.screenWidth, height: 180, alignment: .center)
+        
+        
     }
     
     func getMenuUpdateTimeInString() -> String {
-        let date = restaurantModel.restaurant?.refreshTime ?? Date()
+        let date = restaurantModel.restaurant?.refreshTime ?? Date(timeIntervalSince1970: 0)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         return dateFormatter.string(from: date)

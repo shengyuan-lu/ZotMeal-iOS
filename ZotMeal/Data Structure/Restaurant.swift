@@ -10,7 +10,7 @@ import Foundation
 struct Restaurant: Codable {
     let refreshTime: Date
     let restaurantName: String
-    let allMenu: [Station]
+    var allMenu: [Station]
     
     enum CodingKeys: String, CodingKey {
         case refreshTime

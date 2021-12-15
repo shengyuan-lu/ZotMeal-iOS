@@ -19,8 +19,13 @@ class RestaurantModel: ObservableObject {
     
     func loadRestaurant(data: Data?) -> Void {
         let decoder = JSONDecoder()
+        
         do {
-            self.restaurant = try decoder.decode(Restaurant.self, from: data!)
+            
+            if let d = data {
+                self.restaurant = try decoder.decode(Restaurant.self, from: d)
+            }
+            
             print("Convert JSON to restaurant object successfully")
         } catch {
             print (error)

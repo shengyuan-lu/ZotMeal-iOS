@@ -6,7 +6,9 @@ struct MainView: View {
     
     var body: some View {
         
-        NavigationView {
+        if isModelLoadingSuccessful() {
+            
+            NavigationView {
                 
                 ScrollView(.vertical, showsIndicators: true) {
                     
@@ -14,17 +16,31 @@ struct MainView: View {
                         RestaurantBannerView()
                             .padding(.bottom, 8)
                         
-                    VStack(spacing: 12) {
-                        ForEach(restaurantModel.restaurant?.allMenu ?? getEmptyRestaurant().allMenu, id: \.self) { station in
-                            StationView(station: station)
+                        VStack(spacing: 12) {
+                            ForEach(restaurantModel.restaurant?.allMenu ?? getEmptyRestaurant().allMenu, id: \.self) { station in
+                                StationView(station: station)
+                            }
                         }
+                        .padding(.leading, 12)
                     }
-                    .padding(.leading, 12)
+                    
                 }
-
+                .navigationBarTitle("ZotMeal")
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .navigationBarTitle("ZotMeal")
-            .navigationBarTitleDisplayMode(.inline)
+            
+        } else {
+            Text("Something went wrong. Menu can't be loaded.")
+        }
+    }
+    
+    func isModelLoadingSuccessful() -> Bool {
+        
+        if (restaurantModel.restaurant?.refreshTime == nil || restaurantModel.restaurant?.restaurantName == nil || restaurantModel.restaurant?.allMenu == nil) {
+            return false
+            
+        } else {
+            return true
         }
     }
 }
