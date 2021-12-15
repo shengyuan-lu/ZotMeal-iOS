@@ -3,7 +3,7 @@
     "restaurant": "Brandywine",
     "all": [
         {
-            "station": "Ember/Grill",
+            "station": "Ember / Grill",
             "menu": [
                 {
                     "category": "Condiments",
@@ -113,7 +113,7 @@
             ]
         },
         {
-            "station": "Grubb/ Mainline",
+            "station": "Grubb / Mainline",
             "menu": [
                 {
                     "category": "Entrées",
@@ -148,7 +148,7 @@
             ]
         },
         {
-            "station": "Hearth/Pizza",
+            "station": "Hearth / Pizza",
             "menu": [
                 {
                     "category": "Pizza",
@@ -245,7 +245,7 @@
             ]
         },
         {
-            "station": "The Farm Stand/ Deli",
+            "station": "The Farm Stand / Deli",
             "menu": [
                 {
                     "category": "Condiments",
@@ -445,7 +445,7 @@
             ]
         },
         {
-            "station": "The Farm Stand/ Salad Bar",
+            "station": "The Farm Stand / Salad Bar",
             "menu": [
                 {
                     "category": "Condiments",
@@ -658,7 +658,7 @@
                             "isWholeGrains": false
                         },
                         {
-                            "name": "\r\nPineapple\t",
+                            "name": "Pineapple",
                             "calories": 0,
                             "description": "N/A",
                             "isVegan": true,

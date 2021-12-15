@@ -35,7 +35,7 @@ struct StationView: View {
                 GenericButtonWithLabelView(action: {
                     self.action = 1
                 }, buttonText: buttonText, systemImageName: "", bgColor: Color.yellow, textColor: Color.black)
-                    .padding(.trailing, 12)
+                    .padding(.horizontal, 8)
             }
             
             

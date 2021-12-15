@@ -26,7 +26,7 @@ struct DetailedFoodCell: View {
                             .font(.title2)
                         
                         Spacer()
-
+                        
                     }
                     
                     HStack {
@@ -46,7 +46,7 @@ struct DetailedFoodCell: View {
             
             Divider()
             
-            VStack(spacing: 4) {
+            VStack(alignment: .leading, spacing: 4) {
                 
                 HStack {
                     Text("Description")
@@ -55,13 +55,12 @@ struct DetailedFoodCell: View {
                     Spacer()
                 }
                 
-                HStack {
-                    Text(food.description)
-                        .font(.callout)
-                        .fixedSize(horizontal: false, vertical: true)
-                    
-                    Spacer()
-                }
+                
+                Text(food.description)
+                    .font(.callout)
+                    .fixedSize(horizontal: false, vertical: true)
+                
+                
             }
             
             if hasNutritionInfo() {
@@ -118,7 +117,7 @@ struct DetailedFoodCell: View {
         return String(string)
     }
     
-
+    
     func removeSpecialCharsFromString(text: String) -> String {
         let okayChars = Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890")
         return text.filter {okayChars.contains($0) }
