@@ -28,7 +28,7 @@ struct WebSearchView: View {
                     
                 }
                 .edgesIgnoringSafeArea(.all)
-                .navigationTitle(Text("Web Search"))
+                .navigationTitle("Web Search")
                 .navigationBarTitleDisplayMode(.inline)
         }
         
