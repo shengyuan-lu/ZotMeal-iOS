@@ -38,6 +38,10 @@ class LoadJSON {
         
         URLSession.shared.dataTask(with: url!) { data, response, err in
             
+            if data == nil {
+                print("Load remote JSON failed: data is nil")
+            }
+            
             d = data
             
         }.resume()

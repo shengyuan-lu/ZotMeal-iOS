@@ -6,37 +6,29 @@ struct MainView: View {
     
     @State var restaurantSelectionIndex: Int = 0
     
+    @State var bannerHeight: CGFloat = 160
+    
     var body: some View {
         
         if isModelLoadingSuccessful() {
             
             NavigationView {
                 
-                ScrollView(.vertical, showsIndicators: true) {
-                    
+                VStack(spacing: 16) {
                     PageView(pages: generateRestaurantBanners(), currentPage: $restaurantSelectionIndex)
-                        .frame(width: UIScreen.screenWidth, height: 180, alignment: .center)
+                        .frame(width: UIScreen.screenWidth, height: bannerHeight, alignment: .center)
                     
-                    TabView(selection: $restaurantSelectionIndex) {
-                        
-                        ForEach(restaurantModel.restaurants, id: \.self) { restaurant in
-                            RestaurantBannerView(restaurant: restaurant)
-                                .padding(.bottom, 8)
+                    ScrollView(.vertical, showsIndicators: true) {
+                        VStack(spacing: 12) {
+                            ForEach(restaurantModel.restaurants[restaurantSelectionIndex].allMenu, id: \.self) { station in
+                                StationView(station: station)
+                            }
                         }
-                        
+                        .padding(.leading, 12)
                     }
-                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                    
-                    
-                    VStack(spacing: 12) {
-                        ForEach(restaurantModel.restaurants[restaurantSelectionIndex].allMenu, id: \.self) { station in
-                            StationView(station: station)
-                        }
-                    }
-                    .padding(.leading, 12)
+                    .navigationBarTitle("ZotMeal")
+                    .navigationBarTitleDisplayMode(.inline)
                 }
-                .navigationBarTitle("ZotMeal")
-                .navigationBarTitleDisplayMode(.inline)
             }
             
         } else {
@@ -49,7 +41,7 @@ struct MainView: View {
         var bannerViews = [RestaurantBannerView]()
         
         for restaurant in restaurantModel.restaurants {
-            bannerViews.append(RestaurantBannerView(restaurant: restaurant))
+            bannerViews.append(RestaurantBannerView(restaurant: restaurant, height: bannerHeight))
         }
         
         return bannerViews
@@ -58,7 +50,7 @@ struct MainView: View {
     
     func isModelLoadingSuccessful() -> Bool {
         
-        if restaurantModel.restaurants.count < 2 {
+        if restaurantModel.restaurants.count == 0 {
             
             return false
             

@@ -22,9 +22,9 @@ struct FailView: View {
             VStack(spacing: 10) {
                 GenericButtonWithLabelView(action: {
                     
-                    restaurantModel.reloadData()
+                    restaurantModel.loadRealData()
                     
-                }, buttonText: "Try Again", systemImageName: "arrow.clockwise", bgColor: .blue, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
+                }, buttonText: "Load Real Remote JSON", systemImageName: "arrow.clockwise", bgColor: .blue, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                 
                 
                 Text("Debugging")
@@ -34,13 +34,13 @@ struct FailView: View {
                     
                     restaurantModel.loadLocalDemoData()
                     
-                }, buttonText: "Load Local Demo Data", systemImageName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
+                }, buttonText: "Load Local Demo JSON", systemImageName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                 
                 GenericButtonWithLabelView(action: {
                     
                     restaurantModel.loadRemoteDemoData()
                     
-                }, buttonText: "Load Remote Demo Data", systemImageName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
+                }, buttonText: "Load Remote Demo JSON", systemImageName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
             }
             .fixedSize(horizontal: true, vertical: false)
         }

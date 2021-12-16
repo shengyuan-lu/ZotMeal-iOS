@@ -11,6 +11,8 @@ struct RestaurantBannerView: View {
     
     @State var restaurant: Restaurant
     
+    let height: CGFloat?
+    
     var body: some View {
         
         ZStack {
@@ -19,7 +21,7 @@ struct RestaurantBannerView: View {
                 Image(restaurant.restaurantName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: UIScreen.screenWidth, height: 180, alignment: .center)
+                    .frame(width: UIScreen.screenWidth, height: height, alignment: .center)
                     .clipped()
                 
                 LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .center, endPoint: .bottom)
@@ -51,7 +53,7 @@ struct RestaurantBannerView: View {
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
         }
-        .frame(width: UIScreen.screenWidth, height: 180, alignment: .center)
+        .frame(width: UIScreen.screenWidth, height: height, alignment: .center)
         
         
     }
@@ -66,7 +68,7 @@ struct RestaurantBannerView: View {
 
 struct RestaurantBannerView_Previews: PreviewProvider {
     static var previews: some View {
-        RestaurantBannerView(restaurant: getEmptyRestaurant())
+        RestaurantBannerView(restaurant: getEmptyRestaurant(), height: 120)
             .environmentObject(RestaurantModel())
     }
 }

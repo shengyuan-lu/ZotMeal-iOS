@@ -30,6 +30,7 @@ struct WebSearchView: View {
                 .edgesIgnoringSafeArea(.all)
                 .navigationTitle("Web Search")
                 .navigationBarTitleDisplayMode(.inline)
+                .preferredColorScheme(.light)
         }
         
     }

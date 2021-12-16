@@ -13,10 +13,10 @@ class RestaurantModel: ObservableObject {
     @Published var restaurants: [Restaurant] = [Restaurant]()
     
     init() {
-        reloadData()
+        loadRealData()
     }
     
-    func reloadData() {
+    func loadRealData() {
         
         self.restaurants.removeAll()
         
@@ -42,8 +42,8 @@ class RestaurantModel: ObservableObject {
         
         self.restaurants.removeAll()
         
-        let brandyData: Data? = LoadJSON().loadRemoteJSON(forURL: Constants.remoteSampleJsonURL)
-        let antData: Data? = LoadJSON().loadRemoteJSON(forURL: Constants.remoteSampleJsonURL)
+        let brandyData: Data? = LoadJSON().loadRemoteJSON(forURL: Constants.remoteDemoJsonURL)
+        let antData: Data? = LoadJSON().loadRemoteJSON(forURL: Constants.remoteDemoJsonURL)
         
         loadRestaurant(data: brandyData)
         loadRestaurant(data: antData)
@@ -57,9 +57,9 @@ class RestaurantModel: ObservableObject {
             
             if let d = data {
                 self.restaurants.append(try decoder.decode(Restaurant.self, from: d))
+                
+                print("Successfully convert JSON to restaurant objects")
             }
-            
-            print("Convert JSON to restaurant object successfully")
             
         } catch {
             
