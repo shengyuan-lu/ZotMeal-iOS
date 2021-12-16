@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Restaurant: Codable {
+struct Restaurant: Codable, Hashable {
     let refreshTime: Date
     let restaurantName: String
     var allMenu: [Station]

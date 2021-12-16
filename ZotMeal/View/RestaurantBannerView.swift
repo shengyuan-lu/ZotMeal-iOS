@@ -9,14 +9,14 @@ import SwiftUI
 
 struct RestaurantBannerView: View {
     
-    @EnvironmentObject var restaurantModel: RestaurantModel
+    @State var restaurant: Restaurant
     
     var body: some View {
         
         ZStack {
             
             ZStack{
-                Image(restaurantModel.restaurant?.restaurantName ?? "")
+                Image(restaurant.restaurantName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: UIScreen.screenWidth, height: 180, alignment: .center)
@@ -30,7 +30,7 @@ struct RestaurantBannerView: View {
                 Spacer()
                 
                 HStack {
-                    Text(restaurantModel.restaurant?.restaurantName ?? "")
+                    Text(restaurant.restaurantName)
                         .bold()
                         .font(.title)
                         .foregroundColor(.white)
@@ -57,7 +57,7 @@ struct RestaurantBannerView: View {
     }
     
     func getMenuUpdateTimeInString() -> String {
-        let date = restaurantModel.restaurant?.refreshTime ?? Date(timeIntervalSince1970: 0)
+        let date = restaurant.refreshTime
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         return dateFormatter.string(from: date)
@@ -66,7 +66,7 @@ struct RestaurantBannerView: View {
 
 struct RestaurantBannerView_Previews: PreviewProvider {
     static var previews: some View {
-        RestaurantBannerView()
+        RestaurantBannerView(restaurant: getEmptyRestaurant())
             .environmentObject(RestaurantModel())
     }
 }

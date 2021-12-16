@@ -19,18 +19,30 @@ struct FailView: View {
                 .font(.title3)
                 .bold()
             
-            GenericButtonWithLabelView(action: {
+            VStack(spacing: 10) {
+                GenericButtonWithLabelView(action: {
+                    
+                    restaurantModel.reloadData()
+                    
+                }, buttonText: "Try Again", systemImageName: "arrow.clockwise", bgColor: .blue, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                 
-                restaurantModel.reloadData()
                 
-            }, buttonText: "Try Again", systemImageName: "arrow.clockwise", bgColor: .blue, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
-            
-            GenericButtonWithLabelView(action: {
+                Text("Debugging")
                 
-                restaurantModel.loadDemoData()
                 
-            }, buttonText: "Load Demo Data (DEV)", systemImageName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
-            
+                GenericButtonWithLabelView(action: {
+                    
+                    restaurantModel.loadLocalDemoData()
+                    
+                }, buttonText: "Load Local Demo Data", systemImageName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
+                
+                GenericButtonWithLabelView(action: {
+                    
+                    restaurantModel.loadRemoteDemoData()
+                    
+                }, buttonText: "Load Remote Demo Data", systemImageName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
+            }
+            .fixedSize(horizontal: true, vertical: false)
         }
         
     }

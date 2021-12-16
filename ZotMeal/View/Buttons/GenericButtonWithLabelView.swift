@@ -30,7 +30,7 @@ struct GenericButtonWithLabelView: View {
                 
                 Text(buttonText)
                     .font(.body)
-                    
+                
             }
             .foregroundColor(textColor)
             .padding(edgeInsets)

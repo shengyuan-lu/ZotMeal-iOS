@@ -10,28 +10,43 @@ import SwiftUI
 
 class RestaurantModel: ObservableObject {
     
-    @Published var restaurant: Restaurant?
+    @Published var restaurants: [Restaurant] = [Restaurant]()
     
     init() {
         reloadData()
     }
     
-    func loadDemoData() {
-        
-        var data: Data?
-        
-        data = LoadJSON().loadLocalJSON(forName: "brandy_dummy_data")
-        
-        loadRestaurant(data: data)
-    }
-    
     func reloadData() {
         
-        var data: Data?
+        self.restaurants.removeAll()
         
-        data = LoadJSON().loadRemoteJSON(forURL: Constants.brandyURL)
+        let brandyData: Data? = LoadJSON().loadRemoteJSON(forURL: Constants.brandyURL)
+        let antData: Data? = LoadJSON().loadRemoteJSON(forURL: Constants.anteateryURL)
             
-        loadRestaurant(data: data)
+        loadRestaurant(data: brandyData)
+        loadRestaurant(data: antData)
+    }
+    
+    func loadLocalDemoData() {
+        
+        self.restaurants.removeAll()
+        
+        let brandyData: Data? = LoadJSON().loadLocalJSON(forName: "brandy_dummy_data")
+        let antData: Data? = LoadJSON().loadLocalJSON(forName: "anteatery_dummy_data")
+        
+        loadRestaurant(data: brandyData)
+        loadRestaurant(data: antData)
+    }
+    
+    func loadRemoteDemoData() {
+        
+        self.restaurants.removeAll()
+        
+        let brandyData: Data? = LoadJSON().loadRemoteJSON(forURL: Constants.remoteSampleJsonURL)
+        let antData: Data? = LoadJSON().loadRemoteJSON(forURL: Constants.remoteSampleJsonURL)
+        
+        loadRestaurant(data: brandyData)
+        loadRestaurant(data: antData)
     }
     
     
@@ -41,12 +56,15 @@ class RestaurantModel: ObservableObject {
         do {
             
             if let d = data {
-                self.restaurant = try decoder.decode(Restaurant.self, from: d)
+                self.restaurants.append(try decoder.decode(Restaurant.self, from: d))
             }
             
             print("Convert JSON to restaurant object successfully")
+            
         } catch {
+            
             print (error)
+            
         }
     }
 }
