@@ -11,7 +11,7 @@ struct GenericButtonWithLabelView: View {
     
     let action: (() -> Void)
     let buttonText: String
-    let systemImageName: String
+    let systemName: String
     let bgColor: Color
     let textColor: Color
     let edgeInsets: EdgeInsets
@@ -24,8 +24,8 @@ struct GenericButtonWithLabelView: View {
         } label: {
             
             HStack {
-                if systemImageName != "" {
-                    Image(systemName: systemImageName)
+                if systemName != "" {
+                    Image(systemName: systemName)
                 }
                 
                 Text(buttonText)
@@ -44,7 +44,7 @@ struct GenericButtonWithLabelView_Previews: PreviewProvider {
     static var previews: some View {
         GenericButtonWithLabelView(action: {
             // DO NOTHING FOR PREVIEW
-        }, buttonText: String("View All"), systemImageName: "", bgColor: Color.blue, textColor: Color.black, edgeInsets: EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+        }, buttonText: String("View All"), systemName: "", bgColor: Color.blue, textColor: Color.black, edgeInsets: EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
             .padding()
             .previewLayout(PreviewLayout.sizeThatFits)
             .previewDisplayName("Default preview")

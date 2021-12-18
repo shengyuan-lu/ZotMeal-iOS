@@ -34,7 +34,7 @@ struct StationView: View {
                 
                 GenericButtonWithLabelView(action: {
                     self.action = 1
-                }, buttonText: buttonText, systemImageName: "", bgColor: Color.yellow, textColor: Color.black, edgeInsets: EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                }, buttonText: buttonText, systemName: "", bgColor: Color.yellow, textColor: Color.black, edgeInsets: EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                     .padding(.horizontal, 8)
             }
             
@@ -48,12 +48,6 @@ struct StationView: View {
                             .onTapGesture {
                                 detailMenuTrigger = 1
                             }
-                        /*
-                        NavigationLink(destination: DetailedCategoryScrollableView(category: menu), tag: 1, selection: $detailMenuTrigger) {
-                            EmptyView()
-                        }
-                         
-                         */
                     }
                 }
                 .padding(.bottom, 16)

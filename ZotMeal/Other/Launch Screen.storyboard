@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="ZotMealIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DnT-x2-4kH">
-                                <rect key="frame" x="103.5" y="-64" width="207" height="1024"/>
+                                <rect key="frame" x="124" y="-64" width="166" height="1024"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
@@ -25,7 +25,7 @@
                         <constraints>
                             <constraint firstItem="DnT-x2-4kH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8gu-bh-Ox9"/>
                             <constraint firstItem="DnT-x2-4kH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="96U-hy-UuZ"/>
-                            <constraint firstItem="DnT-x2-4kH" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.5" id="zdi-P4-ckI"/>
+                            <constraint firstItem="DnT-x2-4kH" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.4" id="zdi-P4-ckI"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -15,8 +15,15 @@ struct MainView: View {
             NavigationView {
                 
                 VStack(spacing: 16) {
-                    PageView(pages: generateRestaurantBanners(), currentPage: $restaurantSelectionIndex)
-                        .frame(width: UIScreen.screenWidth, height: bannerHeight, alignment: .center)
+                    
+                    if restaurantModel.restaurants.count > 1 {
+                        PageView(pages: generateRestaurantBanners(), currentPage: $restaurantSelectionIndex)
+                            .frame(width: UIScreen.screenWidth, height: bannerHeight, alignment: .center)
+                    } else {
+                        RestaurantBannerView(restaurant: restaurantModel.restaurants[0], height: bannerHeight)
+                            .frame(width: UIScreen.screenWidth, height: bannerHeight, alignment: .center)
+                    }
+
                     
                     ScrollView(.vertical, showsIndicators: true) {
                         VStack(spacing: 12) {
@@ -60,8 +67,6 @@ struct MainView: View {
         }
         
     }
-    
-    
 }
 
 struct ContentView_Previews: PreviewProvider {

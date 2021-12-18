@@ -20,27 +20,31 @@ struct FailView: View {
                 .bold()
             
             VStack(spacing: 10) {
+                
+                // Try again
                 GenericButtonWithLabelView(action: {
                     
-                    restaurantModel.loadRealData()
+                    restaurantModel.loadRemoteRealData()
                     
-                }, buttonText: "Load Real Remote JSON", systemImageName: "arrow.clockwise", bgColor: .blue, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
+                }, buttonText: "Load Real Remote JSON", systemName: "arrow.clockwise", bgColor: .blue, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                 
                 
                 Text("Debugging")
                 
-                
+                // Load Local Demo
                 GenericButtonWithLabelView(action: {
                     
                     restaurantModel.loadLocalDemoData()
                     
-                }, buttonText: "Load Local Demo JSON", systemImageName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
+                }, buttonText: "Load Local Demo JSON", systemName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                 
+                
+                // Load Remote Demo
                 GenericButtonWithLabelView(action: {
                     
                     restaurantModel.loadRemoteDemoData()
                     
-                }, buttonText: "Load Remote Demo JSON", systemImageName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
+                }, buttonText: "Load Remote Demo JSON", systemName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
             }
             .fixedSize(horizontal: true, vertical: false)
         }
