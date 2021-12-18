@@ -18,8 +18,10 @@ struct DetailedStationView: View {
             ForEach(station.menu.sorted(by: { $0.items.count > $1.items.count }), id: \.self) { category in
                 DetailedCategoryView(category: category)
                     .padding(.bottom, 8)
+                
             }
             .padding([.horizontal, .bottom], 16)
+            .padding(.top, 8)
         }
         .navigationTitle(station.station)
     }

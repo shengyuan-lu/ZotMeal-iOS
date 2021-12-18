@@ -36,7 +36,7 @@
 		F4BEBE35276929D90043C603 /* ExpandButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE34276929D90043C603 /* ExpandButtonView.swift */; };
 		F4BEBE3727693D850043C603 /* DetailedFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE3627693D850043C603 /* DetailedFoodCell.swift */; };
 		F4BEBE39276958350043C603 /* GenericButtonWithoutLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE38276958350043C603 /* GenericButtonWithoutLabel.swift */; };
-		F4BEBE3B276967550043C603 /* FoodSpecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE3A276967550043C603 /* FoodSpecView.swift */; };
+		F4BEBE3B276967550043C603 /* FoodNutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE3A276967550043C603 /* FoodNutritionView.swift */; };
 		F4DB6405276B41C60016EAB6 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB6404276B41C60016EAB6 /* PageView.swift */; };
 		F4DB6407276B42090016EAB6 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB6406276B42090016EAB6 /* PageViewController.swift */; };
 		F4DB6409276B427F0016EAB6 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB6408276B427F0016EAB6 /* PageControl.swift */; };
@@ -76,7 +76,7 @@
 		F4BEBE34276929D90043C603 /* ExpandButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandButtonView.swift; sourceTree = "<group>"; };
 		F4BEBE3627693D850043C603 /* DetailedFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedFoodCell.swift; sourceTree = "<group>"; };
 		F4BEBE38276958350043C603 /* GenericButtonWithoutLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButtonWithoutLabel.swift; sourceTree = "<group>"; };
-		F4BEBE3A276967550043C603 /* FoodSpecView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSpecView.swift; sourceTree = "<group>"; };
+		F4BEBE3A276967550043C603 /* FoodNutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutritionView.swift; sourceTree = "<group>"; };
 		F4DB6404276B41C60016EAB6 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		F4DB6406276B42090016EAB6 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F4DB6408276B427F0016EAB6 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				F45200A52767A4F900E9D5EA /* UIScreenExtension.swift */,
-				F4201762276982030064FF86 /* Constants.swift */,
 				F4F010BF276DB36900BB458C /* DecodingExtension.swift */,
+				F4201762276982030064FF86 /* Constants.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -210,8 +210,8 @@
 		F4B5001D2717DC8C007F9DE0 /* Local JSON */ = {
 			isa = PBXGroup;
 			children = (
-				F4946B582769D4D500D77292 /* anteatery_dummy_data.json */,
 				F4B5001E2717DC99007F9DE0 /* brandy_dummy_data.json */,
+				F4946B582769D4D500D77292 /* anteatery_dummy_data.json */,
 				F4F010BD276D5CFA00BB458C /* sample.json */,
 			);
 			path = "Local JSON";
@@ -234,7 +234,7 @@
 				F4ABC33327697455008A32ED /* DetailedCategoryView.swift */,
 				F42D272327699B9200F139DB /* DetailedCategoryScrollableView.swift */,
 				F4BEBE3627693D850043C603 /* DetailedFoodCell.swift */,
-				F4BEBE3A276967550043C603 /* FoodSpecView.swift */,
+				F4BEBE3A276967550043C603 /* FoodNutritionView.swift */,
 				F4201764276985A20064FF86 /* WebSearchView.swift */,
 			);
 			path = DetailedView;
@@ -349,7 +349,7 @@
 				F4ABC33427697455008A32ED /* DetailedCategoryView.swift in Sources */,
 				F4B4E0C6271F49140057833D /* Station.swift in Sources */,
 				F4766FD22716A1FB00E3AD87 /* ZotMeal_App.swift in Sources */,
-				F4BEBE3B276967550043C603 /* FoodSpecView.swift in Sources */,
+				F4BEBE3B276967550043C603 /* FoodNutritionView.swift in Sources */,
 				F45200A62767A4F900E9D5EA /* UIScreenExtension.swift in Sources */,
 				F4BEBE3727693D850043C603 /* DetailedFoodCell.swift in Sources */,
 				F420176127697FCF0064FF86 /* WebView.swift in Sources */,

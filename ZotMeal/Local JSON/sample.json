@@ -3,7 +3,7 @@
     "restaurant": "Sample",
     "all": [
         {
-            "station": "The Farm Stand/ Salad Bar",
+            "station": "This is Sample Menu",
             "menu": [
                 {
                     "category": "Condiments",
@@ -616,7 +616,7 @@
             ]
         },
         {
-            "station": "Grubb/ Mainline",
+            "station": "Local Sample",
             "menu": [
                 {
                     "category": "Entrées",

@@ -17,7 +17,12 @@ struct DetailedCategoryView: View {
             CategoryTitleView(category: category)
             
             ForEach(category.items.sorted(by: {$0.getNutritionCalorieValue(key: .calories) > $1.getNutritionCalorieValue(key: .calories)}), id: \.self) { food in
-                Divider()
+                
+                // MARK: - Not the best for efficiency, but keep it for now
+                
+                if food.name != category.items.sorted(by: {$0.getNutritionCalorieValue(key: .calories) > $1.getNutritionCalorieValue(key: .calories)})[0].name {
+                    Divider()
+                }
                 
                 DetailedFoodCell(food: food)
                     .padding(.horizontal, 16)

@@ -15,7 +15,7 @@ struct ExpandButtonView: View {
         Button {
             isExpanded.toggle()
         } label: {
-            HStack(spacing: 8) {
+            HStack(spacing: 4) {
                 
                 if !isExpanded {
                     Text("Expand")

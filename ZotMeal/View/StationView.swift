@@ -41,7 +41,7 @@ struct StationView: View {
             
             ScrollView(.horizontal, showsIndicators: true) {
                 
-                HStack(spacing: 16) {
+                HStack(spacing: 12) {
                     ForEach(station.menu.sorted(by: { $0.items.count > $1.items.count }), id: \.self) { menu in
                         
                         CategoryView(category: menu, isExpanded: $isExpanded)

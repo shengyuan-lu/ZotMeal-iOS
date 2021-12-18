@@ -26,12 +26,13 @@ struct MainView: View {
 
                     
                     ScrollView(.vertical, showsIndicators: true) {
-                        VStack(spacing: 12) {
+                        VStack(spacing: 8) {
                             ForEach(restaurantModel.restaurants[restaurantSelectionIndex].allMenu, id: \.self) { station in
                                 StationView(station: station)
                             }
                         }
                         .padding(.leading, 12)
+                       
                     }
                     .navigationBarTitle("ZotMeal")
                     .navigationBarTitleDisplayMode(.inline)

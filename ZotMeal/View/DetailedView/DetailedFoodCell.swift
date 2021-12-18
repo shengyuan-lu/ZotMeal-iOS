@@ -20,13 +20,13 @@ struct DetailedFoodCell: View {
             
             HStack {
                 VStack(spacing: 4) {
+                    
                     HStack {
                         Text(food.name)
                             .bold()
                             .font(.title2)
                         
                         Spacer()
-                        
                     }
                     
                     HStack {
@@ -56,7 +56,7 @@ struct DetailedFoodCell: View {
                 }
                 
                 
-                Text(food.description)
+                Text(self.getFoodDescription())
                     .font(.callout)
                     .fixedSize(horizontal: false, vertical: true)
                 
@@ -78,7 +78,7 @@ struct DetailedFoodCell: View {
             }
             
             if isExpanded {
-                FoodSpecView(food: food)
+                FoodNutritionView(food: food)
             }
             
             Divider()
@@ -86,7 +86,18 @@ struct DetailedFoodCell: View {
     }
     
     func hasNutritionInfo() -> Bool {
+        
         return true
+        
+    }
+    
+    
+    func getFoodDescription() -> String {
+        if food.description == "" || food.description == "N/A" {
+            return "Not Available"
+        } else {
+            return food.description
+        }
     }
     
     
@@ -100,8 +111,6 @@ struct DetailedFoodCell: View {
         var str = ""
         let postStr = removeSpecialCharsFromString(text: name)
         let strArray = postStr.split(separator: " ")
-        
-        print(strArray)
         
         for item in strArray {
             str.append(contentsOf: item)

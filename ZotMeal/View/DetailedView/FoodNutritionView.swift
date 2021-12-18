@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FoodSpecView: View {
+struct FoodNutritionView: View {
     
     let food: Food
     
@@ -49,6 +49,6 @@ struct FoodSpecView: View {
 
 struct FoodSpecView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodSpecView(food: getSampleFood())
+        FoodNutritionView(food: getSampleFood())
     }
 }
