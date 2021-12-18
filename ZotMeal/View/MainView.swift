@@ -23,19 +23,26 @@ struct MainView: View {
                         RestaurantBannerView(restaurant: restaurantModel.restaurants[0], height: bannerHeight)
                             .frame(width: UIScreen.screenWidth, height: bannerHeight, alignment: .center)
                     }
-
                     
-                    ScrollView(.vertical, showsIndicators: true) {
-                        VStack(spacing: 8) {
-                            ForEach(restaurantModel.restaurants[restaurantSelectionIndex].allMenu, id: \.self) { station in
-                                StationView(station: station)
+                    ScrollViewReader { sv in
+                        ScrollView(.vertical, showsIndicators: true) {
+                            VStack(spacing: 8) {
+                                ForEach(restaurantModel.restaurants[restaurantSelectionIndex].allMenu, id: \.self) { station in
+                                    StationView(station: station)
+                                        .padding(.leading, 12)
+                                }
+                            }
+                            
+                            
+                        }
+                        .navigationBarTitle("ZotMeal")
+                        .navigationBarTitleDisplayMode(.inline)
+                        .onChange(of: restaurantSelectionIndex) { _ in
+                            withAnimation {
+                                sv.scrollTo(restaurantModel.restaurants[restaurantSelectionIndex].allMenu[0], anchor: .top)
                             }
                         }
-                        .padding(.leading, 12)
-                       
                     }
-                    .navigationBarTitle("ZotMeal")
-                    .navigationBarTitleDisplayMode(.inline)
                 }
             }
             

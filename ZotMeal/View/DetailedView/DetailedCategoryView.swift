@@ -19,7 +19,6 @@ struct DetailedCategoryView: View {
             ForEach(category.items.sorted(by: {$0.getNutritionCalorieValue(key: .calories) > $1.getNutritionCalorieValue(key: .calories)}), id: \.self) { food in
                 
                 // MARK: - Not the best for efficiency, but keep it for now
-                
                 if food.name != category.items.sorted(by: {$0.getNutritionCalorieValue(key: .calories) > $1.getNutritionCalorieValue(key: .calories)})[0].name {
                     Divider()
                 }

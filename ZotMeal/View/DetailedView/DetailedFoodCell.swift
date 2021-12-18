@@ -125,7 +125,7 @@ struct DetailedFoodCell: View {
     
     func removeSpecialCharsFromString(text: String) -> String {
         let okayChars = Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890")
-        return text.filter {okayChars.contains($0) }
+        return text.filter { okayChars.contains($0) }
     }
 }
 
