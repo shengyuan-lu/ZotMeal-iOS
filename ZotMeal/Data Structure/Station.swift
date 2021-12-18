@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Station: Codable, Hashable {
+struct Station: Decodable, Hashable {
     let station: String
     let menu: [Category]
     

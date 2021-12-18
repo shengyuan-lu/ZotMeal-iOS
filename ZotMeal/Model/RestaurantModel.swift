@@ -12,12 +12,11 @@ class RestaurantModel: ObservableObject {
     
     @Published var restaurants: [Restaurant] = [Restaurant]()
     
-    let localJSONnames: [String] = ["brandy_dummy_data", "anteatery_dummy_data", "sample"]
-    
     let remoteJSONnames: [String] = [Constants.brandyURL, Constants.anteateryURL]
+    let localJSONnames: [String] = [Constants.brandyDummyName, Constants.antearyDummyName, Constants.sampleDummy]
     
     init() {
-        loadRemoteDemoData()
+        loadRemoteRealData()
     }
     
     func loadRemoteRealData() {

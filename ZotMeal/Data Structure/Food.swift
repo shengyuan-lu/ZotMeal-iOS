@@ -8,41 +8,123 @@
 import Foundation
 import UIKit
 
-struct Food: Codable, Hashable {
-    let name: String
-    let calories: Int
-    let description: String
+struct Food: Decodable, Hashable {
     
-    let isVegan: Bool
-    let isVegetarian: Bool
-    let isEatWell: Bool
-    let isPlantForward: Bool
-    let isWholeGrains: Bool
+    let name: String
+    let description: String
+    let nutrition: [String : Any?]
     
     enum CodingKeys: String, CodingKey {
         case name
-        case calories
         case description
-        case isVegan
-        case isVegetarian
-        case isEatWell
-        case isPlantForward
-        case isWholeGrains
+        case nutrition
     }
     
-    init(name: String, calories: Int, description: String, isVegan: Bool, isVegetarian: Bool, isEatWell: Bool, isPlantForward: Bool, isWholeGrains: Bool) {
+    init(name: String, description: String, nutrition: [String : Any?]) {
         self.name = name
-        self.calories = calories
         self.description = description
-        self.isVegan = isVegan
-        self.isVegetarian = isVegetarian
-        self.isEatWell = isEatWell
-        self.isPlantForward = isPlantForward
-        self.isWholeGrains = isWholeGrains
+        self.nutrition = nutrition
     }
     
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let name = try container.decode(String.self, forKey: CodingKeys.name)
+        let description = try container.decode(String.self, forKey: CodingKeys.description)
+        let nutrition = try container.decode([String : Any].self, forKey: CodingKeys.nutrition)
+        
+        self.name = name
+        self.description = description
+        self.nutrition = nutrition
+    }
+    
+    static func == (lhs: Food, rhs: Food) -> Bool {
+        return lhs.name == rhs.name
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(description)
+    }
+    
+    enum NutritionTFValueKey : String, CaseIterable {
+        case isVegan = "isVegan"
+        case isVegetarian = "isVegetarian"
+        case isEatWell = "isEatWell"
+        case isPlantForward = "isPlantForward"
+        case isWholeGrains = "isWholeGrains"
+    }
+    
+    enum NutritionStrValueKey : String, CaseIterable {
+        case servingSize = "servingSize"
+        case servingUnit = "servingUnit"
+        case totalFat = "totalFat"
+        case transFat = "transFat"
+        case cholesterol = "cholesterol"
+        case sodium = "sodium"
+        case totalCarbohydrates = "totalCarbohydrates"
+        case dietaryFiber = "dietaryFiber"
+        case sugars = "sugars"
+        case protein = "protein"
+        case vitaminA = "vitaminA"
+        case vitaminC = "vitaminC"
+        case calcium = "calcium"
+        case iron = "iron"
+        case saturatedFat = "saturatedFat"
+    }
+    
+    enum NutritionCalorieValueKey : String, CaseIterable {
+        case calories = "calories"
+        case caloriesFromFat = "caloriesFromFat"
+    }
+    
+    func getNutritionTFvalue(key: NutritionTFValueKey) -> Bool {
+        guard let value = self.nutrition[key.rawValue] else { return false }
+        
+        return value as! Bool
+    }
+    
+    func getNutritionStrValue(key: NutritionStrValueKey) -> String? {
+        guard let value = self.nutrition[key.rawValue] else { return nil }
+        
+        return value as? String
+    }
+    
+    func getNutritionCalorieValue(key: NutritionCalorieValueKey) -> Int {
+        guard let value = self.nutrition[key.rawValue] else { return 0 }
+        
+        return Int(value as! String)!
+    }
+
 }
 
 func getSampleFood() -> Food {
-    return Food(name: "Beijing Duck", calories: 199, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", isVegan: true, isVegetarian: false, isEatWell: true, isPlantForward: false, isWholeGrains: false)
+    
+    let sampleNutrition: [String : Any?] = [
+        "isVegan": true,
+        "isVegetarian": true,
+        "servingSize": "2",
+        "servingUnit": "tablespoons",
+        "calories": "60",
+        "caloriesFromFat": "45",
+        "totalFat": "5",
+        "transFat": "0",
+        "cholesterol": "0",
+        "sodium": "200",
+        "totalCarbohydrates": "4",
+        "dietaryFiber": "0",
+        "sugars": "4",
+        "protein": "0",
+        "vitaminA": nil,
+        "vitaminC": nil,
+        "calcium": nil,
+        "iron": nil,
+        "saturatedFat": "0.5",
+        "isEatWell": false,
+        "isPlantForward": false,
+        "isWholeGrains": false
+    ]
+    
+    return Food(name: "Beijing Roasted Duck", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", nutrition: sampleNutrition)
 }
+
+

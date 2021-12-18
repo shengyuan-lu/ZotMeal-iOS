@@ -30,7 +30,7 @@ struct DetailedFoodCell: View {
                     }
                     
                     HStack {
-                        Text(String(food.calories) + " Calories")
+                        Text(String(food.getNutritionCalorieValue(key: .calories)) + " Calories")
                         
                         Spacer()
                     }
@@ -86,11 +86,7 @@ struct DetailedFoodCell: View {
     }
     
     func hasNutritionInfo() -> Bool {
-        if (food.isVegetarian == false && food.isVegan == false && food.isPlantForward == false && food.isEatWell == false && food.isWholeGrains == false) {
-            return false
-        } else {
-            return true
-        }
+        return true
     }
     
     

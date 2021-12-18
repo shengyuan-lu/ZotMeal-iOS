@@ -17,25 +17,25 @@ struct FoodSpecView: View {
             
             HStack(spacing: 16) {
                 
-                if food.isVegan {
+                if food.getNutritionTFvalue(key: .isVegan) {
                     Image("Vegan")
                         .resizable()
                         .frame(width: 50, height: 50)
                 }
                 
-                if food.isVegetarian {
+                if food.getNutritionTFvalue(key: .isVegetarian) {
                     Image("Vegetarian")
                         .resizable()
                         .frame(width: 50, height: 50)
                 }
                 
-                if food.isEatWell {
+                if food.getNutritionTFvalue(key: .isEatWell) {
                     Image("EatWell")
                         .resizable()
                         .frame(width: 50, height: 50)
                 }
                 
-                if food.isPlantForward {
+                if food.getNutritionTFvalue(key: .isPlantForward) {
                     Image("PlantForward")
                         .resizable()
                         .frame(width: 50, height: 50)

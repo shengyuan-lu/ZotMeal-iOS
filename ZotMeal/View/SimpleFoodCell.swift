@@ -20,7 +20,7 @@ struct SimpleFoodCell: View {
             
             Spacer()
             
-            Text(String(food.calories))
+            Text(String(food.getNutritionCalorieValue(key: .calories)))
                 .padding(.leading, 4)
         }
        

@@ -60,9 +60,9 @@ struct CategoryView: View {
     
     func returnItemArray() -> [Food] {
         if !isExpanded {
-            return Array(category.items.sorted(by: {$0.calories > $1.calories}).prefix(4))
+            return Array(category.items.sorted(by: {$0.getNutritionCalorieValue(key: .calories) > $1.getNutritionCalorieValue(key: .calories)}).prefix(4))
         } else {
-            return category.items.sorted(by: {$0.calories > $1.calories})
+            return category.items.sorted(by: {$0.getNutritionCalorieValue(key: .calories) > $1.getNutritionCalorieValue(key: .calories)})
         }
     }
 }

@@ -41,6 +41,7 @@
 		F4DB6407276B42090016EAB6 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB6406276B42090016EAB6 /* PageViewController.swift */; };
 		F4DB6409276B427F0016EAB6 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB6408276B427F0016EAB6 /* PageControl.swift */; };
 		F4F010BE276D5CFA00BB458C /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = F4F010BD276D5CFA00BB458C /* sample.json */; };
+		F4F010C0276DB36900BB458C /* DecodingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F010BF276DB36900BB458C /* DecodingExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		F4DB6406276B42090016EAB6 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F4DB6408276B427F0016EAB6 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		F4F010BD276D5CFA00BB458C /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		F4F010BF276DB36900BB458C /* DecodingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			children = (
 				F45200A52767A4F900E9D5EA /* UIScreenExtension.swift */,
 				F4201762276982030064FF86 /* Constants.swift */,
+				F4F010BF276DB36900BB458C /* DecodingExtension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				F45200AC27682B2900E9D5EA /* CategoryTitleView.swift in Sources */,
 				F45200AA2767AF4F00E9D5EA /* SimpleFoodCell.swift in Sources */,
 				F45200A327679CE000E9D5EA /* RestaurantBannerView.swift in Sources */,
+				F4F010C0276DB36900BB458C /* DecodingExtension.swift in Sources */,
 				F45200B027683C8E00E9D5EA /* StationView.swift in Sources */,
 				F4ABC336276976B9008A32ED /* DetailedStationView.swift in Sources */,
 				F4201763276982030064FF86 /* Constants.swift in Sources */,

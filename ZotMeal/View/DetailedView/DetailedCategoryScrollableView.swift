@@ -18,7 +18,7 @@ struct DetailedCategoryScrollableView: View {
             VStack {
                 CategoryTitleView(category: category)
                 
-                ForEach(category.items.sorted(by: {$0.calories > $1.calories}), id: \.self) { food in
+                ForEach(category.items.sorted(by: {$0.getNutritionCalorieValue(key: .calories) > $1.getNutritionCalorieValue(key: .calories)}), id: \.self) { food in
                     Divider()
                     
                     DetailedFoodCell(food: food)

@@ -14,4 +14,8 @@ struct Constants {
     static let anteateryURL = "https://zotmeal-backend.vercel.app/api?location=Anteatery"
     
     static let remoteDemoJsonURL = "https://zotmeal-backend.vercel.app/example.json"
+
+    static let brandyDummyName = "brandy_dummy_data"
+    static let antearyDummyName = "anteatery_dummy_data"
+    static let sampleDummy = "sample"
 }

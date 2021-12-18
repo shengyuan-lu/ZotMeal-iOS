@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Category: Codable, Hashable {
+struct Category: Decodable, Hashable {
     let category: String
     var items: [Food]
     
