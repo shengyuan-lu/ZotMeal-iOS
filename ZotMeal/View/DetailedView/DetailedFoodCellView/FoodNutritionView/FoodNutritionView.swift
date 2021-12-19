@@ -18,7 +18,7 @@ struct FoodNutritionView: View {
             Divider()
             
             if let value = food.nutrtionCellList[key] {
-                FoodNutritionCellView(nutrtionName: key, nutritionValue: String(value))
+                FoodNutritionCellView(nutrtionName: key, nutritionValue: String(value).capitalized)
             }
             
         }

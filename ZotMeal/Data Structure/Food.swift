@@ -111,6 +111,32 @@ struct Food: Decodable, Hashable {
         }
     }
     
+    func getBadgeCount() -> Int {
+        var i: Int = 0
+        
+        if getNutritionTFvalue(key: .isWholeGrains) == true {
+            i += 1
+        }
+        
+        if getNutritionTFvalue(key: .isVegan) == true {
+            i += 1
+        }
+        
+        if getNutritionTFvalue(key: .isVegetarian) == true {
+            i += 1
+        }
+        
+        if getNutritionTFvalue(key: .isEatWell) == true {
+            i += 1
+        }
+        
+        if getNutritionTFvalue(key: .isPlantForward) == true {
+            i += 1
+        }
+        
+        return i
+    }
+    
     mutating func getSubDict() -> Void {
         for key in self.nutrition.keys {
             if let value = self.nutrition[key] as? String {
