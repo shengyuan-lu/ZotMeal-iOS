@@ -13,6 +13,7 @@
 		F4201763276982030064FF86 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4201762276982030064FF86 /* Constants.swift */; };
 		F4201765276985A20064FF86 /* WebSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4201764276985A20064FF86 /* WebSearchView.swift */; };
 		F42D272427699B9200F139DB /* DetailedCategoryScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D272327699B9200F139DB /* DetailedCategoryScrollableView.swift */; };
+		F44ED965276F317100C1B513 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ED964276F317100C1B513 /* LoadingView.swift */; };
 		F45200A1276674A000E9D5EA /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200A0276674A000E9D5EA /* RestaurantModel.swift */; };
 		F45200A327679CE000E9D5EA /* RestaurantBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200A227679CE000E9D5EA /* RestaurantBannerView.swift */; };
 		F45200A62767A4F900E9D5EA /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200A52767A4F900E9D5EA /* UIScreenExtension.swift */; };
@@ -21,6 +22,7 @@
 		F45200AC27682B2900E9D5EA /* CategoryTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AB27682B2900E9D5EA /* CategoryTitleView.swift */; };
 		F45200AE27682C0C00E9D5EA /* GenericButtonWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AD27682C0C00E9D5EA /* GenericButtonWithLabelView.swift */; };
 		F45200B027683C8E00E9D5EA /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AF27683C8E00E9D5EA /* StationView.swift */; };
+		F468C9C0276EF10A00796699 /* brandy_dummy_data_exp.json in Resources */ = {isa = PBXBuildFile; fileRef = F468C9BF276EF10A00796699 /* brandy_dummy_data_exp.json */; };
 		F4766FD22716A1FB00E3AD87 /* ZotMeal_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */; };
 		F4766FD42716A1FB00E3AD87 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD32716A1FB00E3AD87 /* MainView.swift */; };
 		F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD52716A1FE00E3AD87 /* Assets.xcassets */; };
@@ -54,6 +56,7 @@
 		F4201762276982030064FF86 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F4201764276985A20064FF86 /* WebSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchView.swift; sourceTree = "<group>"; };
 		F42D272327699B9200F139DB /* DetailedCategoryScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCategoryScrollableView.swift; sourceTree = "<group>"; };
+		F44ED964276F317100C1B513 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F45200A0276674A000E9D5EA /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		F45200A227679CE000E9D5EA /* RestaurantBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantBannerView.swift; sourceTree = "<group>"; };
 		F45200A52767A4F900E9D5EA /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 		F45200AB27682B2900E9D5EA /* CategoryTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTitleView.swift; sourceTree = "<group>"; };
 		F45200AD27682C0C00E9D5EA /* GenericButtonWithLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButtonWithLabelView.swift; sourceTree = "<group>"; };
 		F45200AF27683C8E00E9D5EA /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
+		F468C9BF276EF10A00796699 /* brandy_dummy_data_exp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brandy_dummy_data_exp.json; sourceTree = "<group>"; };
 		F4766FCE2716A1FB00E3AD87 /* ZotMeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZotMeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotMeal_App.swift; sourceTree = "<group>"; };
 		F4766FD32716A1FB00E3AD87 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -113,7 +117,7 @@
 				F4DB6403276B407F0016EAB6 /* PageView */,
 				F4BEBE3D276969000043C603 /* DetailedView */,
 				F4BEBE3C276967610043C603 /* Buttons */,
-				F4946B5A2769E3DD00D77292 /* FailView */,
+				F4946B5A2769E3DD00D77292 /* ProgressView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,8 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				F485802F276DF04F00856F0E /* FoodNutritionView.swift */,
-				F4BEBE3A276967550043C603 /* FoodBadgeView.swift */,
 				F41A3CC6276ECB1700CBE7A8 /* FoodNutritionCellView.swift */,
+				F4BEBE3A276967550043C603 /* FoodBadgeView.swift */,
 			);
 			path = FoodNutritionView;
 			sourceTree = "<group>";
@@ -218,12 +222,13 @@
 			path = DetailedFoodCellView;
 			sourceTree = "<group>";
 		};
-		F4946B5A2769E3DD00D77292 /* FailView */ = {
+		F4946B5A2769E3DD00D77292 /* ProgressView */ = {
 			isa = PBXGroup;
 			children = (
+				F44ED964276F317100C1B513 /* LoadingView.swift */,
 				F4946B5B2769E3EF00D77292 /* FailView.swift */,
 			);
-			path = FailView;
+			path = ProgressView;
 			sourceTree = "<group>";
 		};
 		F4AE5A5A276AB700003E83FE /* Other */ = {
@@ -240,6 +245,7 @@
 				F4B5001E2717DC99007F9DE0 /* brandy_dummy_data.json */,
 				F4946B582769D4D500D77292 /* anteatery_dummy_data.json */,
 				F4F010BD276D5CFA00BB458C /* sample.json */,
+				F468C9BF276EF10A00796699 /* brandy_dummy_data_exp.json */,
 			);
 			path = "Local JSON";
 			sourceTree = "<group>";
@@ -336,6 +342,7 @@
 				F4766FD92716A1FE00E3AD87 /* Preview Assets.xcassets in Resources */,
 				F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */,
 				F4946B592769D4D600D77292 /* anteatery_dummy_data.json in Resources */,
+				F468C9C0276EF10A00796699 /* brandy_dummy_data_exp.json in Resources */,
 				F4AE5A5C276AB72C003E83FE /* Launch Screen.storyboard in Resources */,
 				F4B5001F2717DC99007F9DE0 /* brandy_dummy_data.json in Resources */,
 				F4F010BE276D5CFA00BB458C /* sample.json in Resources */,
@@ -363,6 +370,7 @@
 				F41A3CC7276ECB1700CBE7A8 /* FoodNutritionCellView.swift in Sources */,
 				F45200A1276674A000E9D5EA /* RestaurantModel.swift in Sources */,
 				F4BEBE39276958350043C603 /* GenericButtonWithoutLabel.swift in Sources */,
+				F44ED965276F317100C1B513 /* LoadingView.swift in Sources */,
 				F42D272427699B9200F139DB /* DetailedCategoryScrollableView.swift in Sources */,
 				F45200AE27682C0C00E9D5EA /* GenericButtonWithLabelView.swift in Sources */,
 				F4946B5C2769E3EF00D77292 /* FailView.swift in Sources */,

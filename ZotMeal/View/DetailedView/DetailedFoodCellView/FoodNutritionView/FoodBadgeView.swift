@@ -33,25 +33,25 @@ struct FoodBadgeView: View {
                     if food.getNutritionTFvalue(key: .isVegan) {
                         Image("Vegan")
                             .resizable()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 55, height: 55)
                     }
                     
                     if food.getNutritionTFvalue(key: .isVegetarian) {
                         Image("Vegetarian")
                             .resizable()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 55, height: 55)
                     }
                     
                     if food.getNutritionTFvalue(key: .isEatWell) {
                         Image("EatWell")
                             .resizable()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 55, height: 55)
                     }
                     
                     if food.getNutritionTFvalue(key: .isPlantForward) {
                         Image("PlantForward")
                             .resizable()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 55, height: 55)
                     }
                     
                 }

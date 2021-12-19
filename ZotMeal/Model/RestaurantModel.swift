@@ -11,34 +11,28 @@ import SwiftUI
 class RestaurantModel: ObservableObject {
     
     @Published var restaurants: [Restaurant] = [Restaurant]()
+    @Published var isLoadingFailed: Bool = false
     
     let remoteJSONnames: [String] = [Constants.brandyURL, Constants.anteateryURL]
     let localJSONnames: [String] = [Constants.brandyDummyName, Constants.antearyDummyName, Constants.sampleDummy]
     
     init() {
         // MARK: - This needs to be changed to loading real data in production
-        loadRemoteDemoData()
+        loadRemoteRealData()
     }
     
     func loadRemoteRealData() {
+        
         self.restaurants.removeAll()
         
         for name in remoteJSONnames {
+            
             loadRemoteJSON(forURL: name) { data in
                 if let d = data {
                     self.loadRestaurant(data: d)
                 }
             }
-        }
-    }
-    
-    func loadLocalDemoData() {
-        
-        self.restaurants.removeAll()
-        
-        for name in localJSONnames {
-            let data: Data? =  loadLocalJSON(forName: name)
-            loadRestaurant(data: data)
+            
         }
     }
     
@@ -55,7 +49,18 @@ class RestaurantModel: ObservableObject {
         }
     }
     
-    // JSON Parsing
+    func loadLocalDemoData() {
+        
+        self.restaurants.removeAll()
+        
+        for name in localJSONnames {
+            let data: Data? =  loadLocalJSON(forName: name)
+            self.loadRestaurant(data: data)
+        }
+        
+    }
+    
+    // MARK: - JSON Parsing
     func loadRestaurant(data: Data?) -> Void {
         let decoder = JSONDecoder()
         
@@ -64,11 +69,13 @@ class RestaurantModel: ObservableObject {
             if let d = data {
                 self.restaurants.append(try decoder.decode(Restaurant.self, from: d))
                 
+                self.isLoadingFailed = false
                 print("Success: converted JSON to restaurant object (name: \(self.restaurants.last!.restaurantName))")
             }
             
         } catch {
             
+            self.isLoadingFailed = true
             print("Failed: can't convert JSON to restaurant object")
             
         }
@@ -89,7 +96,9 @@ class RestaurantModel: ObservableObject {
             }
             
         } catch {
+            self.isLoadingFailed = true
             print("Failed: Can't parse local JSON: \(error.localizedDescription)")
+            
         }
         
         return nil
@@ -101,7 +110,11 @@ class RestaurantModel: ObservableObject {
         let url = URL(string: urlString)
         
         guard url != nil else {
+            
+            self.isLoadingFailed = true
+            
             print("Failed: invalid url string \(urlString) when loading remote JSON")
+            
             return
         }
         
@@ -110,7 +123,11 @@ class RestaurantModel: ObservableObject {
         let dataTask = session.dataTask(with: url!) { (data, response, error) in
             
             if error != nil || data == nil {
+                
+                self.isLoadingFailed = true
+                
                 print("Failed: There is an error in the API url sent")
+                
                 return
             }
             

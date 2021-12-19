@@ -10,9 +10,9 @@ struct MainView: View {
     
     var body: some View {
         
-        if isModelLoadingSuccessful() {
+        NavigationView {
             
-            NavigationView {
+            if restaurantModel.restaurants.count > 0 {
                 
                 VStack(spacing: 16) {
                     
@@ -44,10 +44,15 @@ struct MainView: View {
                         }
                     }
                 }
+                
+            } else {
+                
+                if restaurantModel.isLoadingFailed {
+                    FailView()
+                } else {
+                    LoadingView()
+                }
             }
-            
-        } else {
-            FailView()
         }
     }
     
@@ -62,19 +67,6 @@ struct MainView: View {
         return bannerViews
     }
     
-    
-    func isModelLoadingSuccessful() -> Bool {
-        
-        if restaurantModel.restaurants.count == 0 {
-            
-            return false
-            
-        } else {
-            
-            return true
-        }
-        
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {

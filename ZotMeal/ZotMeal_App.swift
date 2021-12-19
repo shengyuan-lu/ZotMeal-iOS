@@ -11,4 +11,5 @@ struct ZotMeal_App: App {
                 .environmentObject(restaurantModel)
         }
     }
+    
 }
