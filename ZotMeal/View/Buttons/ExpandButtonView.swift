@@ -20,9 +20,11 @@ struct ExpandButtonView: View {
                 if !isExpanded {
                     Text("Expand")
                     Image(systemName: "chevron.down")
+                    
                 } else {
                     Text("Retract")
                     Image(systemName: "chevron.up")
+                    
                 }
             }
         }
