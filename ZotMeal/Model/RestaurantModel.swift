@@ -25,13 +25,15 @@ class RestaurantModel: ObservableObject {
         
         self.restaurants.removeAll()
         
-        for name in remoteJSONnames {
+        for url in remoteJSONnames {
             
-            loadRemoteJSON(forURL: name) { data in
+            loadRemoteJSON(forURL: url) { data in
                 if let d = data {
                     self.loadRestaurant(data: d)
                 }
             }
+            
+            print("Success: load remote JSON (URL: \(url) succeessfully)")
             
         }
     }
@@ -46,6 +48,8 @@ class RestaurantModel: ObservableObject {
                     self.loadRestaurant(data: d)
                 }
             }
+            
+            print("Success: load remote sample JSON succeessfully)")
         }
     }
     
@@ -90,7 +94,7 @@ class RestaurantModel: ObservableObject {
                 let fileURL = URL(fileURLWithPath: filePath)
                 let data = try Data(contentsOf: fileURL)
                 
-                print("Success: Load local JSON (name \(name) succeessfully)")
+                print("Success: load local JSON (name \(name) succeessfully)")
                 
                 return data
             }

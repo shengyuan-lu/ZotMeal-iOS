@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ExDivider: View {
     let color: Color = Color(UIColor(named: "dividerColor")!)
-    let width: CGFloat = 2
+    let width: CGFloat = 1
     var body: some View {
         Rectangle()
             .fill(color)
