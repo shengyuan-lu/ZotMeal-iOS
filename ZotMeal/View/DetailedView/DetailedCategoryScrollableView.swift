@@ -19,7 +19,7 @@ struct DetailedCategoryScrollableView: View {
                 CategoryTitleView(category: category)
                 
                 ForEach(category.items.sorted(by: {$0.getNutritionCalorieValue(key: .calories) > $1.getNutritionCalorieValue(key: .calories)}), id: \.self) { food in
-                    Divider()
+                    ExDivider()
                     
                     DetailedFoodCell(food: food)
                         .padding(.horizontal, 16)
@@ -31,6 +31,7 @@ struct DetailedCategoryScrollableView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color.gray.opacity(0.5), style: StrokeStyle(lineWidth: 2))
             )
+            .background(Color(UIColor(named: "categoryBG")!))
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .navigationTitle("Detail")
             .padding(.bottom, 8)

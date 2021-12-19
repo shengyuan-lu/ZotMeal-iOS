@@ -38,7 +38,7 @@ struct FailView: View {
                     }, buttonText: "Try Again", systemName: "arrow.clockwise", bgColor: .blue, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                     
                     VStack {
-                        Text("Debugging")
+                        Text("Debugging Use Only")
                         
                         // Load Local Demo
                         GenericButtonWithLabelView(action: {

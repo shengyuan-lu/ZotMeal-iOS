@@ -54,6 +54,7 @@ struct CategoryView: View {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.gray.opacity(0.5), style: StrokeStyle(lineWidth: 2))
         )
+        .background(Color(UIColor(named: "categoryBG")!))
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .frame(width: 220)
     }

@@ -20,7 +20,7 @@ struct DetailedCategoryView: View {
                 
                 // MARK: - Not the best for efficiency, but keep it for now
                 if food.name != category.items.sorted(by: {$0.getNutritionCalorieValue(key: .calories) > $1.getNutritionCalorieValue(key: .calories)})[0].name {
-                    Divider()
+                    ExDivider()
                 }
                 
                 DetailedFoodCell(food: food)
@@ -31,8 +31,9 @@ struct DetailedCategoryView: View {
         }
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.gray.opacity(0.5), style: StrokeStyle(lineWidth: 2))
+                .stroke(Color.secondary, style: StrokeStyle(lineWidth: 4))
         )
+        .background(Color(UIColor(named: "categoryBG")!))
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }

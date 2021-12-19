@@ -36,6 +36,7 @@ struct StationView: View {
                     self.action = 1
                 }, buttonText: buttonText, systemName: "", bgColor: Color.yellow, textColor: Color.black, edgeInsets: EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                     .padding(.horizontal, 8)
+                    .padding(.trailing, 4)
             }
             
             
