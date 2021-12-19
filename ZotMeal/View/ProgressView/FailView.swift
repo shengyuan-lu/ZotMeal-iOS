@@ -44,7 +44,10 @@ struct FailView: View {
                         GenericButtonWithLabelView(action: {
                             
                             startLoading()
-                            restaurantModel.loadLocalDemoData()
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                restaurantModel.loadLocalDemoData()
+                            }
                             
                         }, buttonText: "Load Local Demo JSON", systemName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                         
