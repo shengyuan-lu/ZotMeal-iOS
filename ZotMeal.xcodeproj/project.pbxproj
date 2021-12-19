@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F41A3CC7276ECB1700CBE7A8 /* FoodNutritionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A3CC6276ECB1700CBE7A8 /* FoodNutritionCellView.swift */; };
+		F41A3CC9276ECC5300CBE7A8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A3CC8276ECC5300CBE7A8 /* StringExtension.swift */; };
 		F420176127697FCF0064FF86 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F420176027697FCF0064FF86 /* WebView.swift */; };
 		F4201763276982030064FF86 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4201762276982030064FF86 /* Constants.swift */; };
 		F4201765276985A20064FF86 /* WebSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4201764276985A20064FF86 /* WebSearchView.swift */; };
@@ -23,6 +25,7 @@
 		F4766FD42716A1FB00E3AD87 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD32716A1FB00E3AD87 /* MainView.swift */; };
 		F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD52716A1FE00E3AD87 /* Assets.xcassets */; };
 		F4766FD92716A1FE00E3AD87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */; };
+		F4858030276DF04F00856F0E /* FoodNutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485802F276DF04F00856F0E /* FoodNutritionView.swift */; };
 		F4946B592769D4D600D77292 /* anteatery_dummy_data.json in Resources */ = {isa = PBXBuildFile; fileRef = F4946B582769D4D500D77292 /* anteatery_dummy_data.json */; };
 		F4946B5C2769E3EF00D77292 /* FailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4946B5B2769E3EF00D77292 /* FailView.swift */; };
 		F4ABC33427697455008A32ED /* DetailedCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABC33327697455008A32ED /* DetailedCategoryView.swift */; };
@@ -36,7 +39,7 @@
 		F4BEBE35276929D90043C603 /* ExpandButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE34276929D90043C603 /* ExpandButtonView.swift */; };
 		F4BEBE3727693D850043C603 /* DetailedFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE3627693D850043C603 /* DetailedFoodCell.swift */; };
 		F4BEBE39276958350043C603 /* GenericButtonWithoutLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE38276958350043C603 /* GenericButtonWithoutLabel.swift */; };
-		F4BEBE3B276967550043C603 /* FoodNutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE3A276967550043C603 /* FoodNutritionView.swift */; };
+		F4BEBE3B276967550043C603 /* FoodBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE3A276967550043C603 /* FoodBadgeView.swift */; };
 		F4DB6405276B41C60016EAB6 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB6404276B41C60016EAB6 /* PageView.swift */; };
 		F4DB6407276B42090016EAB6 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB6406276B42090016EAB6 /* PageViewController.swift */; };
 		F4DB6409276B427F0016EAB6 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB6408276B427F0016EAB6 /* PageControl.swift */; };
@@ -45,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F41A3CC6276ECB1700CBE7A8 /* FoodNutritionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutritionCellView.swift; sourceTree = "<group>"; };
+		F41A3CC8276ECC5300CBE7A8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		F420176027697FCF0064FF86 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		F4201762276982030064FF86 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F4201764276985A20064FF86 /* WebSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchView.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		F4766FD32716A1FB00E3AD87 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F4766FD52716A1FE00E3AD87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F485802F276DF04F00856F0E /* FoodNutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutritionView.swift; sourceTree = "<group>"; };
 		F4946B582769D4D500D77292 /* anteatery_dummy_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = anteatery_dummy_data.json; sourceTree = "<group>"; };
 		F4946B5B2769E3EF00D77292 /* FailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailView.swift; sourceTree = "<group>"; };
 		F4ABC33327697455008A32ED /* DetailedCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCategoryView.swift; sourceTree = "<group>"; };
@@ -76,7 +82,7 @@
 		F4BEBE34276929D90043C603 /* ExpandButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandButtonView.swift; sourceTree = "<group>"; };
 		F4BEBE3627693D850043C603 /* DetailedFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedFoodCell.swift; sourceTree = "<group>"; };
 		F4BEBE38276958350043C603 /* GenericButtonWithoutLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButtonWithoutLabel.swift; sourceTree = "<group>"; };
-		F4BEBE3A276967550043C603 /* FoodNutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutritionView.swift; sourceTree = "<group>"; };
+		F4BEBE3A276967550043C603 /* FoodBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBadgeView.swift; sourceTree = "<group>"; };
 		F4DB6404276B41C60016EAB6 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		F4DB6406276B42090016EAB6 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F4DB6408276B427F0016EAB6 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 				F45200A52767A4F900E9D5EA /* UIScreenExtension.swift */,
 				F4F010BF276DB36900BB458C /* DecodingExtension.swift */,
 				F4201762276982030064FF86 /* Constants.swift */,
+				F41A3CC8276ECC5300CBE7A8 /* StringExtension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -191,6 +198,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F485802E276DF03900856F0E /* FoodNutritionView */ = {
+			isa = PBXGroup;
+			children = (
+				F485802F276DF04F00856F0E /* FoodNutritionView.swift */,
+				F4BEBE3A276967550043C603 /* FoodBadgeView.swift */,
+				F41A3CC6276ECB1700CBE7A8 /* FoodNutritionCellView.swift */,
+			);
+			path = FoodNutritionView;
+			sourceTree = "<group>";
+		};
+		F4858031276DF1C000856F0E /* DetailedFoodCellView */ = {
+			isa = PBXGroup;
+			children = (
+				F4BEBE3627693D850043C603 /* DetailedFoodCell.swift */,
+				F4201764276985A20064FF86 /* WebSearchView.swift */,
+				F485802E276DF03900856F0E /* FoodNutritionView */,
+			);
+			path = DetailedFoodCellView;
+			sourceTree = "<group>";
+		};
 		F4946B5A2769E3DD00D77292 /* FailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,9 +260,7 @@
 				F4ABC335276976B9008A32ED /* DetailedStationView.swift */,
 				F4ABC33327697455008A32ED /* DetailedCategoryView.swift */,
 				F42D272327699B9200F139DB /* DetailedCategoryScrollableView.swift */,
-				F4BEBE3627693D850043C603 /* DetailedFoodCell.swift */,
-				F4BEBE3A276967550043C603 /* FoodNutritionView.swift */,
-				F4201764276985A20064FF86 /* WebSearchView.swift */,
+				F4858031276DF1C000856F0E /* DetailedFoodCellView */,
 			);
 			path = DetailedView;
 			sourceTree = "<group>";
@@ -328,12 +353,14 @@
 				F45200AC27682B2900E9D5EA /* CategoryTitleView.swift in Sources */,
 				F45200AA2767AF4F00E9D5EA /* SimpleFoodCell.swift in Sources */,
 				F45200A327679CE000E9D5EA /* RestaurantBannerView.swift in Sources */,
+				F41A3CC9276ECC5300CBE7A8 /* StringExtension.swift in Sources */,
 				F4F010C0276DB36900BB458C /* DecodingExtension.swift in Sources */,
 				F45200B027683C8E00E9D5EA /* StationView.swift in Sources */,
 				F4ABC336276976B9008A32ED /* DetailedStationView.swift in Sources */,
 				F4201763276982030064FF86 /* Constants.swift in Sources */,
 				F4DB6405276B41C60016EAB6 /* PageView.swift in Sources */,
 				F4B4E0C4271F475D0057833D /* Category.swift in Sources */,
+				F41A3CC7276ECB1700CBE7A8 /* FoodNutritionCellView.swift in Sources */,
 				F45200A1276674A000E9D5EA /* RestaurantModel.swift in Sources */,
 				F4BEBE39276958350043C603 /* GenericButtonWithoutLabel.swift in Sources */,
 				F42D272427699B9200F139DB /* DetailedCategoryScrollableView.swift in Sources */,
@@ -349,7 +376,8 @@
 				F4ABC33427697455008A32ED /* DetailedCategoryView.swift in Sources */,
 				F4B4E0C6271F49140057833D /* Station.swift in Sources */,
 				F4766FD22716A1FB00E3AD87 /* ZotMeal_App.swift in Sources */,
-				F4BEBE3B276967550043C603 /* FoodNutritionView.swift in Sources */,
+				F4858030276DF04F00856F0E /* FoodNutritionView.swift in Sources */,
+				F4BEBE3B276967550043C603 /* FoodBadgeView.swift in Sources */,
 				F45200A62767A4F900E9D5EA /* UIScreenExtension.swift in Sources */,
 				F4BEBE3727693D850043C603 /* DetailedFoodCell.swift in Sources */,
 				F420176127697FCF0064FF86 /* WebView.swift in Sources */,

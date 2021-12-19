@@ -16,7 +16,8 @@ class RestaurantModel: ObservableObject {
     let localJSONnames: [String] = [Constants.brandyDummyName, Constants.antearyDummyName, Constants.sampleDummy]
     
     init() {
-        loadRemoteRealData()
+        // MARK: - This needs to be changed to loading real data in production
+        loadRemoteDemoData()
     }
     
     func loadRemoteRealData() {
@@ -45,7 +46,7 @@ class RestaurantModel: ObservableObject {
         
         self.restaurants.removeAll()
         
-        for _ in 0...3 {
+        for _ in 0...2 {
             loadRemoteJSON(forURL: Constants.remoteDemoJsonURL) { data in
                 if let d = data {
                     self.loadRestaurant(data: d)

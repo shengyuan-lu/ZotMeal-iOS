@@ -13,6 +13,7 @@ struct Food: Decodable, Hashable {
     let name: String
     let description: String
     let nutrition: [String : Any?]
+    var nutrtionCellList: [String : String] = [:]
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -24,6 +25,7 @@ struct Food: Decodable, Hashable {
         self.name = name
         self.description = description
         self.nutrition = nutrition
+        getSubDict()
     }
     
     init(from decoder: Decoder) throws {
@@ -35,6 +37,7 @@ struct Food: Decodable, Hashable {
         self.name = name
         self.description = description
         self.nutrition = nutrition
+        getSubDict()
     }
     
     static func == (lhs: Food, rhs: Food) -> Bool {
@@ -93,6 +96,27 @@ struct Food: Decodable, Hashable {
         guard let value = self.nutrition[key.rawValue] else { return 0 }
         
         return Int(value as! String)!
+    }
+    
+    func hasBadge() -> Bool {
+        
+        if (getNutritionTFvalue(key: .isPlantForward) == true || getNutritionTFvalue(key: .isEatWell) == true || getNutritionTFvalue(key: .isVegetarian) == true || getNutritionTFvalue(key: .isVegan) == true || getNutritionTFvalue(key: .isWholeGrains)) == true {
+            
+            return true
+            
+        } else {
+            
+            return false
+            
+        }
+    }
+    
+    mutating func getSubDict() -> Void {
+        for key in self.nutrition.keys {
+            if let value = self.nutrition[key] as? String {
+                self.nutrtionCellList[key] = value
+            }
+        }
     }
 
 }
