@@ -24,10 +24,44 @@ struct RestaurantBannerView: View {
                     .frame(width: UIScreen.screenWidth, height: height, alignment: .center)
                     .clipped()
                 
-                LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .center, endPoint: .bottom)
+                LinearGradient(gradient: Gradient(colors: [.clear, .black.opacity(0.4)]), startPoint: .center, endPoint: .bottom)
+                
+                LinearGradient(gradient: Gradient(colors: [.clear, .black.opacity(0.4)]), startPoint: .top, endPoint: .center)
             }
             
             VStack {
+                
+                HStack(spacing: 12) {
+                    
+                    Spacer()
+                    
+                    NavigationLink {
+                        
+                        Text("Schedule")
+                            .navigationTitle(restaurant.restaurantName)
+                            .navigationBarTitleDisplayMode(.inline)
+                        
+                    } label: {
+                        Image(systemName: "calendar")
+                            .shadow(color: Color.black, radius: 3, x: 3, y: 3)
+                            .foregroundColor(.white)
+                            .font(.title)
+                    }
+                    
+                    NavigationLink {
+                        
+                        MapView(resaurant: restaurant)
+                            .navigationTitle(restaurant.restaurantName + " Location")
+                            .navigationBarTitleDisplayMode(.inline)
+                        
+                    } label: {
+                        Image(systemName: "map.fill")
+                            .shadow(color: Color.black, radius: 3, x: 3, y: 3)
+                            .foregroundColor(.white)
+                            .font(.title)
+                    }
+                    
+                }
                 
                 Spacer()
                 
@@ -68,7 +102,9 @@ struct RestaurantBannerView: View {
 
 struct RestaurantBannerView_Previews: PreviewProvider {
     static var previews: some View {
-        RestaurantBannerView(restaurant: getEmptyRestaurant(), height: 120)
+        RestaurantBannerView(restaurant: getEmptyRestaurant(), height: 160)
             .environmentObject(RestaurantModel())
+            .previewLayout(.sizeThatFits)
+            .previewDisplayName("Default Preview")
     }
 }
