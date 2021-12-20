@@ -20,7 +20,7 @@ struct MainView: View {
                         PageView(pages: generateRestaurantBanners(), currentPage: $restaurantSelectionIndex)
                             .frame(width: UIScreen.screenWidth, height: bannerHeight, alignment: .center)
                     } else {
-                        RestaurantBannerView(restaurant: restaurantModel.restaurants[restaurantSelectionIndex], height: bannerHeight)
+                        RestaurantBannerView(restaurant: restaurantModel.restaurants[0], height: bannerHeight)
                             .frame(width: UIScreen.screenWidth, height: bannerHeight, alignment: .center)
                     }
                     
@@ -35,7 +35,6 @@ struct MainView: View {
                                     }
                                 }
                             }
-                            
                             .onChange(of: restaurantSelectionIndex) { _ in
                                 withAnimation {
                                     sv.scrollTo(restaurantModel.restaurants[restaurantSelectionIndex].allMenu[0], anchor: .top)
@@ -59,15 +58,22 @@ struct MainView: View {
                 .navigationBarTitle("ZotMeal")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    
                     ToolbarItem(placement: .navigationBarLeading) {
 
                         Button {
-                            
+                            // FIXME: - Load real data in production
+                            restaurantSelectionIndex = 0
+                            restaurantModel.loadRemoteDemoData()
+
                         } label: {
-                           Text("Refresh")
+                            
+                            HStack {
+                                Image(systemName: "arrow.clockwise.circle.fill")
+                                Text("Refresh")
+                                    .bold()
+                            }
+                           
                         }
-                        
                     }
                     
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -84,11 +90,9 @@ struct MainView: View {
             } else {
                 
                 if restaurantModel.isLoadingFailed {
-                    
                     FailView()
                     
                 } else {
-                    
                     LoadingView()
                     
                 }

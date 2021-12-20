@@ -13,6 +13,8 @@ struct FailView: View {
     
     @State var isLoading: Bool = false
     
+    let isDebugModeON = false
+    
     var body: some View {
         
         if isLoading {
@@ -37,30 +39,32 @@ struct FailView: View {
                         
                     }, buttonText: "Try Again", systemName: "arrow.clockwise", bgColor: .blue, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                     
-                    VStack {
-                        Text("Debugging Use Only")
-                        
-                        // Load Local Demo
-                        GenericButtonWithLabelView(action: {
+                    if isDebugModeON {
+                        VStack {
+                            Text("Debugging Use Only")
                             
-                            startLoading()
+                            // Load Local Demo
+                            GenericButtonWithLabelView(action: {
+                                
+                                startLoading()
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    restaurantModel.loadLocalDemoData()
+                                }
+                                
+                            }, buttonText: "Load Local Demo JSON", systemName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                             
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                restaurantModel.loadLocalDemoData()
-                            }
                             
-                        }, buttonText: "Load Local Demo JSON", systemName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
-                        
-                        
-                        // Load Remote Demo
-                        GenericButtonWithLabelView(action: {
-                            
-                            startLoading()
-                            restaurantModel.loadRemoteDemoData()
-                            
-                        }, buttonText: "Load Remote Demo JSON", systemName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
+                            // Load Remote Demo
+                            GenericButtonWithLabelView(action: {
+                                
+                                startLoading()
+                                restaurantModel.loadRemoteDemoData()
+                                
+                            }, buttonText: "Load Remote Demo JSON", systemName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
+                        }
+                        .padding(.top, 40)
                     }
-                    .padding(.top, 40)
                     
                 }
                 .fixedSize(horizontal: true, vertical: false)
@@ -73,7 +77,7 @@ struct FailView: View {
         
         isLoading = true
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             isLoading = false
         }
     }

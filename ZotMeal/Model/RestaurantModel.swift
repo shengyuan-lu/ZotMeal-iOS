@@ -17,24 +17,23 @@ class RestaurantModel: ObservableObject {
     let localJSONnames: [String] = [Constants.brandyDummyName, Constants.antearyDummyName, Constants.emptyDummy]
     
     init() {
-        // MARK: - This needs to be changed to loading real data in production
-        loadRemoteRealData()
+        // FIXME: - Load real data in production
+        loadRemoteDemoData()
     }
     
     func loadRemoteRealData() {
         
         self.restaurants.removeAll()
         
-        for url in remoteJSONnames {
-            
-            loadRemoteJSON(forURL: url) { data in
-                if let d = data {
-                    self.loadRestaurant(data: d)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            for url in self.remoteJSONnames {
+                self.loadRemoteJSON(forURL: url) { data in
+                    if let d = data {
+                        self.loadRestaurant(data: d)
+                    }
                 }
+                print("Success: load remote JSON (URL: \(url) to data succeessfully)")
             }
-            
-            print("Success: load remote JSON (URL: \(url) to data succeessfully)")
-            
         }
     }
     
@@ -42,14 +41,16 @@ class RestaurantModel: ObservableObject {
         
         self.restaurants.removeAll()
         
-        for _ in 0...2 {
-            loadRemoteJSON(forURL: Constants.remoteDemoJsonURL) { data in
-                if let d = data {
-                    self.loadRestaurant(data: d)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            for _ in 0...1 {
+                self.loadRemoteJSON(forURL: Constants.remoteDemoJsonURL) { data in
+                    if let d = data {
+                        self.loadRestaurant(data: d)
+                    }
                 }
+                
+                print("Success: load remote sample JSON to data succeessfully)")
             }
-            
-            print("Success: load remote sample JSON to data succeessfully)")
         }
     }
     
@@ -57,9 +58,11 @@ class RestaurantModel: ObservableObject {
         
         self.restaurants.removeAll()
         
-        for name in localJSONnames {
-            let data: Data? =  loadLocalJSON(forName: name)
-            self.loadRestaurant(data: data)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            for name in self.localJSONnames {
+                let data: Data? =  self.loadLocalJSON(forName: name)
+                self.loadRestaurant(data: data)
+            }
         }
     }
     

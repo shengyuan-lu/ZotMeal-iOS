@@ -52,7 +52,7 @@ struct CategoryView: View {
         }
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.gray.opacity(0.5), style: StrokeStyle(lineWidth: 2))
+                .stroke(Color(UIColor(named: "dividerColor")!), style: StrokeStyle(lineWidth: 2))
         )
         .background(Color(UIColor(named: "categoryBG")!))
         .clipShape(RoundedRectangle(cornerRadius: 10))

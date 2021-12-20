@@ -25,7 +25,6 @@ struct MapView: View {
     }
     
     
-    
     func getAnnotations() -> [Location] {
         
         if resaurant.restaurantName == "Brandywine" {
