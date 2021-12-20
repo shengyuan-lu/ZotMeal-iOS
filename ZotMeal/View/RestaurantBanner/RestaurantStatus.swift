@@ -31,6 +31,13 @@ struct RestaurantStatus: View {
     }
 }
 
+enum RestaurantOpenStatus: String {
+    case open = "Open Now"
+    case closed = "Closed Now"
+    case closeSoon = "Close Soon"
+    case openSoon = "Open Soon"
+}
+
 struct RestaurantStatus_Previews: PreviewProvider {
     static var previews: some View {
         RestaurantStatus()

@@ -29,7 +29,7 @@ struct RestaurantBannerView: View {
             
             VStack {
                 
-                HStack() {
+                HStack {
                     
                     RestaurantStatus()
                     
@@ -54,7 +54,7 @@ struct RestaurantBannerView: View {
                                 .navigationBarTitleDisplayMode(.inline)
                             
                         } label: {
-                            Image(systemName: "map.fill")
+                            Image(systemName: "mappin.and.ellipse")
                                 .shadow(color: Color.black, radius: 3, x: 3, y: 3)
                                 .foregroundColor(.white)
                                 .font(.title2)

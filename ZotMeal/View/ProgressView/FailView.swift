@@ -25,9 +25,43 @@ struct FailView: View {
             
             VStack(spacing: 16) {
                 
-                Text("Server Returned Invalid Response")
+                Text("ZotMeal Can't Load Menu")
                     .font(.title2)
                     .bold()
+                
+                VStack(alignment: .leading) {
+                    
+                    Divider()
+                    
+                    Text("Possibility 1:")
+                        .font(.footnote)
+                        .bold()
+                    
+                    Text("Network not available (go check it!)")
+                        .font(.footnote)
+                    
+                    Divider()
+                    
+                    Text("Possibility 2:")
+                        .font(.footnote)
+                        .bold()
+                    
+                    Text("Our server decided to turn into a potato")
+                        .font(.footnote)
+                    
+                    Divider()
+                    
+                    Text("Possibility 3:")
+                        .font(.footnote)
+                        .bold()
+                    
+                    Text("Sleep-deprived Shengyuan messed up some code")
+                        .font(.footnote)
+                    
+                    Divider()
+                }
+                .padding([.horizontal, .bottom])
+
                 
                 VStack(spacing: 10) {
                     
@@ -35,7 +69,9 @@ struct FailView: View {
                     GenericButtonWithLabelView(action: {
                         
                         startLoading()
-                        restaurantModel.loadRemoteRealData()
+                        
+                        // FIXME: - change it to real data
+                        restaurantModel.loadRemoteDemoData()
                         
                     }, buttonText: "Try Again", systemName: "arrow.clockwise", bgColor: .blue, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                     

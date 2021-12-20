@@ -130,9 +130,11 @@ class RestaurantModel: ObservableObject {
             
             if error != nil || data == nil {
                 
-                self.isLoadingFailed = true
+                DispatchQueue.main.async {
+                    self.isLoadingFailed = true
+                }
                 
-                print("Failed: There is an error in the API url sent")
+                print("Failed: Can't get data task with URL \(url!)")
                 
                 return
             }
