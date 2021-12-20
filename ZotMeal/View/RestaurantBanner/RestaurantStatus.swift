@@ -13,21 +13,20 @@ struct RestaurantStatus: View {
         
         HStack {
             
-            Text("Open Now")
-                .font(.body)
-                .bold()
-                .foregroundColor(.white)
-
-            
             Circle()
                 .foregroundColor(.green)
                 .frame(width: 10, height: 10, alignment: .center)
             
-            Text("Breakfast")
+            Text("Open Now")
                 .font(.body)
                 .bold()
                 .foregroundColor(.white)
+            
+            Text("Breakfast")
+                .font(.body)
+                .foregroundColor(.white)
         }
+        .padding(.horizontal, 8)
         
     }
 }

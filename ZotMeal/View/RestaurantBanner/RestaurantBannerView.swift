@@ -29,70 +29,82 @@ struct RestaurantBannerView: View {
             
             VStack {
                 
-                HStack(spacing: 16) {
-                    
+                HStack() {
                     
                     RestaurantStatus()
                     
                     Spacer()
                     
-                    NavigationLink {
+                    HStack(spacing: 12) {
+                        NavigationLink {
+                            Text("Schedule")
+                                .navigationTitle(restaurant.restaurantName + " Schedule")
+                                .navigationBarTitleDisplayMode(.inline)
+                            
+                        } label: {
+                            Image(systemName: "calendar")
+                                .shadow(color: Color.black, radius: 3, x: 3, y: 3)
+                                .foregroundColor(.white)
+                                .font(.title2)
+                        }
                         
-                        Text("Schedule")
-                            .navigationTitle(restaurant.restaurantName)
-                            .navigationBarTitleDisplayMode(.inline)
+                        NavigationLink {
+                            MapView(resaurant: restaurant)
+                                .navigationTitle(restaurant.restaurantName + " Location")
+                                .navigationBarTitleDisplayMode(.inline)
+                            
+                        } label: {
+                            Image(systemName: "map.fill")
+                                .shadow(color: Color.black, radius: 3, x: 3, y: 3)
+                                .foregroundColor(.white)
+                                .font(.title2)
+                        }
                         
-                    } label: {
-                        Image(systemName: "calendar")
-                            .shadow(color: Color.black, radius: 3, x: 3, y: 3)
-                            .foregroundColor(.white)
-                            .font(.title2)
-                    }
-                    
-                    NavigationLink {
-                        
-                        MapView(resaurant: restaurant)
-                            .navigationTitle(restaurant.restaurantName + " Location")
-                            .navigationBarTitleDisplayMode(.inline)
-                        
-                    } label: {
-                        Image(systemName: "map.fill")
-                            .shadow(color: Color.black, radius: 3, x: 3, y: 3)
-                            .foregroundColor(.white)
-                            .font(.title2)
+                        NavigationLink {
+                            Text("Pricing")
+                                .navigationTitle(restaurant.restaurantName + " Pricing")
+                                .navigationBarTitleDisplayMode(.inline)
+                            
+                        } label: {
+                            Image(systemName: "dollarsign.circle.fill")
+                                .shadow(color: Color.black, radius: 3, x: 3, y: 3)
+                                .foregroundColor(.white)
+                                .font(.title2)
+                        }
                     }
                     
                 }
                 .padding(8)
-                .background(Color.black.opacity(0.4))
-                .clipShape(RoundedRectangle(cornerRadius: 6))
+                .background(Color.black.opacity(0.6))
+                .clipShape(RoundedRectangle(cornerRadius: 0))
                 
                 Spacer()
                 
-                HStack {
-                    Text(restaurant.restaurantName)
-                        .bold()
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .shadow(color: Color.black, radius: 5, x: 5, y: 5)
+                VStack {
+                    HStack {
+                        Text(restaurant.restaurantName)
+                            .bold()
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .shadow(color: Color.black, radius: 5, x: 5, y: 5)
+                        
+                        Spacer()
+                    }
                     
-                    
-                    Spacer()
+                    HStack {
+                        Text("Menu Updated: " + getMenuUpdateTimeInString())
+                            .foregroundColor(.white)
+                            .shadow(color: Color.black, radius: 5, x: 5, y: 5)
+                        
+                        Spacer()
+                    }
                 }
-                
-                HStack {
-                    Text("Menu Updated: " + getMenuUpdateTimeInString())
-                        .foregroundColor(.white)
-                        .shadow(color: Color.black, radius: 5, x: 5, y: 5)
-                    
-                    Spacer()
-                }
+                .padding(.horizontal, 12)
+                .padding(.vertical, 8)
             }
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
+            
         }
         .frame(width: UIScreen.screenWidth, height: height, alignment: .center)
-        
         
     }
     

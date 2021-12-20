@@ -35,7 +35,7 @@ struct MainView: View {
                                     }
                                 }
                             }
-                            .navigationBarTitleDisplayMode(.inline)
+                            
                             .onChange(of: restaurantSelectionIndex) { _ in
                                 withAnimation {
                                     sv.scrollTo(restaurantModel.restaurants[restaurantSelectionIndex].allMenu[0], anchor: .top)
@@ -57,6 +57,29 @@ struct MainView: View {
                     }
                 }
                 .navigationBarTitle("ZotMeal")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    
+                    ToolbarItem(placement: .navigationBarLeading) {
+
+                        Button {
+                            
+                        } label: {
+                           Text("Refresh")
+                        }
+                        
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "person.3.sequence.fill")
+                        }
+                        
+                    }
+                }
                 
             } else {
                 

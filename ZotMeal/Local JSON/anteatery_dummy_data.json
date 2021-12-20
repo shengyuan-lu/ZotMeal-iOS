@@ -3,7 +3,7 @@
     "restaurant": "Anteatery",
     "all": [
         {
-            "station": "This is Anteatery Menu",
+            "station": "The Main",
             "menu": [
                 {
                     "category": "Condiments",
@@ -616,7 +616,7 @@
             ]
         },
         {
-            "station": "Local Sample",
+            "station": "Locally Sourced",
             "menu": [
                 {
                     "category": "Entrées",
