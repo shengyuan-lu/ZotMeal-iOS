@@ -14,7 +14,7 @@ class RestaurantModel: ObservableObject {
     @Published var isLoadingFailed: Bool = false
     
     let remoteJSONnames: [String] = [Constants.brandyURL, Constants.anteateryURL]
-    let localJSONnames: [String] = [Constants.brandyDummyName, Constants.antearyDummyName]
+    let localJSONnames: [String] = [Constants.brandyDummyName, Constants.antearyDummyName, Constants.emptyDummy]
     
     init() {
         // MARK: - This needs to be changed to loading real data in production
@@ -33,7 +33,7 @@ class RestaurantModel: ObservableObject {
                 }
             }
             
-            print("Success: load remote JSON (URL: \(url) succeessfully)")
+            print("Success: load remote JSON (URL: \(url) to data succeessfully)")
             
         }
     }
@@ -49,7 +49,7 @@ class RestaurantModel: ObservableObject {
                 }
             }
             
-            print("Success: load remote sample JSON succeessfully)")
+            print("Success: load remote sample JSON to data succeessfully)")
         }
     }
     
@@ -61,7 +61,6 @@ class RestaurantModel: ObservableObject {
             let data: Data? =  loadLocalJSON(forName: name)
             self.loadRestaurant(data: data)
         }
-        
     }
     
     // MARK: - JSON Parsing
@@ -74,13 +73,13 @@ class RestaurantModel: ObservableObject {
                 self.restaurants.append(try decoder.decode(Restaurant.self, from: d))
                 
                 self.isLoadingFailed = false
-                print("Success: converted JSON to restaurant object (name: \(self.restaurants.last!.restaurantName))")
+                print("Success: converted JSON data to restaurant object (name: \(self.restaurants.last!.restaurantName))")
             }
             
         } catch {
             
             self.isLoadingFailed = true
-            print("Failed: can't convert JSON to restaurant object")
+            print("Failed: can't convert JSON data to restaurant object")
             
         }
     }
@@ -94,14 +93,14 @@ class RestaurantModel: ObservableObject {
                 let fileURL = URL(fileURLWithPath: filePath)
                 let data = try Data(contentsOf: fileURL)
                 
-                print("Success: load local JSON (name \(name) succeessfully)")
+                print("Success: load local JSON (name \(name) to data succeessfully)")
                 
                 return data
             }
             
         } catch {
             self.isLoadingFailed = true
-            print("Failed: Can't parse local JSON: \(error.localizedDescription)")
+            print("Failed: Can't parse local JSON to data: \(error.localizedDescription)")
             
         }
         

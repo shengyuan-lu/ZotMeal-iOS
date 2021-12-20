@@ -17,6 +17,7 @@ struct Constants {
 
     static let brandyDummyName = "brandy_dummy_data"
     static let antearyDummyName = "anteatery_dummy_data"
-    static let sampleDummy = "sample"
+    static let sampleDummy = "sample_restaurant"
+    static let emptyDummy = "empty_restaurant"
     
 }

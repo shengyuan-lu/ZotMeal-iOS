@@ -23,8 +23,8 @@ struct FailView: View {
             
             VStack(spacing: 16) {
                 
-                Text("Server returned invalid response.")
-                    .font(.title3)
+                Text("Server Returned Invalid Response")
+                    .font(.title2)
                     .bold()
                 
                 VStack(spacing: 10) {

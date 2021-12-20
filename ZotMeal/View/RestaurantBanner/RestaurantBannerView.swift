@@ -25,13 +25,14 @@ struct RestaurantBannerView: View {
                     .clipped()
                 
                 LinearGradient(gradient: Gradient(colors: [.clear, .black.opacity(0.4)]), startPoint: .center, endPoint: .bottom)
-                
-                LinearGradient(gradient: Gradient(colors: [.clear, .black.opacity(0.4)]), startPoint: .top, endPoint: .center)
             }
             
             VStack {
                 
-                HStack(spacing: 12) {
+                HStack(spacing: 16) {
+                    
+                    
+                    RestaurantStatus()
                     
                     Spacer()
                     
@@ -45,7 +46,7 @@ struct RestaurantBannerView: View {
                         Image(systemName: "calendar")
                             .shadow(color: Color.black, radius: 3, x: 3, y: 3)
                             .foregroundColor(.white)
-                            .font(.title)
+                            .font(.title2)
                     }
                     
                     NavigationLink {
@@ -58,10 +59,13 @@ struct RestaurantBannerView: View {
                         Image(systemName: "map.fill")
                             .shadow(color: Color.black, radius: 3, x: 3, y: 3)
                             .foregroundColor(.white)
-                            .font(.title)
+                            .font(.title2)
                     }
                     
                 }
+                .padding(8)
+                .background(Color.black.opacity(0.4))
+                .clipShape(RoundedRectangle(cornerRadius: 6))
                 
                 Spacer()
                 

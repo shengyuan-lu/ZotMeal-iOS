@@ -15,25 +15,29 @@ struct MapView: View {
     @State var resaurant: Restaurant
     
     var body: some View {
+        
         Map(coordinateRegion: $region, interactionModes: [.pan, .zoom], showsUserLocation: true, userTrackingMode: .constant(.follow), annotationItems: getAnnotations())
         {
             MapMarker(coordinate: $0.coordinate, tint: .blue)
             
         }
-            .edgesIgnoringSafeArea([.trailing, .leading, .bottom])
+        .edgesIgnoringSafeArea([.trailing, .leading, .bottom])
     }
     
     
     
     func getAnnotations() -> [Location] {
+        
         if resaurant.restaurantName == "Brandywine" {
             
             return [Location(name: "Brandywine", coordinate: CLLocationCoordinate2D(latitude: 33.64545359567486, longitude: -117.83935794252335))]
             
-        } else {
+        } else if resaurant.restaurantName == "Anteatery" {
             
             return [Location(name: "Anteatery", coordinate: CLLocationCoordinate2D(latitude: 33.6509707747438, longitude: -117.8453661380031))]
             
+        } else {
+            return [Location(name: "Anteatery", coordinate: CLLocationCoordinate2D(latitude: 33.6461, longitude: -117.8427))]
         }
     }
     

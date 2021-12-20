@@ -20,37 +20,54 @@ struct MainView: View {
                         PageView(pages: generateRestaurantBanners(), currentPage: $restaurantSelectionIndex)
                             .frame(width: UIScreen.screenWidth, height: bannerHeight, alignment: .center)
                     } else {
-                        RestaurantBannerView(restaurant: restaurantModel.restaurants[0], height: bannerHeight)
+                        RestaurantBannerView(restaurant: restaurantModel.restaurants[restaurantSelectionIndex], height: bannerHeight)
                             .frame(width: UIScreen.screenWidth, height: bannerHeight, alignment: .center)
                     }
                     
-                    ScrollViewReader { sv in
-                        ScrollView(.vertical, showsIndicators: true) {
-                            VStack(spacing: 8) {
-                                ForEach(restaurantModel.restaurants[restaurantSelectionIndex].allMenu, id: \.self) { station in
-                                    StationView(station: station)
-                                        .padding(.leading, 12)
+                    if restaurantModel.restaurants[restaurantSelectionIndex].allMenu.count > 0 {
+                        
+                        ScrollViewReader { sv in
+                            ScrollView(.vertical, showsIndicators: true) {
+                                VStack(spacing: 8) {
+                                    ForEach(restaurantModel.restaurants[restaurantSelectionIndex].allMenu, id: \.self) { station in
+                                        StationView(station: station)
+                                            .padding(.leading, 12)
+                                    }
                                 }
                             }
-                            
-                            
-                        }
-                        .navigationBarTitle("ZotMeal")
-                        .navigationBarTitleDisplayMode(.inline)
-                        .onChange(of: restaurantSelectionIndex) { _ in
-                            withAnimation {
-                                sv.scrollTo(restaurantModel.restaurants[restaurantSelectionIndex].allMenu[0], anchor: .top)
+                            .navigationBarTitleDisplayMode(.inline)
+                            .onChange(of: restaurantSelectionIndex) { _ in
+                                withAnimation {
+                                    sv.scrollTo(restaurantModel.restaurants[restaurantSelectionIndex].allMenu[0], anchor: .top)
+                                }
                             }
                         }
+                        
+                    } else {
+                        VStack {
+                            Spacer()
+                            
+                            Text("No Menu Available")
+                                .font(.title2)
+                                .bold()
+                            
+                            Spacer()
+                        }
+                        
                     }
                 }
+                .navigationBarTitle("ZotMeal")
                 
             } else {
                 
                 if restaurantModel.isLoadingFailed {
+                    
                     FailView()
+                    
                 } else {
+                    
                     LoadingView()
+                    
                 }
             }
         }
