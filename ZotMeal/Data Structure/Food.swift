@@ -49,7 +49,7 @@ struct Food: Decodable, Hashable {
         hasher.combine(description)
     }
     
-    enum NutritionTFValueKey : String, CaseIterable {
+    enum NutritionTFValueKey : String {
         case isVegan = "isVegan"
         case isVegetarian = "isVegetarian"
         case isEatWell = "isEatWell"
@@ -57,7 +57,7 @@ struct Food: Decodable, Hashable {
         case isWholeGrains = "isWholeGrains"
     }
     
-    enum NutritionStrValueKey : String, CaseIterable {
+    enum NutritionStrValueKey : String {
         case servingSize = "servingSize"
         case servingUnit = "servingUnit"
         case totalFat = "totalFat"
@@ -75,7 +75,7 @@ struct Food: Decodable, Hashable {
         case saturatedFat = "saturatedFat"
     }
     
-    enum NutritionCalorieValueKey : String, CaseIterable {
+    enum NutritionCalorieValueKey : String {
         case calories = "calories"
         case caloriesFromFat = "caloriesFromFat"
     }

@@ -86,11 +86,15 @@ struct DetailedFoodCell: View {
     }
     
     // FIXME: - This is not correct. Check all food nutrition info before deciding.
-    
     func hasNutritionInfo() -> Bool {
         
-        return true
+        for nutrition in AllNutritionKeys.allCases {
+            if let _ = food.nutrition[nutrition.rawValue] {
+                return true
+            }
+        }
         
+        return false
     }
     
     
@@ -128,6 +132,31 @@ struct DetailedFoodCell: View {
     func removeSpecialCharsFromString(text: String) -> String {
         let okayChars = Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890")
         return text.filter { okayChars.contains($0) }
+    }
+    
+    enum AllNutritionKeys : String, CaseIterable {
+        case isVegan = "isVegan"
+        case isVegetarian = "isVegetarian"
+        case isEatWell = "isEatWell"
+        case isPlantForward = "isPlantForward"
+        case isWholeGrains = "isWholeGrains"
+        case servingSize = "servingSize"
+        case servingUnit = "servingUnit"
+        case totalFat = "totalFat"
+        case transFat = "transFat"
+        case cholesterol = "cholesterol"
+        case sodium = "sodium"
+        case totalCarbohydrates = "totalCarbohydrates"
+        case dietaryFiber = "dietaryFiber"
+        case sugars = "sugars"
+        case protein = "protein"
+        case vitaminA = "vitaminA"
+        case vitaminC = "vitaminC"
+        case calcium = "calcium"
+        case iron = "iron"
+        case saturatedFat = "saturatedFat"
+        case calories = "calories"
+        case caloriesFromFat = "caloriesFromFat"
     }
 }
 

@@ -35,9 +35,21 @@ struct RestaurantStatus: View {
                         .font(.body)
                         .bold()
                         .foregroundColor(.white)
+                    
+                    if getPrice() > 0 {
+                        Text("|")
+                            .font(.body)
+                            .foregroundColor(.white)
+                        
+                        Text("$ " + String(getPrice()))
+                            .font(.body)
+                            .bold()
+                            .foregroundColor(.white)
+                    }
                 }
                
             }
+            .lineLimit(1)
             
         }
         .padding(.horizontal, 4)
@@ -45,6 +57,17 @@ struct RestaurantStatus: View {
             updateStatus()
         }
         
+    }
+    
+    func getPrice() -> Double {
+        
+        var price: Double = 0
+        
+        if let pr = restaurant.pricing[restaurant.mealType.lowercased()] {
+            price = pr
+        }
+        
+        return price
     }
     
     func updateStatus() -> Void {
