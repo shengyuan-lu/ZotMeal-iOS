@@ -18,7 +18,7 @@ class RestaurantModel: ObservableObject {
     
     init() {
         // FIXME: - Load real data in production
-        loadRemoteDemoData()
+        loadLocalDemoData()
     }
     
     func loadRemoteRealData() {
@@ -63,6 +63,8 @@ class RestaurantModel: ObservableObject {
                 let data: Data? =  self.loadLocalJSON(forName: name)
                 self.loadRestaurant(data: data)
             }
+            
+            print("Success: load local sample JSON to data succeessfully)")
         }
     }
     

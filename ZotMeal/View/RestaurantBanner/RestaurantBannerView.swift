@@ -31,7 +31,7 @@ struct RestaurantBannerView: View {
                 
                 HStack {
                     
-                    RestaurantStatus()
+                    RestaurantStatus(restaurant: restaurant)
                     
                     Spacer()
                     

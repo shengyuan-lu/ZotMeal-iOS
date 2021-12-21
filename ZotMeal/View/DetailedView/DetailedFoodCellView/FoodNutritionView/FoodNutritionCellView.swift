@@ -26,7 +26,6 @@ struct FoodNutritionCellView: View {
             .font(.footnote)
         }
 
-        
     }
     
 }

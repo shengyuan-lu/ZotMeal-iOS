@@ -1,5 +1,20 @@
 {
     "refreshTime": 1639805899,
     "restaurant": "Sample",
+    "schedule": {
+        "breakfast": {
+            "start": 715,
+            "end": 1100
+        },
+        "lunch": {
+            "start": 1100,
+            "end": 1630
+        },
+        "dinner": {
+            "start": 1630,
+            "end": 2200
+        }
+    },
+    "currentMeal": "lunch",
     "all": []
 }

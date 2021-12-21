@@ -24,6 +24,7 @@ struct FoodNutritionView: View {
         }
         
         if food.hasBadge() {
+            
             Divider()
             
             FoodBadgeView(food: food)

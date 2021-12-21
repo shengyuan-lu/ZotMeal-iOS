@@ -26,7 +26,6 @@
 		F45200AC27682B2900E9D5EA /* CategoryTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AB27682B2900E9D5EA /* CategoryTitleView.swift */; };
 		F45200AE27682C0C00E9D5EA /* GenericButtonWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AD27682C0C00E9D5EA /* GenericButtonWithLabelView.swift */; };
 		F45200B027683C8E00E9D5EA /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AF27683C8E00E9D5EA /* StationView.swift */; };
-		F468C9C0276EF10A00796699 /* brandy_dummy_data_exp.json in Resources */ = {isa = PBXBuildFile; fileRef = F468C9BF276EF10A00796699 /* brandy_dummy_data_exp.json */; };
 		F4766FD22716A1FB00E3AD87 /* ZotMeal_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */; };
 		F4766FD42716A1FB00E3AD87 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD32716A1FB00E3AD87 /* MainView.swift */; };
 		F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD52716A1FE00E3AD87 /* Assets.xcassets */; };
@@ -73,7 +72,6 @@
 		F45200AB27682B2900E9D5EA /* CategoryTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTitleView.swift; sourceTree = "<group>"; };
 		F45200AD27682C0C00E9D5EA /* GenericButtonWithLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButtonWithLabelView.swift; sourceTree = "<group>"; };
 		F45200AF27683C8E00E9D5EA /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
-		F468C9BF276EF10A00796699 /* brandy_dummy_data_exp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brandy_dummy_data_exp.json; sourceTree = "<group>"; };
 		F4766FCE2716A1FB00E3AD87 /* ZotMeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZotMeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotMeal_App.swift; sourceTree = "<group>"; };
 		F4766FD32716A1FB00E3AD87 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -274,7 +272,6 @@
 				F4946B582769D4D500D77292 /* anteatery_dummy_data.json */,
 				F4F010BD276D5CFA00BB458C /* sample_restaurant.json */,
 				F44315A227705F8500421EAD /* empty_restaurant.json */,
-				F468C9BF276EF10A00796699 /* brandy_dummy_data_exp.json */,
 			);
 			path = "Local JSON";
 			sourceTree = "<group>";
@@ -371,7 +368,6 @@
 				F44315A327705F8500421EAD /* empty_restaurant.json in Resources */,
 				F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */,
 				F4946B592769D4D600D77292 /* anteatery_dummy_data.json in Resources */,
-				F468C9C0276EF10A00796699 /* brandy_dummy_data_exp.json in Resources */,
 				F4AE5A5C276AB72C003E83FE /* Launch Screen.storyboard in Resources */,
 				F4B5001F2717DC99007F9DE0 /* brandy_dummy_data.json in Resources */,
 				F4F010BE276D5CFA00BB458C /* sample_restaurant.json in Resources */,

@@ -63,7 +63,7 @@ struct MainView: View {
                         Button {
                             // FIXME: - Load real data in production
                             restaurantSelectionIndex = 0
-                            restaurantModel.loadRemoteDemoData()
+                            restaurantModel.loadLocalDemoData()
 
                         } label: {
                             
