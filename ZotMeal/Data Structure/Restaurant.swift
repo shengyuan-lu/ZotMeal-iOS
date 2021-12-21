@@ -12,8 +12,9 @@ struct Restaurant: Decodable, Hashable {
     let restaurantName: String
     let mealType: String
     
-    var allMenu: [Station]
-    var schedule: [String : [String : Int]]
+    let allMenu: [Station]
+    let schedule: [String : [String : Int]]
+    let pricing: [String : Double]
     
     enum CodingKeys: String, CodingKey {
         case refreshTime
@@ -21,6 +22,7 @@ struct Restaurant: Decodable, Hashable {
         case allMenu = "all"
         case mealType = "currentMeal"
         case schedule = "schedule"
+        case pricing = "price"
     }
     
     init(from decoder: Decoder) throws {
@@ -29,21 +31,23 @@ struct Restaurant: Decodable, Hashable {
         let all = try container.decode([Station].self, forKey: .allMenu)
         let mealType = try container.decode(String.self, forKey: .mealType).capitalized
         let schedule = try container.decode([String : [String : Int]].self, forKey: .schedule)
-        
+        let pricing = try container.decode([String : Double].self, forKey: .pricing)
         
         self.refreshTime = Date(timeIntervalSince1970: Double(unixTime))
         self.restaurantName = try container.decode(String.self, forKey: .restaurantName)
         self.allMenu = all
         self.mealType = mealType
         self.schedule = schedule
+        self.pricing = pricing
     }
     
-    init(refreshTime: Date, restaurantName: String, mealType: String, allMenu: [Station], schedule: [String : [String : Int]]) {
+    init(refreshTime: Date, restaurantName: String, mealType: String, allMenu: [Station], schedule: [String : [String : Int]], pricing: [String : Double]) {
         self.refreshTime = refreshTime
         self.restaurantName = restaurantName
         self.allMenu = allMenu
         self.mealType = mealType
         self.schedule = schedule
+        self.pricing = pricing
     }
     
 }
@@ -51,5 +55,8 @@ struct Restaurant: Decodable, Hashable {
 func getEmptyRestaurant() -> Restaurant {
     let emptyMenu = [Station]()
     let schedule: [String : [String : Int]] = ["breakfast" : ["start" : 715, "end": 1100], "lunch" : ["start" : 1100, "end": 1630], "dinner" : ["start" : 1630, "end": 2200]]
-    return Restaurant(refreshTime: Date(), restaurantName: "", mealType: "Lunch", allMenu: emptyMenu, schedule: schedule)
+    let pricing: [String : Double] = ["breakfast" : 9.75, "lunch" : 13.75, "brunch" : 13.75, "dinner" : 14.95]
+    
+    
+    return Restaurant(refreshTime: Date(), restaurantName: "", mealType: "Lunch", allMenu: emptyMenu, schedule: schedule, pricing: pricing)
 }

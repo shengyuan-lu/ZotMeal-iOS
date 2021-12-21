@@ -46,7 +46,7 @@ struct MainView: View {
                         VStack {
                             Spacer()
                             
-                            Text("No Menu Available")
+                            Text("Menu Not Available")
                                 .font(.title2)
                                 .bold()
                             

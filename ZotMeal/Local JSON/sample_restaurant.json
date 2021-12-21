@@ -1,6 +1,6 @@
 {
     "restaurant": "Sample",
-    "refreshTime": 1640032512,
+    "refreshTime": 1640115842,
     "schedule": {
         "breakfast": {
             "start": 715,
@@ -12,10 +12,16 @@
         },
         "dinner": {
             "start": 1630,
-            "end": 2200
+            "end": 0
         }
     },
     "currentMeal": "lunch",
+    "price": {
+        "breakfast": 9.75,
+        "lunch": 13.75,
+        "brunch": 13.75,
+        "dinner": 14.95
+    },
     "all": [
         {
             "station": "Honeycakes/Bakery",
@@ -636,4 +642,3 @@
         }
     ]
 }
-

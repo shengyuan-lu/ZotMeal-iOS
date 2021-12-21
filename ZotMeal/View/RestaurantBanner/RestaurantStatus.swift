@@ -20,16 +20,27 @@ struct RestaurantStatus: View {
                 .foregroundColor(getStatusIndicatorColor())
                 .frame(width: 10, height: 10, alignment: .center)
             
-            Text(status.rawValue)
-                .font(.body)
-                .bold()
-                .foregroundColor(.white)
+            HStack(spacing: 6) {
+                Text(status.rawValue)
+                    .font(.body)
+                    .bold()
+                    .foregroundColor(.white)
+                
+                if status != .loading && status != .notAvail {
+                    Text("|")
+                        .font(.body)
+                        .foregroundColor(.white)
+                    
+                    Text(restaurant.mealType)
+                        .font(.body)
+                        .bold()
+                        .foregroundColor(.white)
+                }
+               
+            }
             
-            Text("| " + restaurant.mealType)
-                .font(.body)
-                .foregroundColor(.white)
         }
-        .padding(.horizontal, 8)
+        .padding(.horizontal, 4)
         .onAppear {
             updateStatus()
         }
@@ -57,6 +68,12 @@ struct RestaurantStatus: View {
         
         if openTime == 0 || closeTime == 0 {
             status = .notAvail
+            return
+        }
+        
+        if closeTime <= openTime {
+            status = .notAvail
+            return
         }
         
         if (openTime - timeInt) >= 15 {
