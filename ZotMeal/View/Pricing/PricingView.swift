@@ -63,6 +63,15 @@ struct PricingView: View {
                         PricingListCell(item: key.capitalized, price: getPrice(for: key))
                     }
                     
+                    HStack {
+                        Text("Meal plan holders: Plese refer to terms and conditions of your specific meal plan.")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                        
+                        Spacer()
+                    }
+                    
+                    
                 }
             }
             .padding(.top, 4)
