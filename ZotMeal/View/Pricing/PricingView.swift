@@ -23,7 +23,7 @@ struct PricingView: View {
                 VStack {
                     Spacer()
                     
-                    VStack {
+                    VStack(spacing: 4) {
                         HStack {
                             Text(restaurant.restaurantName)
                                 .bold()
@@ -34,14 +34,16 @@ struct PricingView: View {
                             Spacer()
                         }
                         
+                        ExDivider()
+                        
                         HStack {
-                            Text("DoorRate")
+                            Text("Meal Type")
                             
                             Spacer()
                             
-                            Text(restaurant.getMenuUpdateTimeInString())
+                            Text("Price")
                         }
-                        .font(.title2)
+                        .font(.body)
                         .foregroundColor(.white)
                         .shadow(color: Color.black, radius: 5, x: 5, y: 5)
                         
@@ -64,7 +66,7 @@ struct PricingView: View {
                     }
                     
                     HStack {
-                        Text("Meal plan holders: Plese refer to terms and conditions of your specific meal plan.")
+                        Text("Meal plan holders: Please refer to terms and conditions of your specific meal plan.")
                             .font(.footnote)
                             .foregroundColor(.secondary)
                         

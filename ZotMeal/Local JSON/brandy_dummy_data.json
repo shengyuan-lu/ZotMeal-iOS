@@ -12,7 +12,7 @@
         },
         "dinner": {
             "start": 1630,
-            "end": 2200
+            "end": 1900
         }
     },
     "currentMeal": "lunch",

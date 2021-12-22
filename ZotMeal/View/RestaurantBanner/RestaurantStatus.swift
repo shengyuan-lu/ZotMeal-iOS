@@ -29,7 +29,7 @@ struct RestaurantStatus: View {
                         .bold()
                         .foregroundColor(.white)
                     
-                    if !(status == .loading || status == .notAvail || status == .closed) {
+                    if status == .open {
                         Text("|")
                             .font(.body)
                             .foregroundColor(.white)
@@ -59,10 +59,12 @@ struct RestaurantStatus: View {
             .onAppear {
                 updateStatus()
             }
+
             
             Spacer()
             
             HStack(spacing: 12) {
+                
                 NavigationLink {
                     Text("Schedule")
                         .navigationTitle("Schedule")
@@ -149,14 +151,14 @@ struct RestaurantStatus: View {
             return
         }
         
-        if (openTime - timeInt) >= 15 {
+        if (openTime - timeInt) > 15 {
             status = .closed
         } else if (openTime - timeInt) <= 15 && (openTime - timeInt) >= 0 {
             status = .openSoon
-        } else if (closeTime - timeInt) >= 15 {
-            status = .open
         } else if (closeTime - timeInt) <= 15 && (closeTime - timeInt) >= 0 {
             status = .closeSoon
+        } else if (closeTime - timeInt) > 15 {
+            status = .open
         } else if (timeInt - closeTime) > 0 {
             status = .closed
         } else {
@@ -214,7 +216,7 @@ enum RestaurantOpenStatus: String {
     case closed = "Closed Now"
     case closeSoon = "Close Soon"
     case openSoon = "Open Soon"
-    case loading = "Loading.."
+    case loading = "Loading..."
     case notAvail = "Not Available"
 }
 
