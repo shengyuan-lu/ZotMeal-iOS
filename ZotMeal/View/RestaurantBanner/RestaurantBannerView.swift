@@ -11,72 +11,17 @@ struct RestaurantBannerView: View {
     
     @State var restaurant: Restaurant
     
-    let height: CGFloat?
+    let height: CGFloat
     
     var body: some View {
         
         ZStack {
             
-            ZStack{
-                Image(restaurant.restaurantName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: UIScreen.screenWidth, height: height, alignment: .center)
-                    .clipped()
-                
-                LinearGradient(gradient: Gradient(colors: [.clear, .black.opacity(0.4)]), startPoint: .center, endPoint: .bottom)
-            }
+            RestaurantBannerImage(imageName: restaurant.restaurantName, height: height)
             
             VStack {
                 
-                HStack {
-                    
-                    RestaurantStatus(restaurant: restaurant)
-                    
-                    Spacer()
-                    
-                    HStack(spacing: 12) {
-                        NavigationLink {
-                            Text("Schedule")
-                                .navigationTitle(restaurant.restaurantName + " Schedule")
-                                .navigationBarTitleDisplayMode(.inline)
-                            
-                        } label: {
-                            Image(systemName: "calendar")
-                                .shadow(color: Color.black, radius: 3, x: 3, y: 3)
-                                .foregroundColor(.white)
-                                .font(.title2)
-                        }
-                        
-                        NavigationLink {
-                            MapView(resaurant: restaurant)
-                                .navigationTitle(restaurant.restaurantName + " Location")
-                                .navigationBarTitleDisplayMode(.inline)
-                            
-                        } label: {
-                            Image(systemName: "mappin.and.ellipse")
-                                .shadow(color: Color.black, radius: 3, x: 3, y: 3)
-                                .foregroundColor(.white)
-                                .font(.title2)
-                        }
-                        
-                        NavigationLink {
-                            Text("Pricing")
-                                .navigationTitle(restaurant.restaurantName + " Pricing")
-                                .navigationBarTitleDisplayMode(.inline)
-                            
-                        } label: {
-                            Image(systemName: "dollarsign.circle.fill")
-                                .shadow(color: Color.black, radius: 3, x: 3, y: 3)
-                                .foregroundColor(.white)
-                                .font(.title2)
-                        }
-                    }
-                    
-                }
-                .padding(8)
-                .background(Color.black.opacity(0.6))
-                .clipShape(RoundedRectangle(cornerRadius: 0))
+                RestaurantStatus(restaurant: restaurant)
                 
                 Spacer()
                 
@@ -92,7 +37,7 @@ struct RestaurantBannerView: View {
                     }
                     
                     HStack {
-                        Text("Menu Updated: " + getMenuUpdateTimeInString())
+                        Text("Menu Updated: " + restaurant.getMenuUpdateTimeInString())
                             .foregroundColor(.white)
                             .shadow(color: Color.black, radius: 5, x: 5, y: 5)
                         
@@ -108,12 +53,6 @@ struct RestaurantBannerView: View {
         
     }
     
-    func getMenuUpdateTimeInString() -> String {
-        let date = restaurant.refreshTime
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
-        return dateFormatter.string(from: date)
-    }
 }
 
 struct RestaurantBannerView_Previews: PreviewProvider {

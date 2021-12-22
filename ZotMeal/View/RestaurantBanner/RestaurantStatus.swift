@@ -16,48 +16,97 @@ struct RestaurantStatus: View {
         
         HStack {
             
-            Circle()
-                .foregroundColor(getStatusIndicatorColor())
-                .frame(width: 10, height: 10, alignment: .center)
-            
-            HStack(spacing: 6) {
-                Text(status.rawValue)
-                    .font(.body)
-                    .bold()
-                    .foregroundColor(.white)
+            HStack {
                 
-                if status != .loading && status != .notAvail {
-                    Text("|")
-                        .font(.body)
-                        .foregroundColor(.white)
+                Circle()
+                    .foregroundColor(getStatusIndicatorColor())
+                    .frame(width: 10, height: 10, alignment: .center)
+                
+                HStack(spacing: 6) {
                     
-                    Text(restaurant.mealType)
+                    Text(status.rawValue)
                         .font(.body)
                         .bold()
                         .foregroundColor(.white)
                     
-                    if getPrice() > 0 {
+                    if !(status == .loading || status == .notAvail || status == .closed) {
                         Text("|")
                             .font(.body)
                             .foregroundColor(.white)
                         
-                        Text("$ " + String(getPrice()))
+                        Text(restaurant.mealType)
                             .font(.body)
                             .bold()
                             .foregroundColor(.white)
+                        
+                        if getPrice() > 0 {
+                            Text("|")
+                                .font(.body)
+                                .foregroundColor(.white)
+                            
+                            Text("$" + String(getPrice()))
+                                .font(.body)
+                                .bold()
+                                .foregroundColor(.white)
+                        }
                     }
+                   
                 }
-               
+                .lineLimit(1)
+                
             }
-            .lineLimit(1)
+            .padding(.horizontal, 4)
+            .onAppear {
+                updateStatus()
+            }
+            
+            Spacer()
+            
+            HStack(spacing: 12) {
+                NavigationLink {
+                    Text("Schedule")
+                        .navigationTitle("Schedule")
+                        .navigationBarTitleDisplayMode(.inline)
+                    
+                } label: {
+                    Image(systemName: "calendar")
+                        .shadow(color: Color.black, radius: 3, x: 3, y: 3)
+                        .foregroundColor(.white)
+                        .font(.title2)
+                }
+                
+                NavigationLink {
+                    MapView(resaurant: restaurant)
+                        .navigationTitle(restaurant.restaurantName + " Location")
+                        .navigationBarTitleDisplayMode(.inline)
+                    
+                } label: {
+                    Image(systemName: "mappin.and.ellipse")
+                        .shadow(color: Color.black, radius: 3, x: 3, y: 3)
+                        .foregroundColor(.white)
+                        .font(.title2)
+                }
+                
+                NavigationLink {
+                    PricingView(restaurant: restaurant)
+                        .navigationTitle("Pricing")
+                        .navigationBarTitleDisplayMode(.inline)
+                    
+                } label: {
+                    Image(systemName: "dollarsign.circle.fill")
+                        .shadow(color: Color.black, radius: 3, x: 3, y: 3)
+                        .foregroundColor(.white)
+                        .font(.title2)
+                }
+            }
             
         }
-        .padding(.horizontal, 4)
-        .onAppear {
-            updateStatus()
-        }
+        .padding(8)
+        .background(Color.black.opacity(0.6))
+        .clipShape(RoundedRectangle(cornerRadius: 0))
         
     }
+    
     
     func getPrice() -> Double {
         
@@ -69,6 +118,7 @@ struct RestaurantStatus: View {
         
         return price
     }
+    
     
     func updateStatus() -> Void {
         
@@ -114,6 +164,7 @@ struct RestaurantStatus: View {
         }
     }
     
+    
     func getCurrentTimeInInt() -> Int {
         
         let date = Date()
@@ -128,6 +179,7 @@ struct RestaurantStatus: View {
         
         return hour * 100 + minute
     }
+    
     
     func getStatusIndicatorColor() -> Color {
         
@@ -154,15 +206,15 @@ struct RestaurantStatus: View {
         }
     }
     
-    
 }
+
 
 enum RestaurantOpenStatus: String {
     case open = "Open Now"
     case closed = "Closed Now"
     case closeSoon = "Close Soon"
     case openSoon = "Open Soon"
-    case loading = "Loading..."
+    case loading = "Loading.."
     case notAvail = "Not Available"
 }
 

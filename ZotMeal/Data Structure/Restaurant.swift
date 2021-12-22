@@ -50,6 +50,13 @@ struct Restaurant: Decodable, Hashable {
         self.pricing = pricing
     }
     
+    func getMenuUpdateTimeInString() -> String {
+        let date = refreshTime
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        return dateFormatter.string(from: date)
+    }
+    
 }
 
 func getEmptyRestaurant() -> Restaurant {
@@ -58,5 +65,5 @@ func getEmptyRestaurant() -> Restaurant {
     let pricing: [String : Double] = ["breakfast" : 9.75, "lunch" : 13.75, "brunch" : 13.75, "dinner" : 14.95]
     
     
-    return Restaurant(refreshTime: Date(), restaurantName: "", mealType: "Lunch", allMenu: emptyMenu, schedule: schedule, pricing: pricing)
+    return Restaurant(refreshTime: Date(), restaurantName: "Sample", mealType: "Lunch", allMenu: emptyMenu, schedule: schedule, pricing: pricing)
 }

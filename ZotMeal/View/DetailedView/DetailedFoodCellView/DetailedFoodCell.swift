@@ -85,7 +85,6 @@ struct DetailedFoodCell: View {
         }
     }
     
-    // FIXME: - This is not correct. Check all food nutrition info before deciding.
     func hasNutritionInfo() -> Bool {
         
         for nutrition in AllNutritionKeys.allCases {

@@ -70,7 +70,7 @@ struct FailView: View {
                         
                         startLoading()
                         
-                        // FIXME: - change it to real data
+                        // FIXME: - Load real data in production
                         restaurantModel.loadLocalDemoData()
                         
                     }, buttonText: "Try Again", systemName: "arrow.clockwise", bgColor: .blue, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
