@@ -66,7 +66,7 @@ struct RestaurantStatus: View {
             HStack(spacing: 12) {
                 
                 NavigationLink {
-                    Text("Schedule")
+                    ScheduleView()
                         .navigationTitle("Schedule")
                         .navigationBarTitleDisplayMode(.inline)
                     
@@ -78,8 +78,8 @@ struct RestaurantStatus: View {
                 }
                 
                 NavigationLink {
-                    MapView(resaurant: restaurant)
-                        .navigationTitle(restaurant.restaurantName + " Location")
+                    MapView(restaurant: restaurant)
+                        .navigationTitle("")
                         .navigationBarTitleDisplayMode(.inline)
                     
                 } label: {
@@ -212,7 +212,7 @@ struct RestaurantStatus: View {
 
 
 enum RestaurantOpenStatus: String {
-    case open = "Open Now"
+    case open = "Open"
     case closed = "Closed Now"
     case closeSoon = "Close Soon"
     case openSoon = "Open Soon"

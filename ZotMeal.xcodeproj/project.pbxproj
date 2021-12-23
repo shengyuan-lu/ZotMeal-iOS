@@ -15,6 +15,8 @@
 		F42E81422772A17B00E87F08 /* PricingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E81412772A17B00E87F08 /* PricingView.swift */; };
 		F42E81442772A1BD00E87F08 /* RestaurantBannerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E81432772A1BD00E87F08 /* RestaurantBannerImage.swift */; };
 		F42E81462772AB0700E87F08 /* PricingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E81452772AB0700E87F08 /* PricingListCell.swift */; };
+		F42E814A2773CEC000E87F08 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E81492773CEC000E87F08 /* DictionaryExtension.swift */; };
+		F42E814D2773CFC700E87F08 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E814C2773CFC700E87F08 /* ScheduleView.swift */; };
 		F44315A327705F8500421EAD /* empty_restaurant.json in Resources */ = {isa = PBXBuildFile; fileRef = F44315A227705F8500421EAD /* empty_restaurant.json */; };
 		F44315A627706B0000421EAD /* RestaurantStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44315A527706B0000421EAD /* RestaurantStatus.swift */; };
 		F44ED965276F317100C1B513 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ED964276F317100C1B513 /* LoadingView.swift */; };
@@ -64,6 +66,8 @@
 		F42E81412772A17B00E87F08 /* PricingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingView.swift; sourceTree = "<group>"; };
 		F42E81432772A1BD00E87F08 /* RestaurantBannerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantBannerImage.swift; sourceTree = "<group>"; };
 		F42E81452772AB0700E87F08 /* PricingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingListCell.swift; sourceTree = "<group>"; };
+		F42E81492773CEC000E87F08 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		F42E814C2773CFC700E87F08 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		F44315A227705F8500421EAD /* empty_restaurant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty_restaurant.json; sourceTree = "<group>"; };
 		F44315A527706B0000421EAD /* RestaurantStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantStatus.swift; sourceTree = "<group>"; };
 		F44ED964276F317100C1B513 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -121,16 +125,17 @@
 			isa = PBXGroup;
 			children = (
 				F4766FD32716A1FB00E3AD87 /* MainView.swift */,
-				F44315A427706AEB00421EAD /* RestaurantBanner */,
 				F45200AF27683C8E00E9D5EA /* StationView.swift */,
 				F45200A72767AF4100E9D5EA /* CategoryView.swift */,
 				F45200AB27682B2900E9D5EA /* CategoryTitleView.swift */,
 				F45200A92767AF4F00E9D5EA /* SimpleFoodCell.swift */,
+				F44315A427706AEB00421EAD /* RestaurantBanner */,
 				F4DB6403276B407F0016EAB6 /* PageView */,
 				F4BEBE3D276969000043C603 /* DetailedView */,
 				F4BEBE3C276967610043C603 /* Buttons */,
 				F44ED968276F7F5200C1B513 /* MapView */,
 				F42E81402772A15400E87F08 /* Pricing */,
+				F42E814B2773CFAF00E87F08 /* ScheduleView */,
 				F4946B5A2769E3DD00D77292 /* ProgressView */,
 			);
 			path = View;
@@ -151,6 +156,14 @@
 				F42E81452772AB0700E87F08 /* PricingListCell.swift */,
 			);
 			path = Pricing;
+			sourceTree = "<group>";
+		};
+		F42E814B2773CFAF00E87F08 /* ScheduleView */ = {
+			isa = PBXGroup;
+			children = (
+				F42E814C2773CFC700E87F08 /* ScheduleView.swift */,
+			);
+			path = ScheduleView;
 			sourceTree = "<group>";
 		};
 		F44315A427706AEB00421EAD /* RestaurantBanner */ = {
@@ -183,11 +196,12 @@
 		F45200A42767A4E300E9D5EA /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				F4201762276982030064FF86 /* Constants.swift */,
 				F45200A52767A4F900E9D5EA /* UIScreenExtension.swift */,
 				F4F010BF276DB36900BB458C /* DecodingExtension.swift */,
-				F4201762276982030064FF86 /* Constants.swift */,
 				F41A3CC8276ECC5300CBE7A8 /* StringExtension.swift */,
 				F44ED966276F4A4B00C1B513 /* ExDivider.swift */,
+				F42E81492773CEC000E87F08 /* DictionaryExtension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -405,6 +419,8 @@
 				F41A3CC9276ECC5300CBE7A8 /* StringExtension.swift in Sources */,
 				F4F010C0276DB36900BB458C /* DecodingExtension.swift in Sources */,
 				F45200B027683C8E00E9D5EA /* StationView.swift in Sources */,
+				F42E814D2773CFC700E87F08 /* ScheduleView.swift in Sources */,
+				F42E814A2773CEC000E87F08 /* DictionaryExtension.swift in Sources */,
 				F4ABC336276976B9008A32ED /* DetailedStationView.swift in Sources */,
 				F4201763276982030064FF86 /* Constants.swift in Sources */,
 				F44ED96A276F7F6900C1B513 /* MapView.swift in Sources */,

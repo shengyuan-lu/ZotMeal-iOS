@@ -61,9 +61,8 @@ struct MainView: View {
                     ToolbarItem(placement: .navigationBarLeading) {
 
                         Button {
-                            // FIXME: - Load real data in production
                             restaurantSelectionIndex = 0
-                            restaurantModel.loadLocalDemoData()
+                            restaurantModel.load()
 
                         } label: {
                             

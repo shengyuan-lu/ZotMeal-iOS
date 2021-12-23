@@ -14,9 +14,14 @@ class RestaurantModel: ObservableObject {
     @Published var isLoadingFailed: Bool = false
     
     let remoteJSONnames: [String] = [Constants.brandyURL, Constants.anteateryURL]
-    let localJSONnames: [String] = [Constants.brandyDummyName, Constants.antearyDummyName, Constants.emptyDummy]
+    let localJSONnames: [String] = [Constants.brandyDummyName, Constants.antearyDummyName]
     
     init() {
+        self.load()
+    }
+    
+    func load() {
+        
         // FIXME: - Load real data in production
         loadLocalDemoData()
     }

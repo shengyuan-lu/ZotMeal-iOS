@@ -62,7 +62,7 @@ struct PricingView: View {
                 ScrollView {
                     
                     ForEach(Array(restaurant.pricing.keys).sorted(by: { restaurant.pricing[$0]! < restaurant.pricing[$1]! }), id: \.self) { key in
-                        PricingListCell(item: key.capitalized, price: getPrice(for: key))
+                        PricingListCell(item: getCorrectKeyForBrunch(for: key), price: getPrice(for: key))
                     }
                     
                     HStack {
@@ -94,6 +94,18 @@ struct PricingView: View {
         }
         
         return price
+    }
+    
+    func getCorrectKeyForBrunch(for key: String) -> String {
+        if key.capitalized == "Brunch" {
+            return key.capitalized + " (Sat. - Sun. only)"
+            
+        } else if key.capitalized == "Lunch" {
+            return key.capitalized + " (Mon. - Fri. only)"
+            
+        } else {
+            return key.capitalized
+        }
     }
     
     
