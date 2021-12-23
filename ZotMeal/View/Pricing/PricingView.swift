@@ -61,7 +61,7 @@ struct PricingView: View {
             VStack {
                 ScrollView {
                     
-                    ForEach(Array(restaurant.pricing.keys).sorted(by: { restaurant.pricing[$0]! < restaurant.pricing[$1]! }), id: \.self) { key in
+                    ForEach(["breakfast", "lunch", "brunch", "dinner"], id: \.self) { key in
                         PricingListCell(item: getCorrectKeyForBrunch(for: key), price: getPrice(for: key))
                     }
                     

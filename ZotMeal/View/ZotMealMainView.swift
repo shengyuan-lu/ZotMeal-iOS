@@ -77,7 +77,6 @@ struct ZotMealMainView: View {
                     
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         
-                        
                         NavigationLink {
                             
                         } label: {

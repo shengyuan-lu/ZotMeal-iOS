@@ -67,7 +67,7 @@ struct RestaurantStatus: View {
                 
                 NavigationLink {
                     ScheduleView(restaurant: restaurant)
-                        .navigationTitle("Schedule")
+                        .navigationTitle("Calendar")
                         .navigationBarTitleDisplayMode(.inline)
                     
                 } label: {
@@ -79,7 +79,7 @@ struct RestaurantStatus: View {
                 
                 NavigationLink {
                     MapView(restaurant: restaurant)
-                        .navigationTitle("")
+                        .navigationTitle("Map")
                         .navigationBarTitleDisplayMode(.inline)
                     
                 } label: {
