@@ -46,7 +46,7 @@ struct ScheduleView: View {
                         }
                         
                     }
-                    .padding(.horizontal, 12)
+                    .padding(.horizontal, 16)
                     .padding(.vertical, 8)
                     .background(Color.black.opacity(0.6))
                     .clipShape(RoundedRectangle(cornerRadius: 0))
@@ -103,11 +103,13 @@ struct ScheduleView: View {
                         }
                         
                     }
-                    .padding(.horizontal, 12)
+                    
                     
                 }
                 
             }
+            .padding(.horizontal, 16)
+            .padding(.top, 8)
             
             Spacer()
             
