@@ -11,7 +11,7 @@ struct PricingView: View {
     
     @State var restaurant: Restaurant
     
-    let height: CGFloat = 240
+    let height: CGFloat = 220
     
     var body: some View {
         

@@ -39,5 +39,7 @@ struct PricingListCell: View {
 struct PricingListCell_Previews: PreviewProvider {
     static var previews: some View {
         PricingListCell(item: "Breakfast", price: 13.95)
+            .previewLayout(PreviewLayout.sizeThatFits)
+            .previewDisplayName("Default preview")
     }
 }

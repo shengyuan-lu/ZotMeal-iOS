@@ -61,9 +61,8 @@ struct Restaurant: Decodable, Hashable {
 
 func getEmptyRestaurant() -> Restaurant {
     let emptyMenu = [Station]()
-    let schedule: [String : [String : Int]] = ["breakfast" : ["start" : 715, "end": 1100], "lunch" : ["start" : 1100, "end": 1630], "dinner" : ["start" : 1630, "end": 2200]]
-    let pricing: [String : Double] = ["breakfast" : 9.75, "lunch" : 13.75, "brunch" : 13.75, "dinner" : 14.95]
+    let sampleSchedule: [String : [String : Int]] = ["breakfast" : ["start" : 715, "end": 1100], "lunch" : ["start" : 1100, "end": 1630], "dinner" : ["start" : 1630, "end": 2200]]
+    let samplePricing: [String : Double] = ["breakfast" : 9.75, "lunch" : 13.75, "brunch" : 13.75, "dinner" : 14.95]
     
-    
-    return Restaurant(refreshTime: Date(), restaurantName: "Sample", mealType: "Lunch", allMenu: emptyMenu, schedule: schedule, pricing: pricing)
+    return Restaurant(refreshTime: Date(), restaurantName: "Sample", mealType: "Lunch", allMenu: emptyMenu, schedule: sampleSchedule, pricing: samplePricing)
 }

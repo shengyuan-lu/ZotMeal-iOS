@@ -14,7 +14,6 @@ struct MapView: View {
     
     @State var restaurant: Restaurant
     
-    
     var body: some View {
         
         VStack(spacing: 0) {
