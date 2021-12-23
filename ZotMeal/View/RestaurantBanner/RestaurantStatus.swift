@@ -77,17 +77,6 @@ struct RestaurantStatus: View {
                         .font(.title2)
                 }
                 
-                NavigationLink {
-                    MapView(restaurant: restaurant)
-                        .navigationTitle("Map")
-                        .navigationBarTitleDisplayMode(.inline)
-                    
-                } label: {
-                    Image(systemName: "mappin.and.ellipse")
-                        .shadow(color: Color.black, radius: 3, x: 3, y: 3)
-                        .foregroundColor(.white)
-                        .font(.title2)
-                }
                 
                 NavigationLink {
                     PricingView(restaurant: restaurant)
@@ -96,6 +85,19 @@ struct RestaurantStatus: View {
                     
                 } label: {
                     Image(systemName: "dollarsign.circle.fill")
+                        .shadow(color: Color.black, radius: 3, x: 3, y: 3)
+                        .foregroundColor(.white)
+                        .font(.title2)
+                }
+                
+                
+                NavigationLink {
+                    MapView(restaurant: restaurant)
+                        .navigationTitle("Map")
+                        .navigationBarTitleDisplayMode(.inline)
+                    
+                } label: {
+                    Image(systemName: "mappin.and.ellipse")
                         .shadow(color: Color.black, radius: 3, x: 3, y: 3)
                         .foregroundColor(.white)
                         .font(.title2)

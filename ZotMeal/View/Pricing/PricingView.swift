@@ -59,7 +59,7 @@ struct PricingView: View {
             .frame(width: UIScreen.screenWidth, height: height, alignment: .center)
             
             VStack {
-                ScrollView {
+                ScrollView(showsIndicators: false) {
                     
                     ForEach(["breakfast", "lunch", "brunch", "dinner"], id: \.self) { key in
                         PricingListCell(item: getCorrectKeyForBrunch(for: key), price: getPrice(for: key))

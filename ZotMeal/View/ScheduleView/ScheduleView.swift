@@ -57,7 +57,7 @@ struct ScheduleView: View {
             }
             .frame(width: UIScreen.screenWidth, height: height, alignment: .center)
             
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 
                 VStack(spacing: 16) {
                     
