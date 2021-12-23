@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct MainView: View {
+struct ZotMealMainView: View {
     
     @EnvironmentObject var restaurantModel: RestaurantModel
     
@@ -14,7 +14,7 @@ struct MainView: View {
             
             if restaurantModel.restaurants.count > 0 {
                 
-                VStack(spacing: 16) {
+                VStack(spacing: 8) {
                     
                     if restaurantModel.restaurants.count > 1 {
                         PageView(pages: generateRestaurantBanners(), currentPage: $restaurantSelectionIndex)
@@ -31,7 +31,7 @@ struct MainView: View {
                                 VStack(spacing: 8) {
                                     ForEach(restaurantModel.restaurants[restaurantSelectionIndex].allMenu, id: \.self) { station in
                                         StationView(station: station)
-                                            .padding(.leading, 12)
+                                            .padding(.leading, 8)
                                     }
                                 }
                             }
@@ -75,14 +75,23 @@ struct MainView: View {
                         }
                     }
                     
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
                         
-                        Button {
+                        
+                        NavigationLink {
                             
                         } label: {
-                            Image(systemName: "person.3.sequence.fill")
+                            Image(systemName: "wallet.pass.fill")
+                                .offset(x: 15)
                         }
                         
+                        NavigationLink {
+                            
+                        } label: {
+                            Image(systemName: "person.2.fill")
+                                
+                        }
+
                     }
                 }
                 
@@ -112,8 +121,8 @@ struct MainView: View {
     
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ZotMealMainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        ZotMealMainView()
     }
 }

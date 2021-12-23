@@ -73,7 +73,6 @@ struct PricingView: View {
                         Spacer()
                     }
                     
-                    
                 }
             }
             .padding(.top, 4)
@@ -82,8 +81,11 @@ struct PricingView: View {
             Spacer()
             
         }
+        .background(Color(UIColor(named: "categoryBG")!))
+        .edgesIgnoringSafeArea([.horizontal, .bottom])
         
     }
+    
     
     func getPrice(for key: String) -> Double {
         

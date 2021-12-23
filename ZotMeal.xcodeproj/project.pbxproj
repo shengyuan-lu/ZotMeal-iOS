@@ -32,7 +32,7 @@
 		F45200AE27682C0C00E9D5EA /* GenericButtonWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AD27682C0C00E9D5EA /* GenericButtonWithLabelView.swift */; };
 		F45200B027683C8E00E9D5EA /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AF27683C8E00E9D5EA /* StationView.swift */; };
 		F4766FD22716A1FB00E3AD87 /* ZotMeal_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */; };
-		F4766FD42716A1FB00E3AD87 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD32716A1FB00E3AD87 /* MainView.swift */; };
+		F4766FD42716A1FB00E3AD87 /* ZotMealMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD32716A1FB00E3AD87 /* ZotMealMainView.swift */; };
 		F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD52716A1FE00E3AD87 /* Assets.xcassets */; };
 		F4766FD92716A1FE00E3AD87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */; };
 		F4858030276DF04F00856F0E /* FoodNutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485802F276DF04F00856F0E /* FoodNutritionView.swift */; };
@@ -84,7 +84,7 @@
 		F45200AF27683C8E00E9D5EA /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
 		F4766FCE2716A1FB00E3AD87 /* ZotMeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZotMeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotMeal_App.swift; sourceTree = "<group>"; };
-		F4766FD32716A1FB00E3AD87 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F4766FD32716A1FB00E3AD87 /* ZotMealMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotMealMainView.swift; sourceTree = "<group>"; };
 		F4766FD52716A1FE00E3AD87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F485802F276DF04F00856F0E /* FoodNutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutritionView.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		F41E2AD727281EB2004DF007 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F4766FD32716A1FB00E3AD87 /* MainView.swift */,
+				F4766FD32716A1FB00E3AD87 /* ZotMealMainView.swift */,
 				F45200AF27683C8E00E9D5EA /* StationView.swift */,
 				F45200A72767AF4100E9D5EA /* CategoryView.swift */,
 				F45200AB27682B2900E9D5EA /* CategoryTitleView.swift */,
@@ -412,7 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4766FD42716A1FB00E3AD87 /* MainView.swift in Sources */,
+				F4766FD42716A1FB00E3AD87 /* ZotMealMainView.swift in Sources */,
 				F45200AC27682B2900E9D5EA /* CategoryTitleView.swift in Sources */,
 				F45200AA2767AF4F00E9D5EA /* SimpleFoodCell.swift in Sources */,
 				F45200A327679CE000E9D5EA /* RestaurantBannerView.swift in Sources */,

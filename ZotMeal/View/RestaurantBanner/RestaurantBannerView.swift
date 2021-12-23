@@ -44,7 +44,7 @@ struct RestaurantBannerView: View {
                         Spacer()
                     }
                 }
-                .padding(.horizontal, 12)
+                .padding(.horizontal, 8)
                 .padding(.vertical, 8)
             }
             

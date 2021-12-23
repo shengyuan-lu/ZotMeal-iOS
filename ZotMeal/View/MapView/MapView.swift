@@ -26,7 +26,6 @@ struct MapView: View {
                     MapMarker(coordinate: $0.coordinate, tint: .red)
                     
                 }
-                .edgesIgnoringSafeArea([.horizontal, .bottom])
                 
                 VStack {
                     
@@ -62,13 +61,13 @@ struct MapView: View {
                         }
                         
                         
-                    }, buttonText: "Open in Apple Maps", systemName: "map.fill", bgColor: Color.blue, textColor: Color.white, edgeInsets: EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16))
-                        .padding(.bottom, 50)
+                    }, buttonText: "Open in Apple Maps", systemName: "map.fill", bgColor: Color.blue, textColor: Color.white, edgeInsets: EdgeInsets(top: 16, leading: 20, bottom: 16, trailing: 20))
+                        .padding(.bottom, 60)
                         .shadow(color: Color.black.opacity(0.4), radius: 5, x: 1, y: 1)
                 }
             }
-           
-            
+            .edgesIgnoringSafeArea([.horizontal, .bottom])
+
         }
         
     }
