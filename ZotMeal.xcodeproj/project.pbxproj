@@ -39,6 +39,8 @@
 		F48F0EFD27743AB200D62131 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F0EFC27743AB200D62131 /* ScheduleCell.swift */; };
 		F4946B592769D4D600D77292 /* anteatery_dummy_data.json in Resources */ = {isa = PBXBuildFile; fileRef = F4946B582769D4D500D77292 /* anteatery_dummy_data.json */; };
 		F4946B5C2769E3EF00D77292 /* FailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4946B5B2769E3EF00D77292 /* FailView.swift */; };
+		F4999D7F27773A6E0052556C /* PassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D7E27773A6E0052556C /* PassView.swift */; };
+		F4999D8127773EEE0052556C /* PassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D8027773EEE0052556C /* PassModel.swift */; };
 		F4ABC33427697455008A32ED /* DetailedCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABC33327697455008A32ED /* DetailedCategoryView.swift */; };
 		F4ABC336276976B9008A32ED /* DetailedStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABC335276976B9008A32ED /* DetailedStationView.swift */; };
 		F4AE5A5C276AB72C003E83FE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AE5A5B276AB72C003E83FE /* Launch Screen.storyboard */; };
@@ -92,6 +94,8 @@
 		F48F0EFC27743AB200D62131 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		F4946B582769D4D500D77292 /* anteatery_dummy_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = anteatery_dummy_data.json; sourceTree = "<group>"; };
 		F4946B5B2769E3EF00D77292 /* FailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailView.swift; sourceTree = "<group>"; };
+		F4999D7E27773A6E0052556C /* PassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassView.swift; sourceTree = "<group>"; };
+		F4999D8027773EEE0052556C /* PassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassModel.swift; sourceTree = "<group>"; };
 		F4ABC33327697455008A32ED /* DetailedCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCategoryView.swift; sourceTree = "<group>"; };
 		F4ABC335276976B9008A32ED /* DetailedStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedStationView.swift; sourceTree = "<group>"; };
 		F4AE5A5B276AB72C003E83FE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 				F44ED968276F7F5200C1B513 /* MapView */,
 				F42E81402772A15400E87F08 /* Pricing */,
 				F42E814B2773CFAF00E87F08 /* ScheduleView */,
+				F4999D7D27773A570052556C /* PassView */,
 				F4946B5A2769E3DD00D77292 /* ProgressView */,
 			);
 			path = View;
@@ -192,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				F45200A0276674A000E9D5EA /* RestaurantModel.swift */,
+				F4999D8027773EEE0052556C /* PassModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,6 +295,14 @@
 				F4946B5B2769E3EF00D77292 /* FailView.swift */,
 			);
 			path = ProgressView;
+			sourceTree = "<group>";
+		};
+		F4999D7D27773A570052556C /* PassView */ = {
+			isa = PBXGroup;
+			children = (
+				F4999D7E27773A6E0052556C /* PassView.swift */,
+			);
+			name = PassView;
 			sourceTree = "<group>";
 		};
 		F4AE5A5A276AB700003E83FE /* Other */ = {
@@ -425,6 +439,7 @@
 				F42E814D2773CFC700E87F08 /* ScheduleView.swift in Sources */,
 				F42E814A2773CEC000E87F08 /* DictionaryExtension.swift in Sources */,
 				F4ABC336276976B9008A32ED /* DetailedStationView.swift in Sources */,
+				F4999D8127773EEE0052556C /* PassModel.swift in Sources */,
 				F48F0EFD27743AB200D62131 /* ScheduleCell.swift in Sources */,
 				F4201763276982030064FF86 /* Constants.swift in Sources */,
 				F44ED96A276F7F6900C1B513 /* MapView.swift in Sources */,
@@ -454,6 +469,7 @@
 				F4858030276DF04F00856F0E /* FoodNutritionView.swift in Sources */,
 				F4BEBE3B276967550043C603 /* FoodBadgeView.swift in Sources */,
 				F42E81442772A1BD00E87F08 /* RestaurantBannerImage.swift in Sources */,
+				F4999D7F27773A6E0052556C /* PassView.swift in Sources */,
 				F45200A62767A4F900E9D5EA /* UIScreenExtension.swift in Sources */,
 				F4BEBE3727693D850043C603 /* DetailedFoodCell.swift in Sources */,
 				F420176127697FCF0064FF86 /* WebView.swift in Sources */,

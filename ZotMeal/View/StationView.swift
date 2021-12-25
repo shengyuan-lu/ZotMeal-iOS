@@ -20,7 +20,7 @@ struct StationView: View {
         
         VStack {
             
-            HStack {
+            HStack(alignment: .bottom) {
                 Text(station.station)
                     .bold()
                     .font(.title2)
@@ -42,9 +42,8 @@ struct StationView: View {
             
             ScrollView(.horizontal, showsIndicators: true) {
                 
-                HStack(spacing: 12) {
+                HStack(spacing: 8) {
                     ForEach(station.menu.sorted(by: { $0.items.count > $1.items.count }), id: \.self) { menu in
-                        
                         CategoryView(category: menu, isExpanded: $isExpanded)
                             .onTapGesture {
                                 detailMenuTrigger = 1

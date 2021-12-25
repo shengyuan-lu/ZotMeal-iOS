@@ -59,13 +59,13 @@ struct ScheduleView: View {
             
             ScrollView(showsIndicators: false) {
                 
-                VStack(spacing: 16) {
+                VStack(spacing: 0) {
                     
                     ForEach(["breakfast", "brunch", "lunch", "dinner"], id: \.self) { key in
                         
                         if let mealTypeSchedule = restaurant.schedule[key] {
                             
-                            VStack(spacing: 8) {
+                            VStack(spacing: 0) {
                                 
                                 HStack {
                                     Spacer()
@@ -85,7 +85,7 @@ struct ScheduleView: View {
                                     if let mealTypeCellTime = mealTypeSchedule[k] {
                                         
                                         ScheduleCell(startOrStop: k.capitalized, timeInInt: mealTypeCellTime)
-                                            .padding(8)
+                                            .padding(16)
                                         
                                         Divider()
                                     }
@@ -93,19 +93,17 @@ struct ScheduleView: View {
                                 }
                                 
                             }
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color(UIColor(named: "dividerColor")!), style: StrokeStyle(lineWidth: 2))
-                            )
-                            .background(Color(UIColor(named: "categoryBG")!))
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
                             
                         }
                         
                     }
-                    
-                    
                 }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color(UIColor(named: "dividerColor")!), style: StrokeStyle(lineWidth: 2))
+                )
+                .background(Color(UIColor(named: "categoryBG")!))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
                 
             }
             .padding(.horizontal, 16)

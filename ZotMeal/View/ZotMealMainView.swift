@@ -14,7 +14,7 @@ struct ZotMealMainView: View {
             
             if restaurantModel.restaurants.count > 0 {
                 
-                VStack(spacing: 8) {
+                VStack(spacing: 12) {
                     
                     if restaurantModel.restaurants.count > 1 {
                         PageView(pages: generateRestaurantBanners(), currentPage: $restaurantSelectionIndex)
@@ -28,7 +28,7 @@ struct ZotMealMainView: View {
                         
                         ScrollViewReader { sv in
                             ScrollView(.vertical, showsIndicators: true) {
-                                VStack(spacing: 8) {
+                                VStack(spacing: 6) {
                                     ForEach(restaurantModel.restaurants[restaurantSelectionIndex].allMenu, id: \.self) { station in
                                         StationView(station: station)
                                             .padding(.leading, 8)
@@ -78,6 +78,8 @@ struct ZotMealMainView: View {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         
                         NavigationLink {
+                            PassView()
+                                .navigationTitle("Zot Pass")
                             
                         } label: {
                             Image(systemName: "wallet.pass.fill")
