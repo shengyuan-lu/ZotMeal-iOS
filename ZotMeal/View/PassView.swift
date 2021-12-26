@@ -9,8 +9,34 @@ import SwiftUI
 
 struct PassView: View {
     
+    @StateObject var passModel: PassModel = PassModel()
+    
+    @State private var showingSheet = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack(spacing: 24) {
+            
+            HStack(spacing: 12) {
+                SelectionIndicator(isSelected: $passModel.isRestrictionAgreed)
+                
+                Text("I agree to all terms above")
+                    .font(.body)
+                    .bold()
+            }
+            
+            GenericButtonWithLabelView(action: {
+                
+                self.showingSheet = true
+                
+            }, buttonText: "Show Zot Pass", systemName: "", bgColor: self.passModel.isRestrictionAgreed ? Color.blue : Color.secondary, textColor: Color.white, edgeInsets: EdgeInsets(top: 16, leading: 30, bottom: 16, trailing: 30))
+                .disabled(!self.passModel.isRestrictionAgreed)
+
+        }
+        .sheet(isPresented: $showingSheet) {
+            Pass()
+        }
+        
     }
     
 }

@@ -125,5 +125,6 @@ struct ZotMealMainView: View {
 struct ZotMealMainView_Previews: PreviewProvider {
     static var previews: some View {
         ZotMealMainView()
+            .environmentObject(RestaurantModel())
     }
 }

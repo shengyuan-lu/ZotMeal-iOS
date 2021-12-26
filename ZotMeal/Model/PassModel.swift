@@ -7,11 +7,8 @@
 
 import Foundation
 
-class PassModel: ObservableObject{
+class PassModel: ObservableObject {
     
-    @Published var isRestrictionOneAgreed: Bool = false
-    @Published var isRestrictionTwoAgreed: Bool = false
-    @Published var isRestrictionThreeAgreed: Bool = false
-    
+    @Published var isRestrictionAgreed: Bool = false
     
 }

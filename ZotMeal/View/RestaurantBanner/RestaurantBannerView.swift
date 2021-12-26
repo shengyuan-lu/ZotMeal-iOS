@@ -25,11 +25,11 @@ struct RestaurantBannerView: View {
                 
                 Spacer()
                 
-                VStack {
+                VStack(spacing: 2) {
                     HStack {
                         Text(restaurant.restaurantName)
                             .bold()
-                            .font(.title)
+                            .font(.largeTitle)
                             .foregroundColor(.white)
                             .shadow(color: Color.black, radius: 5, x: 5, y: 5)
                         
@@ -39,13 +39,14 @@ struct RestaurantBannerView: View {
                     HStack {
                         Text("Menu Updated: " + restaurant.getMenuUpdateTimeInString())
                             .foregroundColor(.white)
+                            .bold()
                             .shadow(color: Color.black, radius: 5, x: 5, y: 5)
                         
                         Spacer()
                     }
                 }
                 .padding(.horizontal, 8)
-                .padding(.vertical, 8)
+                .padding(.vertical, 12)
             }
             
         }

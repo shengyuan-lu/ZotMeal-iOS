@@ -13,26 +13,35 @@ struct SelectionIndicator: View {
     
     var body: some View {
         
-        if isSelected {
+        Button {
             
-            ZStack {
+            self.isSelected.toggle()
+            
+        } label: {
+            
+            if isSelected {
+            
+                ZStack {
+                    
+                    Circle()
+                        .foregroundColor(.blue)
+                    
+                    Image(systemName: "checkmark")
+                        .resizable()
+                        .frame(width: 12, height: 12)
+                        .foregroundColor(.white)
+                    
+                }
+                .frame(width: 24, height: 24)
+                
+            } else {
                 
                 Circle()
-                    .foregroundColor(.blue)
-                
-                Image(systemName: "checkmark")
-                    .resizable()
-                    .frame(width: 12, height: 12)
-                    .foregroundColor(.white)
-                
+                    .strokeBorder(Color.secondary, lineWidth: 1)
+                    .frame(width: 24, height: 24)
             }
-            .frame(width: 24, height: 24)
-            
-        } else {
-            Circle()
-                .strokeBorder(Color.secondary, lineWidth: 1)
-                .frame(width: 24, height: 24)
         }
+
     }
 }
 

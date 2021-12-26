@@ -42,6 +42,7 @@
 		F4999D7F27773A6E0052556C /* PassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D7E27773A6E0052556C /* PassView.swift */; };
 		F4999D8127773EEE0052556C /* PassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D8027773EEE0052556C /* PassModel.swift */; };
 		F4999D83277864330052556C /* SelectionIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D82277864330052556C /* SelectionIndicator.swift */; };
+		F4999D8527787B490052556C /* Pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D8427787B490052556C /* Pass.swift */; };
 		F4ABC33427697455008A32ED /* DetailedCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABC33327697455008A32ED /* DetailedCategoryView.swift */; };
 		F4ABC336276976B9008A32ED /* DetailedStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABC335276976B9008A32ED /* DetailedStationView.swift */; };
 		F4AE5A5C276AB72C003E83FE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AE5A5B276AB72C003E83FE /* Launch Screen.storyboard */; };
@@ -98,6 +99,7 @@
 		F4999D7E27773A6E0052556C /* PassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassView.swift; sourceTree = "<group>"; };
 		F4999D8027773EEE0052556C /* PassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassModel.swift; sourceTree = "<group>"; };
 		F4999D82277864330052556C /* SelectionIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionIndicator.swift; sourceTree = "<group>"; };
+		F4999D8427787B490052556C /* Pass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pass.swift; sourceTree = "<group>"; };
 		F4ABC33327697455008A32ED /* DetailedCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCategoryView.swift; sourceTree = "<group>"; };
 		F4ABC335276976B9008A32ED /* DetailedStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedStationView.swift; sourceTree = "<group>"; };
 		F4AE5A5B276AB72C003E83FE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			children = (
 				F4999D7E27773A6E0052556C /* PassView.swift */,
 				F4999D82277864330052556C /* SelectionIndicator.swift */,
+				F4999D8427787B490052556C /* Pass.swift */,
 			);
 			name = PassView;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				F4B4E0C2271F462D0057833D /* Food.swift in Sources */,
 				F4201765276985A20064FF86 /* WebSearchView.swift in Sources */,
 				F45200A82767AF4100E9D5EA /* CategoryView.swift in Sources */,
+				F4999D8527787B490052556C /* Pass.swift in Sources */,
 				F4DB6409276B427F0016EAB6 /* PageControl.swift in Sources */,
 				F4B4E0C8271F4A5D0057833D /* Restaurant.swift in Sources */,
 				F42E81462772AB0700E87F08 /* PricingListCell.swift in Sources */,
