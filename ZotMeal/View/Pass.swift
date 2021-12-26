@@ -15,38 +15,23 @@ struct Pass: View {
     
     var body: some View {
         
-        NavigationView {
-            ScrollView {
-                VStack {
-                    Text(dateString)
-                        .font(.title2)
-                        .bold()
-                    
-                    Image("Pass")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    
-                    Spacer()
-                }
-                .padding(.top, 16)
-                .onAppear {
-                    dateString = self.getDateString()
-                }
+        ScrollView {
+            VStack {
+                Text(dateString)
+                    .font(.title2)
+                    .bold()
+                
+                Image("Pass")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                
+                Spacer()
             }
-            .navigationTitle("")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        presentationMode.wrappedValue.dismiss()
-                    } label: {
-                        Image(systemName: "xmark.circle.fill")
-                            .foregroundColor(Color.red)
-                            .font(.title2)
-                    }
-
-                }
+            .padding(.top, 16)
+            .onAppear {
+                dateString = self.getDateString()
             }
+            
         }
         
     }
