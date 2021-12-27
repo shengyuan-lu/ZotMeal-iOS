@@ -7,7 +7,7 @@ struct ZotMeal_App: App {
     
     var body: some Scene {
         WindowGroup {
-            ZotMealMainView()
+            MainView()
                 .environmentObject(restaurantModel)
             
         }

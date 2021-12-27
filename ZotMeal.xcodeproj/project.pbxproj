@@ -32,7 +32,7 @@
 		F45200AE27682C0C00E9D5EA /* GenericButtonWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AD27682C0C00E9D5EA /* GenericButtonWithLabelView.swift */; };
 		F45200B027683C8E00E9D5EA /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AF27683C8E00E9D5EA /* StationView.swift */; };
 		F4766FD22716A1FB00E3AD87 /* ZotMeal_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */; };
-		F4766FD42716A1FB00E3AD87 /* ZotMealMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD32716A1FB00E3AD87 /* ZotMealMainView.swift */; };
+		F4766FD42716A1FB00E3AD87 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD32716A1FB00E3AD87 /* MainView.swift */; };
 		F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD52716A1FE00E3AD87 /* Assets.xcassets */; };
 		F4766FD92716A1FE00E3AD87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */; };
 		F4858030276DF04F00856F0E /* FoodNutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485802F276DF04F00856F0E /* FoodNutritionView.swift */; };
@@ -43,6 +43,7 @@
 		F4999D8127773EEE0052556C /* PassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D8027773EEE0052556C /* PassModel.swift */; };
 		F4999D83277864330052556C /* SelectionIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D82277864330052556C /* SelectionIndicator.swift */; };
 		F4999D8527787B490052556C /* Pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D8427787B490052556C /* Pass.swift */; };
+		F4999D8827796D550052556C /* Genius.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D8727796D550052556C /* Genius.swift */; };
 		F4ABC33427697455008A32ED /* DetailedCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABC33327697455008A32ED /* DetailedCategoryView.swift */; };
 		F4ABC336276976B9008A32ED /* DetailedStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABC335276976B9008A32ED /* DetailedStationView.swift */; };
 		F4AE5A5C276AB72C003E83FE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AE5A5B276AB72C003E83FE /* Launch Screen.storyboard */; };
@@ -89,7 +90,7 @@
 		F45200AF27683C8E00E9D5EA /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
 		F4766FCE2716A1FB00E3AD87 /* ZotMeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZotMeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotMeal_App.swift; sourceTree = "<group>"; };
-		F4766FD32716A1FB00E3AD87 /* ZotMealMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotMealMainView.swift; sourceTree = "<group>"; };
+		F4766FD32716A1FB00E3AD87 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F4766FD52716A1FE00E3AD87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F485802F276DF04F00856F0E /* FoodNutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutritionView.swift; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 		F4999D8027773EEE0052556C /* PassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassModel.swift; sourceTree = "<group>"; };
 		F4999D82277864330052556C /* SelectionIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionIndicator.swift; sourceTree = "<group>"; };
 		F4999D8427787B490052556C /* Pass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pass.swift; sourceTree = "<group>"; };
+		F4999D8727796D550052556C /* Genius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genius.swift; sourceTree = "<group>"; };
 		F4ABC33327697455008A32ED /* DetailedCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCategoryView.swift; sourceTree = "<group>"; };
 		F4ABC335276976B9008A32ED /* DetailedStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedStationView.swift; sourceTree = "<group>"; };
 		F4AE5A5B276AB72C003E83FE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -134,11 +136,9 @@
 		F41E2AD727281EB2004DF007 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F4766FD32716A1FB00E3AD87 /* ZotMealMainView.swift */,
+				F4766FD32716A1FB00E3AD87 /* MainView.swift */,
 				F45200AF27683C8E00E9D5EA /* StationView.swift */,
-				F45200A72767AF4100E9D5EA /* CategoryView.swift */,
-				F45200AB27682B2900E9D5EA /* CategoryTitleView.swift */,
-				F45200A92767AF4F00E9D5EA /* SimpleFoodCell.swift */,
+				F4999D8627796C820052556C /* CategoryView */,
 				F44315A427706AEB00421EAD /* RestaurantBanner */,
 				F4DB6403276B407F0016EAB6 /* PageView */,
 				F4BEBE3D276969000043C603 /* DetailedView */,
@@ -146,6 +146,7 @@
 				F44ED968276F7F5200C1B513 /* MapView */,
 				F42E81402772A15400E87F08 /* Pricing */,
 				F42E814B2773CFAF00E87F08 /* ScheduleView */,
+				F4999D89277979270052556C /* CreditView */,
 				F4999D7D27773A570052556C /* PassView */,
 				F4946B5A2769E3DD00D77292 /* ProgressView */,
 			);
@@ -226,6 +227,7 @@
 				F4B4E0C5271F49140057833D /* Station.swift */,
 				F4B4E0C3271F475D0057833D /* Category.swift */,
 				F4B4E0C1271F462D0057833D /* Food.swift */,
+				F4999D8727796D550052556C /* Genius.swift */,
 			);
 			path = "Data Structure";
 			sourceTree = "<group>";
@@ -309,6 +311,23 @@
 				F4999D8427787B490052556C /* Pass.swift */,
 			);
 			name = PassView;
+			sourceTree = "<group>";
+		};
+		F4999D8627796C820052556C /* CategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				F45200A72767AF4100E9D5EA /* CategoryView.swift */,
+				F45200AB27682B2900E9D5EA /* CategoryTitleView.swift */,
+				F45200A92767AF4F00E9D5EA /* SimpleFoodCell.swift */,
+			);
+			path = CategoryView;
+			sourceTree = "<group>";
+		};
+		F4999D89277979270052556C /* CreditView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreditView;
 			sourceTree = "<group>";
 		};
 		F4AE5A5A276AB700003E83FE /* Other */ = {
@@ -435,7 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4766FD42716A1FB00E3AD87 /* ZotMealMainView.swift in Sources */,
+				F4766FD42716A1FB00E3AD87 /* MainView.swift in Sources */,
 				F45200AC27682B2900E9D5EA /* CategoryTitleView.swift in Sources */,
 				F45200AA2767AF4F00E9D5EA /* SimpleFoodCell.swift in Sources */,
 				F45200A327679CE000E9D5EA /* RestaurantBannerView.swift in Sources */,
@@ -468,6 +487,7 @@
 				F4999D8527787B490052556C /* Pass.swift in Sources */,
 				F4DB6409276B427F0016EAB6 /* PageControl.swift in Sources */,
 				F4B4E0C8271F4A5D0057833D /* Restaurant.swift in Sources */,
+				F4999D8827796D550052556C /* Genius.swift in Sources */,
 				F42E81462772AB0700E87F08 /* PricingListCell.swift in Sources */,
 				F4ABC33427697455008A32ED /* DetailedCategoryView.swift in Sources */,
 				F4999D83277864330052556C /* SelectionIndicator.swift in Sources */,

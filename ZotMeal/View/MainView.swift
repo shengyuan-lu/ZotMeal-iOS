@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ZotMealMainView: View {
+struct MainView: View {
     
     @EnvironmentObject var restaurantModel: RestaurantModel
     
@@ -122,9 +122,9 @@ struct ZotMealMainView: View {
     
 }
 
-struct ZotMealMainView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ZotMealMainView()
+        MainView()
             .environmentObject(RestaurantModel())
     }
 }

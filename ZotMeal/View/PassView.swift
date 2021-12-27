@@ -30,16 +30,15 @@ struct PassView: View {
                     
                     Text("4. I have completed my daily symptoms check and received a green Zot Pass today.")
                     
-                    Text("5. I understand that this feature is experimental, and its only intent is to provide convenience to students to avoid long loading time on Service Now app or sorting through the entire email inbox.")
+                    Text("5. I understand that this feature is experimental, and its only intent is to provide convenience to students to avoid long loading time on Service Now app or sorting through the email inbox.")
                     
                     Text("6. I take full responsibility if I use this feature without full compliance.")
                     
                 }
-                .padding(.horizontal)
+                .padding()
+                
+                Spacer()
             }
-            
-            
-            Spacer()
             
             Divider()
             
@@ -62,6 +61,7 @@ struct PassView: View {
         }
         .sheet(isPresented: $showingSheet) {
             Pass()
+                .preferredColorScheme(.light)
         }
         
     }
