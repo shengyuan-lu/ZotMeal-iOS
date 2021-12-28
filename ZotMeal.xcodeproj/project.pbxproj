@@ -44,6 +44,7 @@
 		F4999D83277864330052556C /* SelectionIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D82277864330052556C /* SelectionIndicator.swift */; };
 		F4999D8527787B490052556C /* Pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D8427787B490052556C /* Pass.swift */; };
 		F4999D8827796D550052556C /* Genius.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D8727796D550052556C /* Genius.swift */; };
+		F4999D8B277A408D0052556C /* CreditViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D8A277A408D0052556C /* CreditViewCell.swift */; };
 		F4ABC33427697455008A32ED /* DetailedCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABC33327697455008A32ED /* DetailedCategoryView.swift */; };
 		F4ABC336276976B9008A32ED /* DetailedStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABC335276976B9008A32ED /* DetailedStationView.swift */; };
 		F4AE5A5C276AB72C003E83FE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AE5A5B276AB72C003E83FE /* Launch Screen.storyboard */; };
@@ -102,6 +103,7 @@
 		F4999D82277864330052556C /* SelectionIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionIndicator.swift; sourceTree = "<group>"; };
 		F4999D8427787B490052556C /* Pass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pass.swift; sourceTree = "<group>"; };
 		F4999D8727796D550052556C /* Genius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genius.swift; sourceTree = "<group>"; };
+		F4999D8A277A408D0052556C /* CreditViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditViewCell.swift; sourceTree = "<group>"; };
 		F4ABC33327697455008A32ED /* DetailedCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCategoryView.swift; sourceTree = "<group>"; };
 		F4ABC335276976B9008A32ED /* DetailedStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedStationView.swift; sourceTree = "<group>"; };
 		F4AE5A5B276AB72C003E83FE /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 		F4999D89277979270052556C /* CreditView */ = {
 			isa = PBXGroup;
 			children = (
+				F4999D8A277A408D0052556C /* CreditViewCell.swift */,
 			);
 			path = CreditView;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				F44315A627706B0000421EAD /* RestaurantStatus.swift in Sources */,
 				F4BEBE39276958350043C603 /* GenericButtonWithoutLabel.swift in Sources */,
 				F42E81422772A17B00E87F08 /* PricingView.swift in Sources */,
+				F4999D8B277A408D0052556C /* CreditViewCell.swift in Sources */,
 				F44ED965276F317100C1B513 /* LoadingView.swift in Sources */,
 				F45200AE27682C0C00E9D5EA /* GenericButtonWithLabelView.swift in Sources */,
 				F4946B5C2769E3EF00D77292 /* FailView.swift in Sources */,

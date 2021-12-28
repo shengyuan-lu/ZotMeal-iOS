@@ -13,6 +13,13 @@ struct FoodNutritionView: View {
     
     var body: some View {
         
+        if food.hasBadge() {
+            
+            Divider()
+            
+            FoodBadgeView(food: food)
+        }
+        
         ForEach(food.nutrtionCellList.keys.sorted(), id: \.self) { key in
             
             Divider()
@@ -21,13 +28,6 @@ struct FoodNutritionView: View {
                 FoodNutritionCellView(nutrtionName: key, nutritionValue: String(value).capitalized)
             }
             
-        }
-        
-        if food.hasBadge() {
-            
-            Divider()
-            
-            FoodBadgeView(food: food)
         }
     }
 }
