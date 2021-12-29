@@ -42,6 +42,62 @@ func getAllGenius() -> [Genius] {
         linkTwo: (name: "YouTube", url: "https://www.youtube.com/c/ShengyuanLu/videos")
     ))
     
+    theCrazyOnes.append(Genius(
+        name: "Eric Pedley",
+        major: "B.S. Computer Science",
+        year: 2025,
+        photoName: "Eric",
+        position: "Backend Tech Lead",
+        myDescription: "",
+        roleDescription: "",
+        awards: [(name: "Apple WWDC Scholar", year: 2021), (name: "3X International Hackathon Wins", year: 2021), (name: "2X Design Competition Wins", year: 2020)],
+        experience: [(name: "Summer Intern @ Zoom as Freshmen", year: 2021), (name: "3X iOS Apps on App Store", year: 2021), (name: "GitHub Campus Expert", year: 2021), (name: "Content Creator @ YouTube & Bilibili", year: 2021)],
+        linkOne: (name: "LinkedIn", url: ""),
+        linkTwo: (name: "YouTube", url: "")
+    ))
+    
+    theCrazyOnes.append(Genius(
+        name: "Brian Vo",
+        major: "B.S. CSE",
+        year: 2024,
+        photoName: "Brian",
+        position: "Backend SDE",
+        myDescription: "",
+        roleDescription: "",
+        awards: [(name: "Apple WWDC Scholar", year: 2021), (name: "3X International Hackathon Wins", year: 2021), (name: "2X Design Competition Wins", year: 2020)],
+        experience: [(name: "Summer Intern @ Zoom as Freshmen", year: 2021), (name: "3X iOS Apps on App Store", year: 2021), (name: "GitHub Campus Expert", year: 2021), (name: "Content Creator @ YouTube & Bilibili", year: 2021)],
+        linkOne: (name: "LinkedIn", url: ""),
+        linkTwo: (name: "YouTube", url: "")
+    ))
+    
+    theCrazyOnes.append(Genius(
+        name: "Justin Yue",
+        major: "B.S. Computer Science",
+        year: 2024,
+        photoName: "Justin",
+        position: "Android Tech Lead",
+        myDescription: "",
+        roleDescription: "",
+        awards: [(name: "Apple WWDC Scholar", year: 2021), (name: "3X International Hackathon Wins", year: 2021), (name: "2X Design Competition Wins", year: 2020)],
+        experience: [(name: "Summer Intern @ Zoom as Freshmen", year: 2021), (name: "3X iOS Apps on App Store", year: 2021), (name: "GitHub Campus Expert", year: 2021), (name: "Content Creator @ YouTube & Bilibili", year: 2021)],
+        linkOne: (name: "LinkedIn", url: ""),
+        linkTwo: (name: "YouTube", url: "")
+    ))
+    
+    theCrazyOnes.append(Genius(
+        name: "Tony Liu",
+        major: "B.S. CSE",
+        year: 2024,
+        photoName: "Tony",
+        position: "Android SDE",
+        myDescription: "",
+        roleDescription: "",
+        awards: [(name: "Apple WWDC Scholar", year: 2021), (name: "3X International Hackathon Wins", year: 2021), (name: "2X Design Competition Wins", year: 2020)],
+        experience: [(name: "Summer Intern @ Zoom as Freshmen", year: 2021), (name: "3X iOS Apps on App Store", year: 2021), (name: "GitHub Campus Expert", year: 2021), (name: "Content Creator @ YouTube & Bilibili", year: 2021)],
+        linkOne: (name: "LinkedIn", url: ""),
+        linkTwo: (name: "YouTube", url: "")
+    ))
+    
     return theCrazyOnes
 }
 

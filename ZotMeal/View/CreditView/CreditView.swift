@@ -24,9 +24,20 @@ struct CreditView: View {
                 }
                 
             }
-            .padding(.vertical, 8)
+            .padding(.vertical, 16)
+            
+            Divider()
+            
+            Text("Special thanks to Max Liu (B.S. CSE '24), Jessie Yao (B.S. CS '23), and Susie Su (B.S. CSE '24) for their contributions to the original ZotMeal.")
+                .font(.footnote)
+                .bold()
+                .foregroundColor(.secondary)
+                .padding([.horizontal, .bottom], 20)
             
         }
+       
+        .background(Color(UIColor(named: "categoryBG")!))
+        .edgesIgnoringSafeArea([.bottom])
         
     }
     

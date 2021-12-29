@@ -14,10 +14,9 @@ struct PhotoView: View {
     var body: some View {
         
         
-        
         ZStack {
             
-            Image("Shengyuan")
+            Image(genius.photoName)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: UIScreen.screenWidth * 0.9, height: 300)
@@ -35,6 +34,10 @@ struct PhotoView: View {
         }
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .frame(width: UIScreen.screenWidth * 0.9, height: 300)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color(UIColor(named: "dividerColor")!), style: StrokeStyle(lineWidth: 0.5))
+        )
         
     }
     
