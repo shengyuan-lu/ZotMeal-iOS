@@ -11,6 +11,8 @@ struct NameMajorView: View {
     
     let genius: Genius
     
+    let showsNavigationButton: Bool
+    
     var body: some View {
         
         HStack {
@@ -31,18 +33,21 @@ struct NameMajorView: View {
             
             Spacer()
             
-            NavigationLink {
-                
-                
-            } label: {
-                Image(systemName: "chevron.forward.circle.fill")
-                    .resizable()
-                    .foregroundColor(.white)
-                    .frame(width: 40, height: 40)
-                    .padding(8)
-                    .padding(.trailing, 4)
+            if showsNavigationButton {
+                NavigationLink {
+                    
+                    CreditViewDetailCell(genius: genius)
+                        .navigationBarTitle("Genius")
+                    
+                } label: {
+                    Image(systemName: "chevron.forward.circle.fill")
+                        .resizable()
+                        .foregroundColor(.white)
+                        .frame(width: 40, height: 40)
+                        .padding(8)
+                        .padding(.trailing, 4)
+                }
             }
-            
         }
         .background(Color.black.opacity(0.6))
     }
@@ -50,7 +55,7 @@ struct NameMajorView: View {
 
 struct NameMajorView_Previews: PreviewProvider {
     static var previews: some View {
-        NameMajorView(genius: getSampleGenius())
+        NameMajorView(genius: getSampleGenius(), showsNavigationButton: true)
             .previewLayout(PreviewLayout.sizeThatFits)
             .previewDisplayName("Default preview")
     }

@@ -10,16 +10,17 @@ import SwiftUI
 struct PhotoView: View {
     
     let genius: Genius
+    let widthFactor: Double
+    let showsNavigationButton: Bool
     
     var body: some View {
-        
         
         ZStack {
             
             Image(genius.photoName)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: UIScreen.screenWidth * 0.9, height: 300)
+                .frame(width: UIScreen.screenWidth * widthFactor, height: 300)
                 .clipped()
             
             
@@ -28,12 +29,12 @@ struct PhotoView: View {
                 
                 Spacer()
                 
-                NameMajorView(genius: genius)
+                NameMajorView(genius: genius, showsNavigationButton: showsNavigationButton)
             }
             
         }
         .clipShape(RoundedRectangle(cornerRadius: 10))
-        .frame(width: UIScreen.screenWidth * 0.9, height: 300)
+        .frame(width: UIScreen.screenWidth * widthFactor, height: 300)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color(UIColor(named: "dividerColor")!), style: StrokeStyle(lineWidth: 0.5))
@@ -48,7 +49,7 @@ struct PhotoView: View {
 struct PhotoView_Previews: PreviewProvider {
     
     static var previews: some View {
-        PhotoView(genius: getSampleGenius())
+        PhotoView(genius: getSampleGenius(), widthFactor: 0.9, showsNavigationButton: true)
             .previewDisplayName("Default preview")
     }
     

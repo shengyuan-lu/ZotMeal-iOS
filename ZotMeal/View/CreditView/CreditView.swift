@@ -19,7 +19,7 @@ struct CreditView: View {
                 
                 ForEach(genius, id: \.id) { g in
                     
-                    PhotoView(genius: g)
+                    PhotoView(genius: g, widthFactor: ((UIScreen.screenWidth -  2 * 20) / UIScreen.screenWidth), showsNavigationButton: true)
                     
                 }
                 
@@ -32,7 +32,7 @@ struct CreditView: View {
                 .font(.footnote)
                 .bold()
                 .foregroundColor(.secondary)
-                .padding([.horizontal, .bottom], 20)
+                .padding([.horizontal, .bottom], 18)
             
         }
        

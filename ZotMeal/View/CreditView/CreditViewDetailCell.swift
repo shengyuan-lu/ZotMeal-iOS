@@ -13,20 +13,65 @@ struct CreditViewDetailCell: View {
     
     var body: some View {
         
-        VStack {
+        ScrollView {
             
-            PhotoView(genius: genius)
-            
-            VStack(alignment: .leading) {
+            VStack(spacing: 0) {
                 
-                Text("About Me")
-                    .bold()
+                PhotoView(genius: genius, widthFactor: ((UIScreen.screenWidth -  2 * 16) / UIScreen.screenWidth), showsNavigationButton: false)
                 
-                Text (genius.myDescription)
+                CreditViewSection(title: "About Me", text: genius.myDescription)
+                
+                CreditViewSection(title: "My Role in ZotMeal", text: genius.roleDescription)
+                
+                VStack(alignment: .leading) {
+                    
+                    Text("Experiences / Awards")
+                        .bold()
+                    
+                    Divider()
+                    
+                    ForEach(genius.experience, id: \.id) { exp in
+                        
+                        HStack {
+                            
+                            Text(exp.name)
+                            
+                            Spacer()
+                            
+                            Text(String(exp.year))
+                            
+                        }
+                    }
+                    
+                    ForEach(genius.awards, id: \.id) { exp in
+                        
+                        HStack {
+                            
+                            Text(exp.name)
+                            
+                            Spacer()
+                            
+                            Text(String(exp.year))
+                            
+                        }
+                    }
+                    
+                }
+                .padding(12)
+                .padding(.vertical, 8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color(UIColor(named: "dividerColor")!), style: StrokeStyle(lineWidth: 2))
+                )
+                .background(Color(UIColor(named: "categoryBG")!))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .padding([.horizontal, .top], 16)
+                
                 
             }
-            
+
         }
+        
         
     }
     

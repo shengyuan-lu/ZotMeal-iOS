@@ -36,6 +36,8 @@
 		F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD52716A1FE00E3AD87 /* Assets.xcassets */; };
 		F4766FD92716A1FE00E3AD87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */; };
 		F4858030276DF04F00856F0E /* FoodNutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485802F276DF04F00856F0E /* FoodNutritionView.swift */; };
+		F48C7055277C8AD7002CF0EB /* AwardExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48C7054277C8AD7002CF0EB /* AwardExperience.swift */; };
+		F48C7057277C8FD4002CF0EB /* CreditViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48C7056277C8FD4002CF0EB /* CreditViewSection.swift */; };
 		F48F0EFD27743AB200D62131 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F0EFC27743AB200D62131 /* ScheduleCell.swift */; };
 		F4946B592769D4D600D77292 /* anteatery_dummy_data.json in Resources */ = {isa = PBXBuildFile; fileRef = F4946B582769D4D500D77292 /* anteatery_dummy_data.json */; };
 		F4946B5C2769E3EF00D77292 /* FailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4946B5B2769E3EF00D77292 /* FailView.swift */; };
@@ -99,6 +101,8 @@
 		F4766FD52716A1FE00E3AD87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4766FD82716A1FE00E3AD87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F485802F276DF04F00856F0E /* FoodNutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutritionView.swift; sourceTree = "<group>"; };
+		F48C7054277C8AD7002CF0EB /* AwardExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardExperience.swift; sourceTree = "<group>"; };
+		F48C7056277C8FD4002CF0EB /* CreditViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditViewSection.swift; sourceTree = "<group>"; };
 		F48F0EFC27743AB200D62131 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		F4946B582769D4D500D77292 /* anteatery_dummy_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = anteatery_dummy_data.json; sourceTree = "<group>"; };
 		F4946B5B2769E3EF00D77292 /* FailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailView.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 				F4B4E0C3271F475D0057833D /* Category.swift */,
 				F4B4E0C1271F462D0057833D /* Food.swift */,
 				F4999D8727796D550052556C /* Genius.swift */,
+				F48C7054277C8AD7002CF0EB /* AwardExperience.swift */,
 			);
 			path = "Data Structure";
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 			children = (
 				F4B96966277B13DB005EEAFF /* CreditView.swift */,
 				F4999D8A277A408D0052556C /* CreditViewDetailCell.swift */,
+				F48C7056277C8FD4002CF0EB /* CreditViewSection.swift */,
 				F4B9696C277BDBB5005EEAFF /* PhotoView.swift */,
 				F4B96968277B5122005EEAFF /* NameMajorView.swift */,
 				F4B9696A277B5201005EEAFF /* PositionView.swift */,
@@ -518,7 +524,9 @@
 				F42E81442772A1BD00E87F08 /* RestaurantBannerImage.swift in Sources */,
 				F4999D7F27773A6E0052556C /* PassView.swift in Sources */,
 				F4B9696B277B5201005EEAFF /* PositionView.swift in Sources */,
+				F48C7055277C8AD7002CF0EB /* AwardExperience.swift in Sources */,
 				F45200A62767A4F900E9D5EA /* UIScreenExtension.swift in Sources */,
+				F48C7057277C8FD4002CF0EB /* CreditViewSection.swift in Sources */,
 				F4BEBE3727693D850043C603 /* DetailedFoodCell.swift in Sources */,
 				F420176127697FCF0064FF86 /* WebView.swift in Sources */,
 			);

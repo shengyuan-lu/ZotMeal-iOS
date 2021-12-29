@@ -17,10 +17,10 @@ struct Genius: Identifiable {
     let position: String
     let myDescription: String
     let roleDescription: String
-    let awards: [(name: String, year: Int)]
-    let experience: [(name: String, year: Int)]
-    let linkOne: (name:String, url: String)
-    let linkTwo: (name:String, url: String)
+    let awards: [AwardExperience]
+    let experience: [AwardExperience]
+    let linkOne: (name: String, url: String)
+    let linkTwo: (name: String, url: String)
     
 }
 
@@ -34,10 +34,10 @@ func getAllGenius() -> [Genius] {
         year: 2024,
         photoName: "Shengyuan",
         position: "iOS Tech Lead",
-        myDescription: "There's a certain kind of person who doesn't take NO for an answer - for example, a Stanford reject like me. I am here to write my legend: Why can't software engineers can be super stars too?",
+        myDescription: "A Stanford reject who doesn't take NO for an answer. I am here to write my legend: Why can't software engineers can be super stars too?",
         roleDescription: "iOS Tech Lead: Responsible for everything you can see in this app, plus some marketing / legal stuff.",
-        awards: [(name: "Apple WWDC Scholar", year: 2021), (name: "3X International Hackathon Wins", year: 2021), (name: "2X Design Competition Wins", year: 2020)],
-        experience: [(name: "Summer Intern @ Zoom as Freshmen", year: 2021), (name: "3X iOS Apps on App Store", year: 2021), (name: "GitHub Campus Expert", year: 2021), (name: "Content Creator @ YouTube & Bilibili", year: 2021)],
+        awards: [AwardExperience(name: "Apple WWDC Scholar", year: 2021), AwardExperience(name: "3X International Hackathon Wins", year: 2021), AwardExperience(name: "2X Design Competition Wins", year: 2020)],
+        experience: [AwardExperience(name: "Summer Intern", year: 2021), AwardExperience(name: "3X iOS Apps on App Store", year: 2021), AwardExperience(name: "GitHub Campus Expert", year: 2021)],
         linkOne: (name: "LinkedIn", url: "https://www.linkedin.com/in/shengyuan-lu/"),
         linkTwo: (name: "YouTube", url: "https://www.youtube.com/c/ShengyuanLu/videos")
     ))
@@ -48,12 +48,12 @@ func getAllGenius() -> [Genius] {
         year: 2025,
         photoName: "Eric",
         position: "Backend Tech Lead",
-        myDescription: "",
-        roleDescription: "",
-        awards: [(name: "Apple WWDC Scholar", year: 2021), (name: "3X International Hackathon Wins", year: 2021), (name: "2X Design Competition Wins", year: 2020)],
-        experience: [(name: "Summer Intern @ Zoom as Freshmen", year: 2021), (name: "3X iOS Apps on App Store", year: 2021), (name: "GitHub Campus Expert", year: 2021), (name: "Content Creator @ YouTube & Bilibili", year: 2021)],
-        linkOne: (name: "LinkedIn", url: ""),
-        linkTwo: (name: "YouTube", url: "")
+        myDescription: "I'm interested in web development and machine learning. Outside of programming, I'm part of the UCI triathlon club and also enjoy playing video games.",
+        roleDescription: "Backend Tech Lead: Worked on web-scraping dining website and devops",
+        awards: [],
+        experience: [AwardExperience(name: "Eagle Scout (2020)", year: 2020)],
+        linkOne: (name: "GitHub", url: "https://github.com/EricPedley"),
+        linkTwo: (name: "LinkedIn", url: "https://www.linkedin.com/in/ericpedley/")
     ))
     
     theCrazyOnes.append(Genius(
@@ -63,9 +63,9 @@ func getAllGenius() -> [Genius] {
         photoName: "Brian",
         position: "Backend SDE",
         myDescription: "I'm an aspiring full stack developer.",
-        roleDescription: "I worked on the Python backend logic to deliver the (hopefully) correct information to users of the Zotmeal app.",
+        roleDescription: "Backend SDE: I worked on the Python backend logic to deliver the (hopefully) correct information to users of the Zotmeal app.",
         awards: [],
-        experience: [(name: "DFS STEM Instructor", year: 2021)],
+        experience: [AwardExperience(name: "DFS STEM Instructor", year: 2021)],
         linkOne: (name: "GitHub", url: "https://github.com/bevm0"),
         linkTwo: (name: "Linkedin", url: "https://www.linkedin.com/in/brian-m-vo/")
     ))
@@ -78,8 +78,8 @@ func getAllGenius() -> [Genius] {
         position: "Android Tech Lead",
         myDescription: "",
         roleDescription: "",
-        awards: [(name: "Apple WWDC Scholar", year: 2021), (name: "3X International Hackathon Wins", year: 2021), (name: "2X Design Competition Wins", year: 2020)],
-        experience: [(name: "Summer Intern @ Zoom as Freshmen", year: 2021), (name: "3X iOS Apps on App Store", year: 2021), (name: "GitHub Campus Expert", year: 2021), (name: "Content Creator @ YouTube & Bilibili", year: 2021)],
+        awards: [],
+        experience: [],
         linkOne: (name: "LinkedIn", url: ""),
         linkTwo: (name: "YouTube", url: "")
     ))
@@ -92,8 +92,8 @@ func getAllGenius() -> [Genius] {
         position: "Android SDE",
         myDescription: "",
         roleDescription: "",
-        awards: [(name: "Apple WWDC Scholar", year: 2021), (name: "3X International Hackathon Wins", year: 2021), (name: "2X Design Competition Wins", year: 2020)],
-        experience: [(name: "Summer Intern @ Zoom as Freshmen", year: 2021), (name: "3X iOS Apps on App Store", year: 2021), (name: "GitHub Campus Expert", year: 2021), (name: "Content Creator @ YouTube & Bilibili", year: 2021)],
+        awards: [],
+        experience: [],
         linkOne: (name: "LinkedIn", url: ""),
         linkTwo: (name: "YouTube", url: "")
     ))
@@ -111,8 +111,8 @@ func getSampleGenius() -> Genius {
         position: "iOS Tech Lead",
         myDescription: "There's a certain kind of person who doesn't take NO for an answer - for example, a Stanford reject like me. I am here to write my legend: Why can't software engineers can be super stars too?",
         roleDescription: "iOS Tech Lead: Responsible for everything you can see in this app, plus some marketing / legal stuff.",
-        awards: [(name: "Apple WWDC Scholar", year: 2021), (name: "3X International Hackathon Wins", year: 2021), (name: "2X Design Competition Wins", year: 2020)],
-        experience: [(name: "Summer Intern @ Zoom as Freshmen", year: 2021), (name: "3X iOS Apps on App Store", year: 2021), (name: "GitHub Campus Expert", year: 2021), (name: "Content Creator @ YouTube & Bilibili", year: 2021)],
+        awards: [AwardExperience(name: "Apple WWDC Scholar", year: 2021), AwardExperience(name: "3X International Hackathon Wins", year: 2021), AwardExperience(name: "2X Design Competition Wins", year: 2020)],
+        experience: [AwardExperience(name: "Summer Intern @ Zoom as Freshmen", year: 2021), AwardExperience(name: "3X iOS Apps on App Store", year: 2021), AwardExperience(name: "GitHub Campus Expert", year: 2021), AwardExperience(name: "Content Creator @ YouTube & Bilibili", year: 2021)],
         linkOne: (name: "LinkedIn", url: "https://www.linkedin.com/in/shengyuan-lu/"),
         linkTwo: (name: "YouTube", url: "https://www.youtube.com/c/ShengyuanLu/videos")
     )
