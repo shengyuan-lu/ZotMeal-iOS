@@ -81,7 +81,7 @@ struct CreditViewDetailCell: View {
                         // Primary
                         Button {
                             
-                            openURL(URL(string: genius.linkOne.url)!)
+                            openURL((URL(string: genius.linkOne.url) ?? URL(string: "https://www.google.com/"))!)
                             
                         } label: {
                             Text(genius.linkOne.name)
@@ -96,7 +96,7 @@ struct CreditViewDetailCell: View {
                         // Secondary
                         Button {
                             
-                            openURL(URL(string: genius.linkTwo.url)!)
+                            openURL((URL(string: genius.linkTwo.url) ?? URL(string: "https://www.google.com/"))!)
                             
                         } label: {
                             
