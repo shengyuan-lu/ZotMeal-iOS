@@ -18,7 +18,7 @@ struct StationView: View {
     
     var body: some View {
         
-        VStack {
+        VStack(spacing: 12) {
             
             HStack(alignment: .bottom) {
                 Text(station.station)
@@ -26,7 +26,6 @@ struct StationView: View {
                     .font(.title2)
                 
                 Spacer()
-                
                 
                 NavigationLink(destination: DetailedStationView(station: station), tag: 1, selection: $action) {
                     EmptyView()
@@ -38,7 +37,6 @@ struct StationView: View {
                     .padding(.horizontal, 8)
                     .padding(.trailing, 4)
             }
-            
             
             ScrollView(.horizontal, showsIndicators: true) {
                 

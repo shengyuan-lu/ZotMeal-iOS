@@ -87,6 +87,8 @@ struct MainView: View {
                         }
                         
                         NavigationLink {
+                            CreditView()
+                                .navigationTitle("The Crazy Ones")
                             
                         } label: {
                             Image(systemName: "person.2.fill")
