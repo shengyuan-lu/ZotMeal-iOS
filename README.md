@@ -1,5 +1,5 @@
 # ZotMeal
-A menu app for UC Irvine dining halls. (iOS App)
+The only revolutionary menu app for UC Irvine dining halls. 
 
 ZotMeal will be on Apple App Store around Jan. 3, 2022
 
