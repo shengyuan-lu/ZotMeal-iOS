@@ -62,12 +62,12 @@ func getAllGenius() -> [Genius] {
         year: 2024,
         photoName: "Brian",
         position: "Backend SDE",
-        myDescription: "",
-        roleDescription: "",
-        awards: [(name: "Apple WWDC Scholar", year: 2021), (name: "3X International Hackathon Wins", year: 2021), (name: "2X Design Competition Wins", year: 2020)],
-        experience: [(name: "Summer Intern @ Zoom as Freshmen", year: 2021), (name: "3X iOS Apps on App Store", year: 2021), (name: "GitHub Campus Expert", year: 2021), (name: "Content Creator @ YouTube & Bilibili", year: 2021)],
-        linkOne: (name: "LinkedIn", url: ""),
-        linkTwo: (name: "YouTube", url: "")
+        myDescription: "I'm an aspiring full stack developer.",
+        roleDescription: "I worked on the Python backend logic to deliver the (hopefully) correct information to users of the Zotmeal app.",
+        awards: [],
+        experience: [(name: "DFS STEM Instructor", year: 2021)],
+        linkOne: (name: "GitHub", url: "https://github.com/bevm0"),
+        linkTwo: (name: "Linkedin", url: "https://www.linkedin.com/in/brian-m-vo/")
     ))
     
     theCrazyOnes.append(Genius(
