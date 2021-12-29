@@ -112,7 +112,7 @@ func getSampleGenius() -> Genius {
         myDescription: "There's a certain kind of person who doesn't take NO for an answer - for example, a Stanford reject like me. I am here to write my legend: Why can't software engineers can be super stars too?",
         roleDescription: "iOS Tech Lead: Responsible for everything you can see in this app, plus some marketing / legal stuff.",
         awards: [AwardExperience(name: "Apple WWDC Scholar", year: 2021), AwardExperience(name: "3X International Hackathon Wins", year: 2021), AwardExperience(name: "2X Design Competition Wins", year: 2020)],
-        experience: [AwardExperience(name: "Summer Intern @ Zoom as Freshmen", year: 2021), AwardExperience(name: "3X iOS Apps on App Store", year: 2021), AwardExperience(name: "GitHub Campus Expert", year: 2021), AwardExperience(name: "Content Creator @ YouTube & Bilibili", year: 2021)],
+        experience: [AwardExperience(name: "Summer Intern @ Zoom", year: 2021), AwardExperience(name: "3X iOS Apps on App Store", year: 2021), AwardExperience(name: "GitHub Campus Expert", year: 2021)],
         linkOne: (name: "LinkedIn", url: "https://www.linkedin.com/in/shengyuan-lu/"),
         linkTwo: (name: "YouTube", url: "https://www.youtube.com/c/ShengyuanLu/videos")
     )
