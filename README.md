@@ -1,5 +1,10 @@
-# ZotMeal-iOS
+# ZotMeal
 A menu app for UC Irvine dining halls. (iOS App)
+
+ZotMeal will be on Apple App Store around Jan. 3, 2022
+
+ZotMeal (iOS) is not open source. It is a freeware developed and owned by Shengyuan Lu, who choose to publish the code for educational purposes.
+
 ![EN 1](https://user-images.githubusercontent.com/70995597/147644783-c9b1cb92-e4fb-4bfc-b2e2-69b5342fa5cf.png)
 
 ![EN 2](https://user-images.githubusercontent.com/70995597/147644792-de7ef580-94a7-4e7a-9b35-76db915b140e.png)
