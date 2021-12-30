@@ -11,10 +11,10 @@ struct JoinUsView: View {
     
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: true) {
             VStack(alignment: .leading, spacing: 20) {
                 
-                Text("Thinking About Contributing?")
+                Text("Thinking About Joining Us?")
                     .bold()
                     .font(.title3)
                 
@@ -38,6 +38,7 @@ struct JoinUsView: View {
             }
             .fixedSize(horizontal: false, vertical: true)
             .padding()
+            .padding(.top, 10)
         }
         
     }
