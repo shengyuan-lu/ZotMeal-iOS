@@ -63,6 +63,7 @@
 		F4BEBE3727693D850043C603 /* DetailedFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE3627693D850043C603 /* DetailedFoodCell.swift */; };
 		F4BEBE39276958350043C603 /* GenericButtonWithoutLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE38276958350043C603 /* GenericButtonWithoutLabel.swift */; };
 		F4BEBE3B276967550043C603 /* FoodBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEBE3A276967550043C603 /* FoodBadgeView.swift */; };
+		F4C34566277DF18600411359 /* JoinUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C34565277DF18600411359 /* JoinUsView.swift */; };
 		F4DB6405276B41C60016EAB6 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB6404276B41C60016EAB6 /* PageView.swift */; };
 		F4DB6407276B42090016EAB6 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB6406276B42090016EAB6 /* PageViewController.swift */; };
 		F4DB6409276B427F0016EAB6 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB6408276B427F0016EAB6 /* PageControl.swift */; };
@@ -129,6 +130,7 @@
 		F4BEBE3627693D850043C603 /* DetailedFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedFoodCell.swift; sourceTree = "<group>"; };
 		F4BEBE38276958350043C603 /* GenericButtonWithoutLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButtonWithoutLabel.swift; sourceTree = "<group>"; };
 		F4BEBE3A276967550043C603 /* FoodBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBadgeView.swift; sourceTree = "<group>"; };
+		F4C34565277DF18600411359 /* JoinUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinUsView.swift; sourceTree = "<group>"; };
 		F4DB6404276B41C60016EAB6 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		F4DB6406276B42090016EAB6 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F4DB6408276B427F0016EAB6 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				F4B9696C277BDBB5005EEAFF /* PhotoView.swift */,
 				F4B96968277B5122005EEAFF /* NameMajorView.swift */,
 				F4B9696A277B5201005EEAFF /* PositionView.swift */,
+				F4C34565277DF18600411359 /* JoinUsView.swift */,
 			);
 			path = CreditView;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				F45200A82767AF4100E9D5EA /* CategoryView.swift in Sources */,
 				F4999D8527787B490052556C /* Pass.swift in Sources */,
 				F4DB6409276B427F0016EAB6 /* PageControl.swift in Sources */,
+				F4C34566277DF18600411359 /* JoinUsView.swift in Sources */,
 				F4B4E0C8271F4A5D0057833D /* Restaurant.swift in Sources */,
 				F4999D8827796D550052556C /* Genius.swift in Sources */,
 				F42E81462772AB0700E87F08 /* PricingListCell.swift in Sources */,
@@ -657,7 +661,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"ZotMeal/Preview Content\"";
 				DEVELOPMENT_TEAM = WMFKF24VVS;
 				ENABLE_PREVIEWS = YES;
@@ -691,7 +695,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"ZotMeal/Preview Content\"";
 				DEVELOPMENT_TEAM = WMFKF24VVS;
 				ENABLE_PREVIEWS = YES;
