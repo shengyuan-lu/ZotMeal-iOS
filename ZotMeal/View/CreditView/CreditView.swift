@@ -35,7 +35,6 @@ struct CreditView: View {
                 .padding([.horizontal, .bottom], 18)
             
         }
-        //.background(Color(UIColor(named: "categoryBG")!))
         .edgesIgnoringSafeArea([.bottom])
         
     }

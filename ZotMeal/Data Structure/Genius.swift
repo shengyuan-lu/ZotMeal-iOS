@@ -35,10 +35,10 @@ func getAllGenius() -> [Genius] {
         photoName: "Shengyuan",
         position: "iOS Tech Lead",
         myDescription: "A Stanford reject who doesn't take NO for an answer. I am here to write my legend: Why can't software engineers can be super stars too?",
-        roleDescription: "iOS Tech Lead: Responsible for everything you can see in this app, plus some marketing / legal stuff.",
+        roleDescription: "Responsible for everything you can see in this app, plus some marketing / legal stuff.",
         awards: [AwardExperience(name: "Apple WWDC Scholar", year: 2021), AwardExperience(name: "3X International Hackathon Wins", year: 2021), AwardExperience(name: "2X Design Competition Wins", year: 2020)],
-        experience: [AwardExperience(name: "Summer Intern", year: 2021), AwardExperience(name: "3X iOS Apps on App Store", year: 2021), AwardExperience(name: "GitHub Campus Expert", year: 2021)],
-        linkOne: (name: "LinkedIn", url: "https://www.linkedin.com/in/shengyuan-lu/"),
+        experience: [AwardExperience(name: "Summer Intern @ Zoom", year: 2021), AwardExperience(name: "3X iOS Apps on App Store", year: 2021), AwardExperience(name: "GitHub Campus Expert", year: 2021)],
+        linkOne: (name: "Linkedin", url: "https://www.linkedin.com/in/shengyuan-lu/"),
         linkTwo: (name: "YouTube", url: "https://www.youtube.com/c/ShengyuanLu/videos")
     ))
     
@@ -49,11 +49,11 @@ func getAllGenius() -> [Genius] {
         photoName: "Eric",
         position: "Backend Tech Lead",
         myDescription: "I'm interested in web development and machine learning. Outside of programming, I'm part of the UCI triathlon club and also enjoy playing video games.",
-        roleDescription: "Backend Tech Lead: Worked on web-scraping dining website and devops",
+        roleDescription: "Worked on web-scraping dining website and devops.",
         awards: [],
         experience: [AwardExperience(name: "Eagle Scout (2020)", year: 2020)],
         linkOne: (name: "GitHub", url: "https://github.com/EricPedley"),
-        linkTwo: (name: "LinkedIn", url: "https://www.linkedin.com/in/ericpedley/")
+        linkTwo: (name: "Linkedin", url: "https://www.linkedin.com/in/ericpedley/")
     ))
     
     theCrazyOnes.append(Genius(
@@ -63,7 +63,7 @@ func getAllGenius() -> [Genius] {
         photoName: "Brian",
         position: "Backend SDE",
         myDescription: "I'm an aspiring full stack developer.",
-        roleDescription: "Backend SDE: I worked on the Python backend logic to deliver the (hopefully) correct information to users of the Zotmeal app.",
+        roleDescription: "I worked on the Python backend logic to deliver the (hopefully) correct information to users of the Zotmeal app.",
         awards: [],
         experience: [AwardExperience(name: "DFS STEM Instructor", year: 2021)],
         linkOne: (name: "GitHub", url: "https://github.com/bevm0"),
@@ -90,12 +90,12 @@ func getAllGenius() -> [Genius] {
         year: 2024,
         photoName: "Tony",
         position: "Android SDE",
-        myDescription: "",
-        roleDescription: "",
+        myDescription: "I am into web and mobile development, and I like editing videos and playing basketball in my free time.",
+        roleDescription: "Implemented UI as well as various functionalities in the ZotMeal Android app; tested and improved on all aspects of ZotMeal app, including stability, performance, accessibility, growth, and retention.",
         awards: [],
         experience: [],
-        linkOne: (name: "LinkedIn", url: ""),
-        linkTwo: (name: "YouTube", url: "")
+        linkOne: (name: "Linkedin", url: "https://www.linkedin.com/in/tonyliu02/"),
+        linkTwo: (name: "GitHub", url: "https://github.com/tonyliu02")
     ))
     
     return theCrazyOnes
