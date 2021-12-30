@@ -34,11 +34,11 @@ func getAllGenius() -> [Genius] {
         year: 2024,
         photoName: "Shengyuan",
         position: "iOS Tech Lead",
-        myDescription: "A Stanford reject who doesn't take NO for an answer. I am here to write my legend: Why can't software engineers can be super stars too?",
+        myDescription: "A Stanford reject who doesn't take NO for an answer. I am here to write my legend: Why can't software engineers can be super stars?",
         roleDescription: "Responsible for everything you can see in this app, plus some marketing / legal stuff.",
         awards: [AwardExperience(name: "Apple WWDC Scholar", year: 2021), AwardExperience(name: "3X International Hackathon Wins", year: 2021), AwardExperience(name: "2X Design Competition Wins", year: 2020)],
         experience: [AwardExperience(name: "Summer Intern @ Zoom", year: 2021), AwardExperience(name: "3X iOS Apps on App Store", year: 2021), AwardExperience(name: "GitHub Campus Expert", year: 2021)],
-        linkOne: (name: "Linkedin", url: "https://www.linkedin.com/in/shengyuan-lu/"),
+        linkOne: (name: "LinkedIn", url: "https://www.linkedin.com/in/shengyuan-lu/"),
         linkTwo: (name: "YouTube", url: "https://www.youtube.com/c/ShengyuanLu/videos")
     ))
     
@@ -53,7 +53,7 @@ func getAllGenius() -> [Genius] {
         awards: [],
         experience: [AwardExperience(name: "Eagle Scout (2020)", year: 2020)],
         linkOne: (name: "GitHub", url: "https://github.com/EricPedley"),
-        linkTwo: (name: "Linkedin", url: "https://www.linkedin.com/in/ericpedley/")
+        linkTwo: (name: "LinkedIn", url: "https://www.linkedin.com/in/ericpedley/")
     ))
     
     theCrazyOnes.append(Genius(
@@ -67,7 +67,7 @@ func getAllGenius() -> [Genius] {
         awards: [],
         experience: [AwardExperience(name: "DFS STEM Instructor", year: 2021)],
         linkOne: (name: "GitHub", url: "https://github.com/bevm0"),
-        linkTwo: (name: "Linkedin", url: "https://www.linkedin.com/in/brian-m-vo/")
+        linkTwo: (name: "LinkedIn", url: "https://www.linkedin.com/in/brian-m-vo/")
     ))
     
     theCrazyOnes.append(Genius(
@@ -92,9 +92,9 @@ func getAllGenius() -> [Genius] {
         position: "Android SDE",
         myDescription: "I am into web and mobile development, and I like editing videos and playing basketball in my free time.",
         roleDescription: "Implemented UI as well as various functionalities in the ZotMeal Android app; tested and improved on all aspects of ZotMeal app, including stability, performance, accessibility, growth, and retention.",
-        awards: [],
-        experience: [],
-        linkOne: (name: "Linkedin", url: "https://www.linkedin.com/in/tonyliu02/"),
+        awards: [AwardExperience(name: "USNCO Silver", year: 2019), AwardExperience(name: "COMC Silver", year: 2019), AwardExperience(name: "Euclid Math Distinction", year: 2018), AwardExperience(name: "AMC 12 Honor Roll", year: 2018)],
+        experience: [AwardExperience(name: "Calit 2 Research", year: 2021), AwardExperience(name: "Graphic Design Intern", year: 2021)],
+        linkOne: (name: "LinkedIn", url: "https://www.linkedin.com/in/tonyliu02/"),
         linkTwo: (name: "GitHub", url: "https://github.com/tonyliu02")
     ))
     

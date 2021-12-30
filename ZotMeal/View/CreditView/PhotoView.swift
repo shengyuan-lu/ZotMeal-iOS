@@ -37,7 +37,7 @@ struct PhotoView: View {
         .frame(width: UIScreen.screenWidth * widthFactor, height: 300)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color(UIColor(named: "dividerColor")!), style: StrokeStyle(lineWidth: 0.5))
+                .stroke(Color(UIColor(named: "dividerColor")!), style: StrokeStyle(lineWidth: 1))
         )
         
     }
