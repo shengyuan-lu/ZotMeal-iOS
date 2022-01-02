@@ -137,6 +137,7 @@ struct RestaurantStatus: View {
             }
         }
         
+        
         if let dinnerTime =  restaurant.schedule["dinner"] {
             if let dinnerCloseTime = dinnerTime["end"] {
                 closeTime = dinnerCloseTime
@@ -219,7 +220,7 @@ enum RestaurantOpenStatus: String {
     case closeSoon = "Close Soon"
     case openSoon = "Open Soon"
     case loading = "Loading..."
-    case notAvail = "Not Available"
+    case notAvail = "Status Not Available"
 }
 
 struct RestaurantStatus_Previews: PreviewProvider {

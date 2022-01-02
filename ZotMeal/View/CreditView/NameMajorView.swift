@@ -43,7 +43,7 @@ struct NameMajorView: View {
                     Image(systemName: "chevron.forward.circle.fill")
                         .resizable()
                         .foregroundColor(.white)
-                        .frame(width: 40, height: 40)
+                        .frame(width: 50, height: 50)
                         .padding(8)
                         .padding(.trailing, 4)
                 }

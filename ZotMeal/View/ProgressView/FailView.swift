@@ -55,7 +55,7 @@ struct FailView: View {
                         .font(.footnote)
                         .bold()
                     
-                    Text("Sleep-deprived Shengyuan messed up some code")
+                    Text("Dining halls are closed for breaks")
                         .font(.footnote)
                     
                     Divider()
