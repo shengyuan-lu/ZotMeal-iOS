@@ -29,7 +29,7 @@ struct JoinUsView: View {
                     
                     Text("3. Intern as a freshmen or sophomore at any tech companies with more than 50 employees.")
                     
-                    Text("4. Any personal projects with 1000 real users. This does't have to be in tech. Your Tiktok has 1,000 fans? Let's go!")
+                    Text("4. Any personal projects with 1000 real users. This does't have to be in tech.")
                     
                     Text("5. Place 3rd or above in any category at any Pinnacle-eligible hackathons, or place 3rd or above overall at any university-level hackathons hosted in North America.")
                     
