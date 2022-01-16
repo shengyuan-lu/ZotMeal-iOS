@@ -1,9 +1,26 @@
 # ZotMeal
-The only revolutionary menu app for UC Irvine dining halls. 
+The revolutionary menu app for UC Irvine dining halls. 
 
-ZotMeal will be on Apple App Store around Jan. 3, 2022
+ZotMeal brings a revolutionary dining experience to the 2 largest UCI dining halls - Anteatery and Brandywine. Aim to fight eating disorders and promote healthy living habits, ZotMeal equips students with the following features:
+
+
+- See what's on the menu every day
+
+- Detailed nutrition information for every dish offered
+
+- Integrated Zot Pass
+
+- Get the up-to-date schedule and pricing
+
+- Navigate to the dining hall with one click
+
+- Search the food you don't know
+
+- Dark mode support
 
 ZotMeal (iOS) is not open source. It is a freeware developed and owned by Shengyuan Lu, who choose to publish the code for educational purposes.
+
+Download it on [Apple App Store](https://apps.apple.com/us/app/zotmeal/id1551606266).
 
 ![EN 1](https://user-images.githubusercontent.com/70995597/147644783-c9b1cb92-e4fb-4bfc-b2e2-69b5342fa5cf.png)
 
