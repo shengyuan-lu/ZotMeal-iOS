@@ -22,7 +22,7 @@ ZotMeal (iOS) is not open source. It is a freeware developed and owned by Shengy
 
 Download it on [Apple App Store](https://apps.apple.com/us/app/zotmeal/id1551606266).
 
-![EN 1](https://user-images.githubusercontent.com/70995597/147644783-c9b1cb92-e4fb-4bfc-b2e2-69b5342fa5cf.png)
+![EN 1](https://user-images.githubusercontent.com/70995597/149829843-58d264f9-a571-4e1f-8498-3a4cefde1c84.png)
 
 ![EN 2](https://user-images.githubusercontent.com/70995597/147644792-de7ef580-94a7-4e7a-9b35-76db915b140e.png)
 
