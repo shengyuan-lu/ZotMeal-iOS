@@ -1,4 +1,4 @@
-# ZotMeal
+# ZotMeal 2.0
 The revolutionary menu app for UC Irvine dining halls. 
 
 ZotMeal brings a revolutionary dining experience to the 2 largest UCI dining halls - Anteatery and Brandywine. Aim to fight eating disorders and promote healthy living habits, ZotMeal equips students with the following features:
