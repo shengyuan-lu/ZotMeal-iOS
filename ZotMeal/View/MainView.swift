@@ -77,6 +77,7 @@ struct MainView: View {
                     
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         
+                        /*
                         NavigationLink {
                             PassView()
                                 .navigationTitle("Zot Pass")
@@ -85,6 +86,7 @@ struct MainView: View {
                             Image(systemName: "wallet.pass.fill")
                                 .offset(x: 15)
                         }
+                        */
                         
                         NavigationLink {
                             CreditView()
