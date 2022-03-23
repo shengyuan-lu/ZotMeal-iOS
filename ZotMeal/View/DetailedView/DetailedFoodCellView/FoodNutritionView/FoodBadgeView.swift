@@ -16,14 +16,13 @@ struct FoodBadgeView: View {
         VStack {
             
             HStack {
-                Text("Badges")
+                Text("Nutrition Badges")
                     .bold()
                 
                 Spacer()
                 
                 Text(String(food.getBadgeCount()))
             }
-            .font(.footnote)
             .padding(.vertical, 2)
             
             ScrollView(.horizontal, showsIndicators: false) {

@@ -12,6 +12,26 @@ struct FoodNutritionCellView: View {
     let nutrtionName: String
     let nutritionValue: String
     
+    // nutritionName : unit
+    let unitDict: [String : String] = [
+        "Calcium" : "mg",
+        "Calories" : "kCal",
+        "Calories From Fat" : "kCal",
+        "Cholesterol" : "mg",
+        "Dietary Fiber" : "g",
+        "Iron" : "mg",
+        "Protein" : "g",
+        "Saturated Fat" : "g",
+        "Serving Size" : "serving(s)",
+        "Sodium" : "mg",
+        "Sugars" : "g",
+        "Total Carbohydrates" : "g",
+        "Total Fat" : "g",
+        "Trans Fat" : "g",
+        "Vitamin C" : "IU",
+        "Vitamin A" : "IU"
+    ]
+    
     var body: some View {
         
         VStack {
@@ -21,12 +41,23 @@ struct FoodNutritionCellView: View {
                 
                 Spacer()
                 
-                Text(nutritionValue)
+                Text(nutritionValue + getUnit())
             }
             .font(.footnote)
         }
 
     }
+    
+    func getUnit() -> String {
+        
+        if let unit = unitDict[nutrtionName.camelCaseToWords().capitalized] {
+            return " " + unit
+        }
+        
+        return ""
+    }
+    
+    
     
 }
 

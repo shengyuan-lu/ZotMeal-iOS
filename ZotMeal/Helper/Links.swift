@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Constants {
+struct Links {
     static let googleSearchURL = "https://www.google.com/search?q="
     
     // Remote

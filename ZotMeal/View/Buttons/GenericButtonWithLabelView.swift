@@ -37,6 +37,8 @@ struct GenericButtonWithLabelView: View {
             .background(bgColor)
             .cornerRadius(8)
         }
+        
+
     }
 }
 

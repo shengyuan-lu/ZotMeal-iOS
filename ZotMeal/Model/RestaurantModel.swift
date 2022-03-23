@@ -13,8 +13,8 @@ class RestaurantModel: ObservableObject {
     @Published var restaurants: [Restaurant] = [Restaurant]()
     @Published var isLoadingFailed: Bool = false
     
-    let remoteJSONnames: [String] = [Constants.brandyURL, Constants.anteateryURL]
-    let localJSONnames: [String] = [Constants.brandyDummyName, Constants.antearyDummyName]
+    let remoteJSONnames: [String] = [Links.brandyURL, Links.anteateryURL]
+    let localJSONnames: [String] = [Links.brandyDummyName, Links.antearyDummyName]
     
     init() {
         self.load()
@@ -48,7 +48,7 @@ class RestaurantModel: ObservableObject {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             for _ in 0...1 {
-                self.loadRemoteJSON(forURL: Constants.remoteDemoJsonURL) { data in
+                self.loadRemoteJSON(forURL: Links.remoteDemoJsonURL) { data in
                     if let d = data {
                         self.loadRestaurant(data: d)
                     }

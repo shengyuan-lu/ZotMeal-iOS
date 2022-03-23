@@ -13,7 +13,7 @@ struct FailView: View {
     
     @State var isLoading: Bool = false
     
-    let isDebugModeON = false
+    let isDebugModeON = true
     
     var body: some View {
         
@@ -63,7 +63,7 @@ struct FailView: View {
                 .padding([.horizontal, .bottom])
 
                 
-                VStack(spacing: 10) {
+                VStack(spacing: 30) {
                     
                     // Try again
                     GenericButtonWithLabelView(action: {
@@ -74,9 +74,10 @@ struct FailView: View {
                         
                     }, buttonText: "Try Again", systemName: "arrow.clockwise", bgColor: .blue, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                     
+                    
+
                     if isDebugModeON {
                         VStack {
-                            Text("Debugging Use Only")
                             
                             // Load Local Demo
                             GenericButtonWithLabelView(action: {
@@ -87,8 +88,7 @@ struct FailView: View {
                                     restaurantModel.loadLocalDemoData()
                                 }
                                 
-                            }, buttonText: "Load Local Demo JSON", systemName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
-                            
+                            }, buttonText: "Use Local Demo Data", systemName: "arrow.clockwise", bgColor: .gray, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                             
                             // Load Remote Demo
                             GenericButtonWithLabelView(action: {
@@ -96,7 +96,7 @@ struct FailView: View {
                                 startLoading()
                                 restaurantModel.loadRemoteDemoData()
                                 
-                            }, buttonText: "Load Remote Demo JSON", systemName: "arrow.clockwise", bgColor: .green, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
+                            }, buttonText: "Use Remote Demo Data", systemName: "arrow.clockwise", bgColor: .gray, textColor: .white, edgeInsets: EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                         }
                         .padding(.top, 40)
                     }

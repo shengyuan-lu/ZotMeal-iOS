@@ -137,6 +137,11 @@ struct RestaurantStatus: View {
             }
         }
         
+        if openTime == 9999 {
+            status = .demo
+            return
+        }
+        
         
         if let dinnerTime =  restaurant.schedule["dinner"] {
             if let dinnerCloseTime = dinnerTime["end"] {
@@ -208,6 +213,8 @@ struct RestaurantStatus: View {
         case .openSoon:
             return Color.yellow
             
+        case .demo:
+            return Color.blue
         }
     }
     
@@ -221,6 +228,7 @@ enum RestaurantOpenStatus: String {
     case openSoon = "Open Soon"
     case loading = "Loading..."
     case notAvail = "Status Not Available"
+    case demo = "Demo Mode"
 }
 
 struct RestaurantStatus_Previews: PreviewProvider {

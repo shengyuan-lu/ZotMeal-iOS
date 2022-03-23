@@ -1,18 +1,20 @@
 //
-//  DetailedFoodCel.swift
+//  SingleDetailedFoodCell.swift
 //  ZotMeal
 //
-//  Created by Shengyuan Lu on 12/14/21.
+//  Created by Shengyuan Lu on 3/23/22.
 //
+
+import Foundation
 
 import SwiftUI
 
-struct DetailedFoodCell: View {
+struct SingleDetailedFoodCell: View {
     
     @State var food: Food
     @State var isExpanded: Bool = false
     
-    @State private var showingWebSearch = false
+    @State private var showingWebSearch = true
     
     var body: some View {
         
@@ -62,14 +64,6 @@ struct DetailedFoodCell: View {
                 
                 
             }
-            
-            if food.hasBadge() {
-                
-                Divider()
-                
-                FoodBadgeView(food: food)
-            }
-            
             
             if hasNutritionInfo() {
                 
@@ -141,13 +135,13 @@ struct DetailedFoodCell: View {
         return text.filter { okayChars.contains($0) }
     }
     
+    
     enum AllNutritionKeys : String, CaseIterable {
         case isVegan = "isVegan"
         case isVegetarian = "isVegetarian"
         case isEatWell = "isEatWell"
         case isPlantForward = "isPlantForward"
         case isWholeGrains = "isWholeGrains"
-        
         case servingSize = "servingSize"
         case servingUnit = "servingUnit"
         case totalFat = "totalFat"
@@ -168,9 +162,9 @@ struct DetailedFoodCell: View {
     }
 }
 
-struct DetailedFoodCell_Previews: PreviewProvider {
+struct SingleDetailedFoodCell_Preview: PreviewProvider {
     static var previews: some View {
-        DetailedFoodCell(food: getSampleFood())
+        SingleDetailedFoodCell(food: getSampleFood())
             .previewLayout(PreviewLayout.sizeThatFits)
             .previewDisplayName("Default preview")
     }

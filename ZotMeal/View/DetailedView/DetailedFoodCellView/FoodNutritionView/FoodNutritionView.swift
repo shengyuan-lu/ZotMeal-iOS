@@ -13,13 +13,6 @@ struct FoodNutritionView: View {
     
     var body: some View {
         
-        if food.hasBadge() {
-            
-            Divider()
-            
-            FoodBadgeView(food: food)
-        }
-        
         ForEach(food.nutrtionCellList.keys.sorted(), id: \.self) { key in
             
             Divider()
