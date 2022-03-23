@@ -23,7 +23,7 @@ struct DetailedCategoryView: View {
                     ExDivider()
                 }
                 
-                DetailedFoodCell(food: food)
+                DetailedFoodCell(food: food, isExpanded: false)
                     .padding(.horizontal, 16)
             }
             .padding(.bottom, 8)

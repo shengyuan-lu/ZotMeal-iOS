@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailedFoodCell: View {
     
     @State var food: Food
-    @State var isExpanded: Bool = false
+    @State var isExpanded: Bool
     
     @State private var showingWebSearch = false
     
@@ -170,7 +170,7 @@ struct DetailedFoodCell: View {
 
 struct DetailedFoodCell_Previews: PreviewProvider {
     static var previews: some View {
-        DetailedFoodCell(food: getSampleFood())
+        DetailedFoodCell(food: getSampleFood(), isExpanded: true)
             .previewLayout(PreviewLayout.sizeThatFits)
             .previewDisplayName("Default preview")
     }

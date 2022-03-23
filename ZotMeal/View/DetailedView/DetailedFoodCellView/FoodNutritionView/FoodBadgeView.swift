@@ -16,7 +16,7 @@ struct FoodBadgeView: View {
         VStack {
             
             HStack {
-                Text("Nutrition Badges")
+                Text("Nutrition Badge(s)")
                     .bold()
                 
                 Spacer()

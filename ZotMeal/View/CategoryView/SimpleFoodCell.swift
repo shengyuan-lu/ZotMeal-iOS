@@ -10,6 +10,7 @@ import SwiftUI
 struct SimpleFoodCell: View {
     
     @State var food: Food
+    @State var presentDetail: Bool = false
     
     var body: some View {
         
@@ -22,6 +23,16 @@ struct SimpleFoodCell: View {
             
             Text(String(food.getNutritionCalorieValue(key: .calories)))
                 .padding(.leading, 4)
+            
+            NavigationLink(isActive: $presentDetail) {
+                SingleDetailedFoodCell(food: food)
+            } label: {
+                EmptyView()
+            }
+
+        }
+        .onTapGesture {
+            presentDetail.toggle()
         }
        
     }
