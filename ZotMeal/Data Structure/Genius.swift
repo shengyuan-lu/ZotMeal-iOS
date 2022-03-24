@@ -71,6 +71,21 @@ func getAllGenius() -> [Genius] {
     ))
     
     theCrazyOnes.append(Genius(
+        name: "Kaiyuan Hu",
+        major: "B.S. Computer Science",
+        year: 2024,
+        photoName: "Kaiyuan",
+        position: "Backend SDE",
+        myDescription: "Minoring Statistics; Aiming for full-stack development and data mining.",
+        roleDescription: "Built a crawler for themed event information in dining halls.",
+        awards: [],
+        experience: [AwardExperience(name: "Calit 2 Researcher", year: 2022), AwardExperience(name: "ICS Peer Advisor", year: 2021)],
+        linkOne: (name: "LinkedIn", url: "https://www.linkedin.com/in/kaiyuanhu/"),
+        linkTwo: (name: "GitHub", url: "https://github.com/RAIL-HU")
+    ))
+    
+    
+    theCrazyOnes.append(Genius(
         name: "Justin Yue",
         major: "B.S. Computer Science",
         year: 2024,
