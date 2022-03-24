@@ -15,8 +15,10 @@ struct SingleDetailedFoodCell: View {
 
         ScrollView {
             DetailedFoodCell(food: food, isExpanded: true)
-                .padding()
+                .padding(24)
         }
+        .background(Color(UIColor(named: "categoryBG")!))
+        .edgesIgnoringSafeArea([.horizontal, .bottom])
         .navigationTitle("Detail")
         
     }
