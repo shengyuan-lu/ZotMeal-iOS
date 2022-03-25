@@ -13,7 +13,7 @@ struct FailView: View {
     
     @State var isLoading: Bool = false
     
-    let isDebugModeON = true
+    let isDebugModeON = false
     
     var body: some View {
         

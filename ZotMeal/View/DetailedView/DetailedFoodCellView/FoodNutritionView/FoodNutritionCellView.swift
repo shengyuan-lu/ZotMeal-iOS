@@ -41,11 +41,19 @@ struct FoodNutritionCellView: View {
                 
                 Spacer()
                 
-                Text(nutritionValue + getUnit())
+                Text(getNutritionValue() + getUnit())
             }
             .font(.footnote)
         }
 
+    }
+    
+    func getNutritionValue() -> String {
+        if nutritionValue.starts(with: "/") {
+            return "1" + nutritionValue
+        }
+        
+        return nutritionValue
     }
     
     func getUnit() -> String {

@@ -30,7 +30,7 @@ struct CreditView: View {
             
             Divider()
             
-            Text("Special thanks to Max Liu (B.S. CSE '24), Jessie Yao (B.S. CS '23), and Susie Su (B.S. CSE '24) for their contributions to the original ZotMeal. We would also like to thank users like you who make all the work worth it.")
+            Text("Special thanks to Max Yinghao Liu (B.S. CSE '24), Jessie Jingqi Yao (B.S. CS '23), and Susie Qingshuang Su (B.S. CSE '24) for their contributions to the original ZotMeal. We would also like to thank users like you who make all the work worth it.")
                 .font(.footnote)
                 .bold()
                 .foregroundColor(.secondary)

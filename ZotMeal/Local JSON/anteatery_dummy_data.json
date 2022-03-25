@@ -3,7 +3,7 @@
     "refreshTime": 1640115842,
     "schedule": {
         "breakfast": {
-            "start": 0715,
+            "start": 715,
             "end": 1100
         },
         "brunch": {
