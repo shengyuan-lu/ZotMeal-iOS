@@ -8,8 +8,6 @@ ZotMeal brings a revolutionary dining experience to the 2 largest UCI dining hal
 
 - Detailed nutrition information for every dish offered
 
-- Integrated Zot Pass
-
 - Get the up-to-date schedule and pricing
 
 - Navigate to the dining hall with one click
@@ -25,8 +23,6 @@ Download it on [Apple App Store](https://apps.apple.com/us/app/zotmeal/id1551606
 ![EN 1](https://user-images.githubusercontent.com/70995597/149829843-58d264f9-a571-4e1f-8498-3a4cefde1c84.png)
 
 ![EN 2](https://user-images.githubusercontent.com/70995597/147644792-de7ef580-94a7-4e7a-9b35-76db915b140e.png)
-
-![EN 3](https://user-images.githubusercontent.com/70995597/147644794-131b6ab0-5d7a-495f-8dcb-6d76e0c826c4.png)
 
 ![EN 4](https://user-images.githubusercontent.com/70995597/147644799-bee3c0a8-a0eb-4705-9a63-585d6abb64cd.png)
 
