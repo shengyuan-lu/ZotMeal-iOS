@@ -66,8 +66,7 @@ struct RestaurantStatus: View {
             HStack(spacing: 12) {
                 
                 NavigationLink {
-                    CalendarView(restaurant: restaurant)
-                        .navigationTitle("Calendar")
+                    CalendarView(restaurant: restaurant, index: 1)
                         .navigationBarTitleDisplayMode(.inline)
                     
                 } label: {

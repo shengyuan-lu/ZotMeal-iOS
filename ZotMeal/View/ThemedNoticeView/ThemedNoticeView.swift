@@ -11,23 +11,33 @@ struct ThemedNoticeView: View {
     
     let restaurant: Restaurant
     
+    @State var isActive: Bool = false
+    
     var body: some View {
         
-        HStack() {
-            
-            Image(systemName: "star.fill")
-                .font(.body)
-            
-            Text("Event: " + getEventName())
-                .font(.body)
-                .bold()
-            
+        NavigationLink(isActive: $isActive) {
+            CalendarView(restaurant: restaurant, index: 0)
+        } label: {
+            HStack() {
+                
+                Image(systemName: "star.fill")
+                    .font(.body)
+                
+                Text("Event: " + getEventName())
+                    .font(.body)
+                    .bold()
+                
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
+            .frame(maxWidth: .infinity)
+            .foregroundColor(Color.white)
+            .background(Color.blue)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .onTapGesture {
+                isActive.toggle()
+            }
         }
-        .padding(16)
-        .frame(maxWidth: .infinity)
-        .foregroundColor(Color.white)
-        .background(Color.blue)
-        .clipShape(RoundedRectangle(cornerRadius: 10))
         
     }
     

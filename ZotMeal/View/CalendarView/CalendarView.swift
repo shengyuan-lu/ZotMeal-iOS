@@ -11,7 +11,7 @@ struct CalendarView: View {
     
     @State var restaurant: Restaurant
     
-    @State var index: Int = 0
+    @State var index: Int
     
     let height: CGFloat = 140
     
@@ -65,9 +65,18 @@ struct CalendarView: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding(.horizontal, 16)
+            .padding(.vertical, 4)
+            .navigationTitle("Calendar")
             
             if index == 0 {
-                ThemedView(restaurant: restaurant)
+                if restaurant.events.count != 0 {
+                    ThemedView(restaurant: restaurant)
+                } else {
+                    Text("No Themed Events In The Next 7 Days")
+                        .bold()
+                        .padding(.top, 16)
+                }
+                
             } else {
                 ScheduleView(restaurant: restaurant)
             }
@@ -81,6 +90,6 @@ struct CalendarView: View {
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView(restaurant: getEmptyRestaurant())
+        CalendarView(restaurant: getEmptyRestaurant(), index: 1)
     }
 }
