@@ -1,17 +1,19 @@
 //
-//  ScheduleCell.swift
+//  ThemedCell.swift
 //  ZotMeal
 //
-//  Created by Shengyuan Lu on 12/22/21.
+//  Created by Shengyuan Lu on 3/26/22.
 //
 
 import SwiftUI
 
-struct ScheduleCell: View {
+import SwiftUI
+
+struct ThemedCell: View {
     
     let startOrStop: String
     let timeInInt: Int
-    
+
     var body: some View {
         
         HStack {
@@ -60,10 +62,10 @@ struct ScheduleCell: View {
     
 }
 
-struct ScheduleCell_Previews: PreviewProvider {
+struct ThemedCell_Previews: PreviewProvider {
     
     static var previews: some View {
-        ScheduleCell(startOrStop: "Start", timeInInt: 1200)
+        ThemedCell(startOrStop: "Start", timeInInt: 1200)
             .previewLayout(PreviewLayout.sizeThatFits)
             .previewDisplayName("Default preview")
     }

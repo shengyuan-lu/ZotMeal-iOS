@@ -16,7 +16,7 @@
 		F42E81442772A1BD00E87F08 /* RestaurantBannerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E81432772A1BD00E87F08 /* RestaurantBannerImage.swift */; };
 		F42E81462772AB0700E87F08 /* PricingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E81452772AB0700E87F08 /* PricingListCell.swift */; };
 		F42E814A2773CEC000E87F08 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E81492773CEC000E87F08 /* DictionaryExtension.swift */; };
-		F42E814D2773CFC700E87F08 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E814C2773CFC700E87F08 /* ScheduleView.swift */; };
+		F42E814D2773CFC700E87F08 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E814C2773CFC700E87F08 /* CalendarView.swift */; };
 		F44315A327705F8500421EAD /* empty_restaurant.json in Resources */ = {isa = PBXBuildFile; fileRef = F44315A227705F8500421EAD /* empty_restaurant.json */; };
 		F44315A627706B0000421EAD /* RestaurantStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44315A527706B0000421EAD /* RestaurantStatus.swift */; };
 		F44ED965276F317100C1B513 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ED964276F317100C1B513 /* LoadingView.swift */; };
@@ -31,6 +31,9 @@
 		F45200AC27682B2900E9D5EA /* CategoryTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AB27682B2900E9D5EA /* CategoryTitleView.swift */; };
 		F45200AE27682C0C00E9D5EA /* GenericButtonWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AD27682C0C00E9D5EA /* GenericButtonWithLabelView.swift */; };
 		F45200B027683C8E00E9D5EA /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45200AF27683C8E00E9D5EA /* StationView.swift */; };
+		F460339C27EF340C00EF0105 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460339B27EF340C00EF0105 /* ScheduleView.swift */; };
+		F460339E27EF37E600EF0105 /* ThemedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460339D27EF37E600EF0105 /* ThemedView.swift */; };
+		F46033A027EF383F00EF0105 /* ThemedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460339F27EF383F00EF0105 /* ThemedCell.swift */; };
 		F4766FD22716A1FB00E3AD87 /* ZotMeal_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */; };
 		F4766FD42716A1FB00E3AD87 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4766FD32716A1FB00E3AD87 /* MainView.swift */; };
 		F4766FD62716A1FE00E3AD87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4766FD52716A1FE00E3AD87 /* Assets.xcassets */; };
@@ -39,7 +42,7 @@
 		F48B469127EEF4330096210D /* ThemedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48B469027EEF4330096210D /* ThemedEvent.swift */; };
 		F48C7055277C8AD7002CF0EB /* AwardExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48C7054277C8AD7002CF0EB /* AwardExperience.swift */; };
 		F48C7057277C8FD4002CF0EB /* CreditViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48C7056277C8FD4002CF0EB /* CreditViewSection.swift */; };
-		F48F0EFD27743AB200D62131 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F0EFC27743AB200D62131 /* ScheduleCell.swift */; };
+		F48F0EFD27743AB200D62131 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F0EFC27743AB200D62131 /* CalendarCell.swift */; };
 		F4946B592769D4D600D77292 /* anteatery_dummy_data.json in Resources */ = {isa = PBXBuildFile; fileRef = F4946B582769D4D500D77292 /* anteatery_dummy_data.json */; };
 		F4946B5C2769E3EF00D77292 /* FailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4946B5B2769E3EF00D77292 /* FailView.swift */; };
 		F4999D7F27773A6E0052556C /* PassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999D7E27773A6E0052556C /* PassView.swift */; };
@@ -83,7 +86,7 @@
 		F42E81432772A1BD00E87F08 /* RestaurantBannerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantBannerImage.swift; sourceTree = "<group>"; };
 		F42E81452772AB0700E87F08 /* PricingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingListCell.swift; sourceTree = "<group>"; };
 		F42E81492773CEC000E87F08 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
-		F42E814C2773CFC700E87F08 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		F42E814C2773CFC700E87F08 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		F44315A227705F8500421EAD /* empty_restaurant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty_restaurant.json; sourceTree = "<group>"; };
 		F44315A527706B0000421EAD /* RestaurantStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantStatus.swift; sourceTree = "<group>"; };
 		F44ED964276F317100C1B513 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -98,6 +101,9 @@
 		F45200AB27682B2900E9D5EA /* CategoryTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTitleView.swift; sourceTree = "<group>"; };
 		F45200AD27682C0C00E9D5EA /* GenericButtonWithLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButtonWithLabelView.swift; sourceTree = "<group>"; };
 		F45200AF27683C8E00E9D5EA /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
+		F460339B27EF340C00EF0105 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		F460339D27EF37E600EF0105 /* ThemedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedView.swift; sourceTree = "<group>"; };
+		F460339F27EF383F00EF0105 /* ThemedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedCell.swift; sourceTree = "<group>"; };
 		F4766FCE2716A1FB00E3AD87 /* ZotMeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZotMeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4766FD12716A1FB00E3AD87 /* ZotMeal_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotMeal_App.swift; sourceTree = "<group>"; };
 		F4766FD32716A1FB00E3AD87 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -107,7 +113,7 @@
 		F48B469027EEF4330096210D /* ThemedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedEvent.swift; sourceTree = "<group>"; };
 		F48C7054277C8AD7002CF0EB /* AwardExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardExperience.swift; sourceTree = "<group>"; };
 		F48C7056277C8FD4002CF0EB /* CreditViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditViewSection.swift; sourceTree = "<group>"; };
-		F48F0EFC27743AB200D62131 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		F48F0EFC27743AB200D62131 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		F4946B582769D4D500D77292 /* anteatery_dummy_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = anteatery_dummy_data.json; sourceTree = "<group>"; };
 		F4946B5B2769E3EF00D77292 /* FailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailView.swift; sourceTree = "<group>"; };
 		F4999D7E27773A6E0052556C /* PassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassView.swift; sourceTree = "<group>"; };
@@ -165,7 +171,7 @@
 				F4BEBE3C276967610043C603 /* Buttons */,
 				F44ED968276F7F5200C1B513 /* MapView */,
 				F42E81402772A15400E87F08 /* Pricing */,
-				F42E814B2773CFAF00E87F08 /* ScheduleView */,
+				F42E814B2773CFAF00E87F08 /* CalendarView */,
 				F4999D89277979270052556C /* CreditView */,
 				F4999D7D27773A570052556C /* PassView */,
 				F4946B5A2769E3DD00D77292 /* ProgressView */,
@@ -190,13 +196,16 @@
 			path = Pricing;
 			sourceTree = "<group>";
 		};
-		F42E814B2773CFAF00E87F08 /* ScheduleView */ = {
+		F42E814B2773CFAF00E87F08 /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
-				F42E814C2773CFC700E87F08 /* ScheduleView.swift */,
-				F48F0EFC27743AB200D62131 /* ScheduleCell.swift */,
+				F42E814C2773CFC700E87F08 /* CalendarView.swift */,
+				F460339D27EF37E600EF0105 /* ThemedView.swift */,
+				F460339B27EF340C00EF0105 /* ScheduleView.swift */,
+				F48F0EFC27743AB200D62131 /* CalendarCell.swift */,
+				F460339F27EF383F00EF0105 /* ThemedCell.swift */,
 			);
-			path = ScheduleView;
+			path = CalendarView;
 			sourceTree = "<group>";
 		};
 		F44315A427706AEB00421EAD /* RestaurantBanner */ = {
@@ -492,11 +501,11 @@
 				F4F010C0276DB36900BB458C /* DecodingExtension.swift in Sources */,
 				F4B96967277B13DB005EEAFF /* CreditView.swift in Sources */,
 				F45200B027683C8E00E9D5EA /* StationView.swift in Sources */,
-				F42E814D2773CFC700E87F08 /* ScheduleView.swift in Sources */,
+				F42E814D2773CFC700E87F08 /* CalendarView.swift in Sources */,
 				F42E814A2773CEC000E87F08 /* DictionaryExtension.swift in Sources */,
 				F4ABC336276976B9008A32ED /* DetailedStationView.swift in Sources */,
 				F4999D8127773EEE0052556C /* PassModel.swift in Sources */,
-				F48F0EFD27743AB200D62131 /* ScheduleCell.swift in Sources */,
+				F48F0EFD27743AB200D62131 /* CalendarCell.swift in Sources */,
 				F4201763276982030064FF86 /* Links.swift in Sources */,
 				F44ED96A276F7F6900C1B513 /* MapView.swift in Sources */,
 				F4DB6405276B41C60016EAB6 /* PageView.swift in Sources */,
@@ -518,6 +527,7 @@
 				F4201765276985A20064FF86 /* WebSearchView.swift in Sources */,
 				F4B96969277B5122005EEAFF /* NameMajorView.swift in Sources */,
 				F45200A82767AF4100E9D5EA /* CategoryView.swift in Sources */,
+				F460339E27EF37E600EF0105 /* ThemedView.swift in Sources */,
 				F4999D8527787B490052556C /* Pass.swift in Sources */,
 				F4DB6409276B427F0016EAB6 /* PageControl.swift in Sources */,
 				F4C34566277DF18600411359 /* JoinUsView.swift in Sources */,
@@ -531,7 +541,9 @@
 				F4766FD22716A1FB00E3AD87 /* ZotMeal_App.swift in Sources */,
 				F4BA36F927EB7812006DCA0F /* SingleDetailedFoodCell.swift in Sources */,
 				F4858030276DF04F00856F0E /* FoodNutritionView.swift in Sources */,
+				F460339C27EF340C00EF0105 /* ScheduleView.swift in Sources */,
 				F4BEBE3B276967550043C603 /* FoodBadgeView.swift in Sources */,
+				F46033A027EF383F00EF0105 /* ThemedCell.swift in Sources */,
 				F42E81442772A1BD00E87F08 /* RestaurantBannerImage.swift in Sources */,
 				F4999D7F27773A6E0052556C /* PassView.swift in Sources */,
 				F4B9696B277B5201005EEAFF /* PositionView.swift in Sources */,
