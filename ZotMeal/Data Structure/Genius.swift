@@ -34,7 +34,7 @@ func getAllGenius() -> [Genius] {
         year: 2024,
         photoName: "Shengyuan",
         position: "Lead iOS SDE",
-        myDescription: "A Stanford reject who doesn't take NO for an answer. I am here to write my legend: Why can't software engineers can be super stars?",
+        myDescription: "Why can't software engineers can be super stars? I am here to write my legend.",
         roleDescription: "Responsible for everything you can see in this app, plus some marketing / legal stuff.",
         awards: [AwardExperience(name: "Apple WWDC Scholar", year: 2021), AwardExperience(name: "3X International Hackathon Wins", year: 2021), AwardExperience(name: "2X Design Competition Wins", year: 2020)],
         experience: [AwardExperience(name: "Summer Intern @ Zoom", year: 2021), AwardExperience(name: "3X iOS Apps on App Store", year: 2021), AwardExperience(name: "GitHub Campus Expert", year: 2021)],

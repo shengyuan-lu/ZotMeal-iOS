@@ -23,5 +23,13 @@
         "dinner": 14.95
     },
     "currentMeal": "breakfast",
-    "all": []
+    "all": [],
+    "themed": [
+        {
+        "date": "03/30/2022",
+        "name": "Flaming Chips Day",
+        "service_start": 1100,
+        "service_end": 1500
+        }
+    ]
 }

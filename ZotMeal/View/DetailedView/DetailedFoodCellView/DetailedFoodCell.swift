@@ -63,13 +63,6 @@ struct DetailedFoodCell: View {
                 
             }
             
-            if food.hasBadge() {
-                
-                Divider()
-                
-                FoodBadgeView(food: food)
-            }
-            
             
             if hasNutritionInfo() {
                 
@@ -87,6 +80,13 @@ struct DetailedFoodCell: View {
             
             if isExpanded {
                 FoodNutritionView(food: food)
+            }
+            
+            if food.hasBadge() {
+                
+                Divider()
+                
+                FoodBadgeView(food: food)
             }
             
             Divider()
