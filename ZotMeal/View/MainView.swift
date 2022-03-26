@@ -26,8 +26,15 @@ struct MainView: View {
                     
                     if restaurantModel.restaurants[restaurantSelectionIndex].allMenu.count > 0 {
                         
+                        if checkIfThemedEventToday() {
+                            ThemedNoticeView(restaurant: restaurantModel.restaurants[restaurantSelectionIndex])
+                                .padding(.horizontal, 8)
+                        }
+                        
                         ScrollViewReader { sv in
+                    
                             ScrollView(.vertical, showsIndicators: true) {
+                                
                                 VStack(spacing: 6) {
                                     ForEach(restaurantModel.restaurants[restaurantSelectionIndex].allMenu, id: \.self) { station in
                                         StationView(station: station)
@@ -122,6 +129,19 @@ struct MainView: View {
         }
         
         return bannerViews
+    }
+    
+    func checkIfThemedEventToday() -> Bool {
+        
+        let selectedRestaurant = restaurantModel.restaurants[restaurantSelectionIndex]
+        
+        for event in selectedRestaurant.events {
+            if selectedRestaurant.dateString == event.date {
+                return true
+            }
+        }
+        
+        return false
     }
     
 }

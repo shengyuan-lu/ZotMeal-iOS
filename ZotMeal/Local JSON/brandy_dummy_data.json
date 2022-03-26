@@ -1,7 +1,7 @@
 {
     "restaurant": "Brandywine",
     "refreshTime": 1648278470,
-    "date": "04/7/2022",
+    "date": "03/26/2022",
     "schedule": {
         "breakfast": {
             "start": 715,
@@ -656,7 +656,7 @@
         "service_end": 1500
         },
         {
-        "date": "03/28/2022",
+        "date": "03/26/2022",
         "name": "Taco Day",
         "service_start": 1600,
         "service_end": 1900
