@@ -1,6 +1,7 @@
 {
     "restaurant": "Sample",
     "refreshTime": 1640115842,
+    "date": "04/7/2022",
     "schedule": {
         "breakfast": {
             "start": 715,
