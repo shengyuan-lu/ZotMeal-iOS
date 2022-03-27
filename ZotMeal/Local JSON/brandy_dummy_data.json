@@ -644,12 +644,6 @@
     ],
     "themed": [
         {
-        "date": "04/7/2022",
-        "name": "Flaming Chips Day",
-        "service_start": 1100,
-        "service_end": 1500
-        },
-        {
         "date": "03/30/2022",
         "name": "Beijing Duck Day",
         "service_start": 1100,
@@ -657,7 +651,7 @@
         },
         {
         "date": "03/26/2022",
-        "name": "Taco Day",
+        "name": "Crab Leg Day",
         "service_start": 1600,
         "service_end": 1900
         }

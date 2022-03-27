@@ -23,7 +23,7 @@ class RestaurantModel: ObservableObject {
     func load() {
         
         // FIXME: - Load real data in production
-        self.loadLocalDemoData()
+        self.loadRemoteRealData()
     }
     
     func loadRemoteRealData() {
