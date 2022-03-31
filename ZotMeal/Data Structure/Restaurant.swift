@@ -16,7 +16,7 @@ struct Restaurant: Decodable, Hashable {
     let allMenu: [Station]
     let schedule: [String : [String : Int]]
     let pricing: [String : Double]
-    let events: [ThemedEvent]
+    var events: [ThemedEvent]
     
     enum CodingKeys: String, CodingKey {
         case refreshTime
@@ -47,6 +47,8 @@ struct Restaurant: Decodable, Hashable {
         self.pricing = pricing
         self.events = events
         self.dateString = dateString
+        
+        resetThemedEvents()
     }
     
     init(refreshTime: Date, dateString: String, restaurantName: String, mealType: String, allMenu: [Station], schedule: [String : [String : Int]], pricing: [String : Double], events: [ThemedEvent]) {
@@ -58,6 +60,8 @@ struct Restaurant: Decodable, Hashable {
         self.pricing = pricing
         self.events = events
         self.dateString = dateString
+        
+        resetThemedEvents()
     }
     
     func getMenuUpdateTimeInString() -> String {
@@ -65,6 +69,27 @@ struct Restaurant: Decodable, Hashable {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         return dateFormatter.string(from: date)
+    }
+    
+    mutating func resetThemedEvents() -> Void {
+        if checkIfThemedEventEmpty() {
+            self.events.removeAll()
+        }
+    }
+    
+    
+    func checkIfThemedEventEmpty() -> Bool {
+        if self.events.count == 0 {
+            return true
+        } else {
+            for e in self.events {
+                if e.name == "placeholder" || e.name == "No more events this month" {
+                    return true
+                }
+            }
+            
+            return false
+        }
     }
     
 }

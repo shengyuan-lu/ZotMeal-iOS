@@ -12,7 +12,7 @@ struct Food: Decodable, Hashable {
     
     let name: String
     let description: String
-    let nutrition: [String : Any?]
+    var nutrition: [String : Any?]
     var nutrtionCellList: [String : String] = [:]
     
     enum CodingKeys: String, CodingKey {
@@ -81,6 +81,7 @@ struct Food: Decodable, Hashable {
     }
     
     func getNutritionTFvalue(key: NutritionTFValueKey) -> Bool {
+        
         guard let value = self.nutrition[key.rawValue] else { return false }
         
         return value as! Bool
@@ -143,7 +144,10 @@ struct Food: Decodable, Hashable {
                 self.nutrtionCellList[key] = value
             }
         }
+        
+        // self.nutrition = self.nutrition.filter( { !(($0.value as? String)?.isEmpty ?? false) })
     }
+    
 
 }
 

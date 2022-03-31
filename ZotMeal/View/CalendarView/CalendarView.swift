@@ -69,7 +69,7 @@ struct CalendarView: View {
             .navigationTitle("Calendar")
             
             if index == 0 {
-                if restaurant.events.count != 0 {
+                if !restaurant.checkIfThemedEventEmpty() {
                     ThemedView(restaurant: restaurant)
                 } else {
                     Text("No Themed Events In The Next 7 Days")
