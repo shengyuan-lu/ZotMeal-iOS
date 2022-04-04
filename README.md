@@ -17,7 +17,7 @@ ZotMeal brings a revolutionary dining experience to the 2 largest UCI dining hal
 - Dark mode support
 
 ## License Statement
-ZotMeal (iOS) is not open source. It is a freeware developed and owned by Shengyuan Lu, who choose to publish the code for educational and transparency purposes.
+ZotMeal (iOS) is open source. It is a freeware developed and owned by Shengyuan Lu, who chose to publish the code for educational and transparency purposes.
 
 ## Links
 Download it on [Apple App Store](https://apps.apple.com/us/app/zotmeal/id1551606266).
