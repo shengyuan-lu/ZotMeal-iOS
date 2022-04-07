@@ -17,15 +17,19 @@ ZotMeal brings a revolutionary dining experience to the 2 largest UCI dining hal
 - Dark mode support
 
 ## License Statement
-ZotMeal (iOS) is NOT open source. It is a freeware developed and owned by Shengyuan Lu, who choose to publish the code for educational and transparency purposes. Any reuse, distribution, modification of the software requires written permission from Shengyuan Lu. 
+ZotMeal (iOS version) is NOT open source. It is a freeware developed and owned by Shengyuan Lu, who choose to publish the code for educational and transparency purposes. While you may download the code to study how it works, any reuse, distribution, modification of the software requires written permission from Shengyuan Lu. 
 
 ## Contributing to ZotMeal iOS
-Currently, this repository is not for open contribution. Please contact Shengyuan Lu prior if you want to initiate a pull request. Unwanted pull requests will be denied and the user be blocked. This is to ensure the integrity of this repo.
+Currently, this repository is not for public contribution. Please contact Shengyuan Lu directly before initiating a pull request. Unwanted pull requests will be denied and the user(s) will be blocked. This action is to ensure the integrity of this project against internet trolls.
 
 ## Links
-Download it on [Apple App Store](https://apps.apple.com/us/app/zotmeal/id1551606266).
+- Download it on [Apple App Store](https://apps.apple.com/us/app/zotmeal/id1551606266).
 
-Visit the ZotMeal [website](https://shengyuan-lu.com/zotmeal-app-website/) for changelog, privacy policy, and more.
+- Visit the ZotMeal [website](https://shengyuan-lu.com/zotmeal-app-website/) for changelog, privacy policy, and more.
+
+- Visit the ZotMeal backend repository [here](https://github.com/EricPedley/zotmeal-backend) to see how our backend works.
+
+- Track the development progress of ZotMeal Android [here](https://github.com/justinyue1643/ZotMeals-Android). 
 
 ## Preview / Promo
 
