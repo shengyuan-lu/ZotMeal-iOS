@@ -16,12 +16,6 @@ ZotMeal brings a revolutionary dining experience to the 2 largest UCI dining hal
 
 - Dark mode support
 
-## License Statement
-ZotMeal (iOS version) is NOT open source. It is a freeware developed and owned by Shengyuan Lu, who choose to publish the code for educational and transparency purposes. While you may download the code to study how it works, any reuse, distribution, modification of the software requires written permission from Shengyuan Lu. 
-
-## Contributing to ZotMeal iOS
-Currently, this repository is not for public contribution. Please contact Shengyuan Lu directly before initiating a pull request. Unwanted pull requests will be denied and the user(s) will be blocked. This action is to ensure the integrity of this project against internet trolls.
-
 ## Links
 - Download it on [Apple App Store](https://apps.apple.com/us/app/zotmeal/id1551606266).
 
@@ -48,3 +42,9 @@ Currently, this repository is not for public contribution. Please contact Shengy
 ![EN 8](https://user-images.githubusercontent.com/70995597/147644809-fc972a87-cbdb-41bb-b905-7daf97a673b0.png)
 
 ![EN 9](https://user-images.githubusercontent.com/70995597/147644810-c6d32651-4018-4102-ac20-0b6ce31c0278.png)
+
+## License Statement
+ZotMeal (iOS version) is NOT open source. It is a freeware developed and owned by Shengyuan Lu, who choose to publish the code for educational and transparency purposes. While you may download the code to study how it works, any reuse, distribution, modification of the software requires written permission from Shengyuan Lu. 
+
+## Contributing to ZotMeal iOS
+Currently, this repository is not for public contribution. Please contact Shengyuan Lu directly before initiating a pull request. Unwanted pull requests will be denied and the user(s) will be blocked. This action is to ensure the integrity of this project against internet trolls.
